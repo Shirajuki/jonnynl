@@ -1,0 +1,22 @@
+I"�<!-- HARDWARE INTRO -->
+<h1 id="principles-of-computer-operations">Principles of Computer Operations</h1>
+<h2 id="following-instructions">Following Instructions</h2>
+<h2 id="learning-objectives">Learning objectives</h2>
+<ul>
+  <li>Explain what a software stack represents and how it is used</li>
+  <li>Describe how the Fetch/Execute Cycle works, listing the five steps
+    <ul>
+      <li>IF – instruction Fetch</li>
+      <li>ID – instruction data”coding”</li>
+      <li>DF – data fetch</li>
+      <li>IE – instruction execution</li>
+      <li>RR – result return</li>
+    </ul>
+  </li>
+  <li>Understand the function of the memory, control unit, arithmetic/logic unit (ALU), input unit and output unit, and program counter</li>
+  <li>Discuss the purpose of an operating system</li>
+  <li>Explain the purpose of a compiler</li>
+  <li>Describe how large tasks are performed with simple instructions</li>
+  <li>Explain why integration and photolithography are important in integrated circuits</li>
+</ul>
+:ET

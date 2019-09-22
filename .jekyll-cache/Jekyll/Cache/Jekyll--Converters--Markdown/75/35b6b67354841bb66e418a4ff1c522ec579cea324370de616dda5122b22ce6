@@ -1,0 +1,167 @@
+I"<!-- HARDWARE INTRO -->
+<h1 id="defining-information-technology">Defining Information Technology</h1>
+<h2 id="terms-of-endearment">Terms of Endearment</h2>
+<h2 id="learning-objectives">Learning objectives</h2>
+<ul>
+  <li>Explain what was the “big idea” of computing inventions</li>
+  <li>Explain why it’s important to know the right word</li>
+  <li>Define basic hardware and software terms</li>
+  <li>Define and give examples of “idea” terms</li>
+</ul>
+
+<hr />
+
+<h1 id="summary-1">SUMMARY 1</h1>
+<p>In this chapter we have set the context for our future study. We learned how to do the following:</p>
+<ul>
+  <li>Know what is important about the major computing inventions of the past one hundred years or so.
+    <ul>
+      <li>Punch card to store data</li>
+      <li>Vacuum tubes as electonic circuit - transistors</li>
+    </ul>
+  </li>
+  <li>Know and use the right word because as we learn words, we learn ideas; knowing the right words help us to communicate clearly.</li>
+  <li>Give informed definitons for common computer terms.</li>
+  <li>Consider a brief list of “idea” words such as abstract and generalize.</li>
+</ul>
+
+<p>The remainder of the book elaborates on the content of this chapter. You will continue to recognize and learn more about Fluency in information technology, a topic we hope you find interesting.</p>
+
+<h1 id="try-it-solutions">TRY IT SOLUTIONS</h1>
+<ol>
+  <li><strong>Counting Boys</strong> - imagine a large stack of cards as shown above. Suppose that when the machine reads the right column, it places the cards in one of five stacks based on the holes in the card. Explain how to use the card reader/stacker to determine how many males in the input are under 21 years of age.</li>
+</ol>
+
+<ul>
+  <li><em>Process the whole input on left column. Using only those in the “1” stack (males), process on the right column. This produces five stacks. Combine the two stacks corresponding to 0-10 and 11-20. Run the combined stack back through the machine counting them: They are the boys under 21</em></li>
+</ul>
+
+<ol>
+  <li><strong>Accronym Are Important</strong>, LOL. Acronyms are important in computing terminology. Using online search, find out what the three-letter acronym TLA stands for, and give an example.
+    <ul>
+      <li>TLA stands for “three-letter acronym” and is it’s own example</li>
+    </ul>
+  </li>
+  <li><strong>Watching an algorithm.</strong> For a list with three items, the last of which is the desired item e, how many times is the whole sequence of instructions 2-5 perfomed
+    <ul>
+      <li>The 2-5 sequence is performed 3 times, the third/last time the process ends on step 3</li>
+    </ul>
+  </li>
+  <li><strong>Abstract idea.</strong> Read the parable below and sat which of “chirping”, “corn” and “preparation” are relevant to the abstract o idea being presented.
+    <ul>
+      <li>“Chirping” and “corn” are irrelevant features of the story; “preparation” is a part of the abstract idea.</li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="review-questions">REVIEW QUESTIONS</h1>
+<h2 id="multiple-choice">Multiple Choice</h2>
+<ol>
+  <li>In order for something to be considered a computer it must have a keyboard attached.
+    <ul>
+      <li>true</li>
+      <li><strong>false</strong></li>
+      <li>only certain computers</li>
+    </ul>
+  </li>
+  <li>The problem of rewriting was solved by electronic computer using
+    <ul>
+      <li>integrated circuits</li>
+      <li><strong>the central processing unit (CPU)</strong></li>
+      <li>punch cards</li>
+      <li>storage units</li>
+    </ul>
+  </li>
+  <li>When using Google or Bing, what keyword can be used to provide you with a definition of a certain term?
+    <ul>
+      <li>look-up</li>
+      <li><strong>define</strong></li>
+      <li>dictionary</li>
+      <li>definition</li>
+    </ul>
+  </li>
+  <li>What word is interchangeable with computer
+    <ul>
+      <li><strong>processor</strong></li>
+      <li>desktop</li>
+      <li>personal</li>
+      <li>intergrated circuit (IC)</li>
+    </ul>
+  </li>
+  <li>What is educational background is required to write algorithms?
+    <ul>
+      <li>BS in computer science or computer engineering</li>
+      <li>MS in computer science or computer engineering</li>
+      <li>a high school diploma</li>
+      <li><strong>no educational background is required</strong></li>
+    </ul>
+  </li>
+  <li>A set of programs is called
+    <ul>
+      <li>instructions</li>
+      <li>agent</li>
+      <li><strong>software</strong></li>
+      <li>all of the above</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="short-answer">Short Answer</h2>
+<ol>
+  <li>The <strong>Alto (first PC attempt)</strong> was invented at Xerox’s Palo Alto Research Center in 1973.</li>
+  <li>The instructions written in software are followed or executed by <strong>the hardware</strong>.</li>
+  <li><strong>Gordon Moore and “Moore’s Law”</strong> made computers more affordable and allowed them to have more complex CPUs.</li>
+  <li>The bundle of metal wires in a punched card is called as a <strong>brush</strong>.</li>
+  <li>Complexity is <strong>cheap</strong> to manufacture, though it remains <strong>expensive</strong> to design.</li>
+  <li>The art of writing step-by-step instruction is called <strong>programming</strong></li>
+  <li>A <strong>generalization</strong> expresses a common idea that can address multiple situations.</li>
+  <li>A program acts on <strong>inputs</strong> and results in <strong>outputs</strong>.</li>
+</ol>
+
+<h2 id="exercises">Exercises</h2>
+<ol>
+  <li>How many computers do you have?
+    <ul>
+      <li>Many</li>
+    </ul>
+  </li>
+  <li>Explain how punched cards were digitized.
+    <ul>
+      <li>Punched cards were digitized using holes on the card. Moving along the card the brush will connect on the holes making an electrical connection.</li>
+    </ul>
+  </li>
+  <li>Explain how the problem of assembling was overcome by integration.
+    <ul>
+      <li>The problem of assembling (transistors/circuits by hand) was overcomed by integration (IC) using doped chips made of silicone where parts are connected already before they are even fully formed.</li>
+    </ul>
+  </li>
+  <li>Similar to video production, which is now accessible to many nonprofessionals, name two other things that over time have been made more accessible because of computer software.
+    <ul>
+      <li>Image editing</li>
+      <li>Game production</li>
+    </ul>
+  </li>
+  <li>Explain why it is important to use the right words when describing your problem to tech support.
+    <ul>
+      <li>It is important to use the right words/terms when describing our problems to the tech support “le mot juste”, so the tech supports know what the problem is.</li>
+    </ul>
+  </li>
+  <li>Explain in detail the difference between booting and rebooting.
+    <ul>
+      <li>Difference between booting and rebooting is that booting means to start a computer, while rebooting means to restart it.</li>
+    </ul>
+  </li>
+  <li>What are the properties of an algorithm?
+    <ul>
+      <li>Properties of an algorithm are:</li>
+    </ul>
+    <ol>
+      <li><em>Specifying input</em></li>
+      <li><em>Specifying output</em></li>
+      <li><em>Definite</em> - process spelled “easily” understood</li>
+      <li><em>Effective</em> - withing the agents “abilites”</li>
+      <li><em>Finite</em> - process has to finish the computation after a given time</li>
+    </ol>
+  </li>
+</ol>
+:ET

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    <br/>
+    {% include archive.html %}
+    <br/><br/>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+</article>

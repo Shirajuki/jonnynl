@@ -1,0 +1,162 @@
+I"�!<!-- DIGITAL REPRESENTATION -->
+<h1 id="representing-information-digitally">Representing Information Digitally</h1>
+<h2 id="bits-and-the-why-of-bytes">Bits and the “Why” of bytes</h2>
+<h2 id="learning-objectives">Learning objectives</h2>
+<ul>
+  <li>Explain the link between patterns, symbols, and information</li>
+  <li>Determine possible PandA encodings using a physical phenomenon</li>
+  <li>Enode and decode ASCII</li>
+  <li>Represent numbers in binary form</li>
+  <li>Compare different encoding methods</li>
+  <li>Explain how structure tags (metadata) enode the Oxford English Dictionary</li>
+</ul>
+
+<hr />
+
+<h1 id="summary-7">Summary 7</h1>
+<p>We began the chapter by learning that digitizing doesn’t require digits - any symbols will do. We explored following:</p>
+<ul>
+  <li>PandA encoding, which is based on the presence and absence of a physical phenomenon. Their patterns are discrete; they form the basic unit of a bit. Their names (most often 1 and 0) can be pair of opposite terms.</li>
+  <li>A bit’s 0 and 1 states naturally encourage the representation of numbers in base 2, that is, binary.</li>
+  <li>7-bit ASCII, an early assignment of bit sequences (symbols) to keyboard characters. Extended or 8-bit ASCII is the standard.</li>
+  <li>The need to use more than the minimum number of bits to encode information.</li>
+  <li>How documents like the Oxford English Dictionary are digitized. We learned that tags associate metadata with every part of the OED. Using that data, a computer can easily help us find words and other information.</li>
+  <li>The mystery of the <em>y</em> in byte.</li>
+</ul>
+
+<h1 id="try-it-solutions">TRY IT SOLUTIONS</h1>
+<ol>
+  <li><strong>Complete the Code.</strong> QWERTY vs. Dovrak. From Dovrak to QWERTY: <code class="highlighter-rouge">Ecuu.p.by ofmxrnoq oam. m.abcbi</code>
+    <ul>
+      <li><code class="highlighter-rouge">Different symbolsx same meaning</code></li>
+    </ul>
+  </li>
+  <li><strong>Specific Information.</strong> North Atlantic lobsters have green-brown shells when alive. Specify the bit of information for “lobster cooked.”</li>
+  <li><strong>Bits of Orange.</strong> The sequence of glasses below records information in several different ways. Assuming thatt present represents 1, identify what the phenomenon is to represent these binary sequences: (a) 101101001, (b) 000001011, and (c) 100110101.</li>
+  <li><strong>Count one more.</strong> If your new computer thinks it is 100111 days old, how old will it be tomorrow?</li>
+  <li><strong>Casting a Hex.</strong> Convert the hex <code class="highlighter-rouge">F00D 4 A BEE</code> to binary using substitutiong from table 7.3. Going the other decode this binary <code class="highlighter-rouge">0000 1111 1111 0010 1010 1101 1000</code> into hex</li>
+  <li><strong>Counting on Your Fists.</strong> According to the joke, humans count with their fingers, which is why we have decimal; computer people count with their fists, which is why we have binary. Assign 0 and 1 to the fists below to make binary six.
+  <code class="highlighter-rouge">0101</code> eller <code class="highlighter-rouge">1010</code></li>
+  <li><strong>Alternating.</strong> What decimal number is the binary number <code class="highlighter-rouge">1 0101 0101</code></li>
+  <li><strong>Numbers as letters.</strong> Encode the phone number (888) 555-1212 in ASCII, including the punctuation. (Notice that there is a space before the first 5.) To find the answer, locate each character in Figure 7.3 and write the four bits at the left of the row and the four bits at the top of the column. For example, the open paranthesis -(- is in the third row and corresponds to <code class="highlighter-rouge">0010 1000</code></li>
+  <li><strong>How Much is a Pound?</strong> The ASCII for the character “£”, the symbol for the British pound, is A3 in hex and <code class="highlighter-rouge">1010 0011</code> in binary. Wht’s the deimal value of the binary number <code class="highlighter-rouge">1010 0011</code>; that is, how much is a £.</li>
+</ol>
+
+<h1 id="review-questions">REVIEW QUESTIONS</h1>
+<h2 id="multiple-choice">Multiple Choice</h2>
+<ol>
+  <li>How many symbols can be represented by 9 bits?
+    <ul>
+      <li>256</li>
+      <li><strong>512</strong></li>
+      <li>1024</li>
+      <li>2048</li>
+    </ul>
+  </li>
+  <li>PandA representation is what kind of system?
+    <ul>
+      <li>decimal</li>
+      <li><strong>binary</strong></li>
+      <li>hexadecimal</li>
+      <li>byte</li>
+    </ul>
+  </li>
+  <li>Extended ASCII is
+    <ul>
+      <li>7 bit code</li>
+      <li><strong>8 bit code</strong></li>
+      <li>2 bit code</li>
+      <li>10 bit code</li>
+    </ul>
+  </li>
+  <li>This defines how characters relate to each other when they are compared.
+    <ul>
+      <li>digitizing</li>
+      <li>binary sequence</li>
+      <li><strong>collating sequence</strong></li>
+      <li>information representation</li>
+    </ul>
+  </li>
+  <li>When using physical phenomena to encode information, name on potential solution if there are more than two alternatives.
+    <ul>
+      <li>there is no solution</li>
+      <li>adopt them all as present</li>
+      <li><strong>adopt one as present and all the other alternatives as absent</strong></li>
+      <li>adopt them all as absent</li>
+    </ul>
+  </li>
+  <li>Information describing information is called
+    <ul>
+      <li>special information</li>
+      <li><strong>metadata</strong></li>
+      <li>special-data</li>
+      <li>formatting</li>
+    </ul>
+  </li>
+  <li>K bits in a sequence yield how many symbols?
+    <ul>
+      <li>K**2</li>
+      <li><strong>2</strong>K**</li>
+      <li>K</li>
+      <li>2</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="short-answer">Short Answer</h2>
+<ol>
+  <li><strong>QWERTY</strong> is standard US key board.</li>
+  <li><strong>Bumps and pits</strong> encode information on DVDs and CDs</li>
+  <li>Binary is base <strong>2</strong>.</li>
+  <li>Grouping binary digits in groups of four makes converting to <strong>hexadecimal</strong> easier.</li>
+  <li>“PandA” are part of <strong>binary</strong> system.</li>
+  <li>Information is said to be <strong>discrete</strong>, or distinct; there is no gray.</li>
+  <li>The number of digits is the <strong>base</strong> or the <strong>radix</strong> of the numbering system.</li>
+  <li>A byte consists of <strong>8</strong> bits.</li>
+  <li><strong>Digitizing</strong> is representing information with symbols.</li>
+</ol>
+
+<h2 id="exercises">Exercises</h2>
+<ol>
+  <li>Make a list of the numbers you use that are not treated as numbers (e.g., phone numbers).
+    <ul>
+      <li>Lots, phone numbers, customer id, other ids.</li>
+    </ul>
+  </li>
+  <li>Create a list of 10 different PandA encodings that are different from those presented in this chapter.
+    <ul>
+      <li>idk</li>
+    </ul>
+  </li>
+  <li>Encode (800) 555-0012 in ASCII, including punctuation.</li>
+  <li>This chapter mentions that it does matter whether 0 represents present or absent. Explain in detail why this is the case.
+    <ul>
+      <li>present or absent gives different combinations, 01 is different from 10.</li>
+    </ul>
+  </li>
+  <li>Translate the following hexadecimal into binary and then into ASCII: <code class="highlighter-rouge">68 65 78 61 64 65 63 69 6D 61 6C</code>
+    <ul>
+      <li>“hexadecimal” using python3 <code class="highlighter-rouge">bytearray.fromhex('68 65 78 61 64 65 63 69 6D 61 6C').decode()</code></li>
+    </ul>
+  </li>
+  <li>Encode the following ISBN number in ASCII: <code class="highlighter-rouge">978-3-16-148410-0</code></li>
+  <li>You have discovered the following string of binary ASCII code; figure out what they mean: <code class="highlighter-rouge">01010111 01100001 01111001 00100000 01110100 01101111 00100000 01100111 01101111 00100001</code>
+    <ul>
+      <li>python3 <code class="highlighter-rouge">chr(int('base2',2))</code> gives us <code class="highlighter-rouge">"way to go!"</code></li>
+    </ul>
+  </li>
+  <li>Explain the relatonship between the number D and 1101.
+    <ul>
+      <li>D in base16/hex = <code class="highlighter-rouge">bin(int('D',16))</code></li>
+    </ul>
+  </li>
+  <li>Explain why radio broadcasters use longer encoding to transmit information.</li>
+  <li>Discuss the need for UTF-8.
+    <ul>
+      <li>ASCII won’t have enough combination for all the possible character and symbols (emojis, foreign characters like hebrew, arabic, chinese, korean and so on), as it’s limited we need Unicode/UTF-8.</li>
+    </ul>
+  </li>
+  <li>Explain how Buchholz created an error-detecting name for the memory unit.</li>
+  <li>List out the characteristics that have to be encoded for a content.</li>
+</ol>
+:ET
