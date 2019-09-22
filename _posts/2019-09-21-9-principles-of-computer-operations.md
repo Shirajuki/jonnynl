@@ -1,6 +1,7 @@
 ---
 layout: post
 tags: TDT4109
+categories: TDT4109
 ---
 <!-- HARDWARE INTRO -->
 # Principles of Computer Operations

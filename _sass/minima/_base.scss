@@ -14,7 +14,15 @@ dl, dd, ol, ul, figure {
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
-  background-color: $background-color;
+  // background-color: $background-color;
+  background: linear-gradient(to top, rgba(82, 16, 132, 0.2), rgba(240, 255, 255, 0.5));
+    min-height: 100vh;
+    /* height: 100vh; */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -23,7 +31,10 @@ body {
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
-  flex-direction: column;
+  flex-direction: row;
+  @include media-query($on-palm) {
+    flex-direction: column;
+  }
 }
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -38,7 +49,11 @@ ul, ol, dl, figure,
  * `main` element
  */
 main {
-  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+  position: relative;
+  display: flex; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+  flex-direction: column;
+  min-height: 100%;
+  padding-bottom: 240px;
 }
 /**
  * Images
@@ -144,6 +159,8 @@ pre {
   max-width:         calc(#{$content-width} - (#{$spacing-unit}));
   margin-right: auto;
   margin-left: auto;
+  display: flex;
+  flex-direction: column;
   padding-right: $spacing-unit / 2;
   padding-left: $spacing-unit / 2;
   @extend %clearfix;

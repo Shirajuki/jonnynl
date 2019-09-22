@@ -2,8 +2,9 @@ title: jonnynl
 author: shirajuki
 email: jonnynl@stud.ntnu.no
 description: > # this means to ignore newlines until "show_excerpts:"
-  An e-notebook by jonnynl, notes are sorted by courses with tags. Site built with <3 thanks to jekyll and github pages. 
-
+  An e-notebook by jonnynl, notes are sorted by courses with tags. Site built with <3 thanks to jekyll and github pages.
+baseurl: /jonnynl
+permalink: /tag/:categories/:title/
 show_excerpts: false # set to true to show excerpts on the homepage
 
 # Minima date format

@@ -11,24 +11,24 @@ $base-line-height: 1.5 !default;
 $spacing-unit:     30px !default;
 $spacing-unit-bot: 15px !default;
 
-$text-color:       #111 !default;
+// $text-color:       #111 !default;
 $text-color2:      #eee !default;
-$background-color: #eaf5fe !default;
-$brand-color:      #3d367b !default;
+// $background-color: #eaf5fe !default;
+// $brand-color:      #87057f !default;
+//
+// $grey-color:       #ff66f5 !default;
+// $grey-color-light: lighten($grey-color, 70%) !default;
+// $grey-color-dark:  darken($grey-color, 35%) !default;
 
-$grey-color:       #0020ff !default;
+$text-color:       #111 !default;
+$background-color: #fdfdfd !default;
+$brand-color:      #2a7ae2 !default;
+
+$grey-color:       #252525 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 35%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
 $orange-color:     #f66a0a !default;
 $table-text-align: left !default;
-
-// $text-color:       #111 !default;
-// $background-color: #fdfdfd !default;
-// $brand-color:      #2a7ae2 !default;
-// $grey-color:       #828282 !default;
-// $grey-color-light: lighten($grey-color, 40%) !default;
-// $grey-color-dark:  darken($grey-color, 25%) !default;
-
 
 // Width of the content area
 $content-width:    800px !default;
@@ -48,16 +48,17 @@ $on-large:         $on-laptop !default;
 // }
 // Notice the following mixin uses max-width, in a deprecated, desktop-first
 // approach, whereas media queries used elsewhere now use min-width.
+strong {
+  font-size: 1.15rem;
+}
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
     @content;
   }
 }
-
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
 }
-
 // Import partials.
 @import
   "minima/base",
