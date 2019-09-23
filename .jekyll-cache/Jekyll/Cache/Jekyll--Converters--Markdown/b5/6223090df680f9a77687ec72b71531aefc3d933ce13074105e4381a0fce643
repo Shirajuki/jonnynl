@@ -1,0 +1,155 @@
+I"Q<hr />
+<ul>
+  <li>
+    <h3 id="2-theory"><a href="../2-WebTek_Theory.pdf">2-Theory</a></h3>
+    <p>Client-Server Architecture, client -&gt; server -&gt; client <em>repeat</em></p>
+    <ul>
+      <li>How the internet works: TCP/IP protocol, domain, ip address and DNS</li>
+      <li>WWW</li>
+      <li>HTML - markup language - tags/elements</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<ul>
+  <li>
+    <h3 id="3-html"><a href="../3-WebTek_HTML.pdf">3-HTML</a></h3>
+    <p>HTML basics:</p>
+    <ul>
+      <li>strong for bold text</li>
+      <li>q/blockquote for quotes</li>
+      <li>abbr for acronyms</li>
+      <li>address for physical/digital addresses</li>
+      <li>dl, dt, dd - defintition list, gives definition of items</li>
+      <li>Tips for images:
+        <ul>
+          <li>right format</li>
+          <li>right size</li>
+          <li>pixels</li>
+        </ul>
+      </li>
+      <li>Caption image with figure and figcaption</li>
+      <li>Tips for tables:
+        <ul>
+          <li>attribute colspan and rowspan</li>
+        </ul>
+      </li>
+      <li>Site map - a website guide/map</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<ul>
+  <li>
+    <h3 id="3-urls"><a href="../3-WebTek_URLs.pdf">3-URLs</a></h3>
+    <ul>
+      <li>Protocol: <code class="highlighter-rouge">http://</code></li>
+      <li>Domain name: <code class="highlighter-rouge">www.example.com</code></li>
+      <li>path to file: <code class="highlighter-rouge">/path/to/myfile.html</code></li>
+      <li>parameters: <code class="highlighter-rouge">..to/myfile.html?key1=value1&amp;key2=value2...</code></li>
+      <li>Form GET gives us parameters on our URL starting with ‘?’</li>
+      <li>Anchor: <code class="highlighter-rouge">#targetId</code></li>
+      <li>Storyboarding</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<ul>
+  <li>
+    <h3 id="4-css-intro"><a href="../4-CSS-Intro.pdf">4-CSS-Intro</a></h3>
+    <ul>
+      <li>XHTML - lowercase elements, closed with <code class="highlighter-rouge">/</code>, quotes <code class="highlighter-rouge">""</code> for attributes and need to have <code class="highlighter-rouge">html, head, body</code></li>
+      <li>Box model</li>
+      <li>Selector - declaration - property - value</li>
+      <li>External &lt; internal/embeded &lt; inline</li>
+      <li><code class="highlighter-rouge">!important ;</code> to override</li>
+      <li>The more specific rules applies, meaning tag &lt; class &lt; id</li>
+      <li>Inherit from parents</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<ul>
+  <li>
+    <h3 id="4-css-selectorproperties"><a href="../4-CSS-Selectors-Properties.pdf">4-CSS-Selector/Properties</a></h3>
+    <ul>
+      <li>CSS sees HTML as box model</li>
+      <li>learn selectors using <a href="https://flukeout.github.io">CSSDiner</a></li>
+      <li>p a vs p&gt;a, is that <code class="highlighter-rouge">p a</code> takes any child element, while <code class="highlighter-rouge">p&gt;a</code> takes only the immediate child element inside it’s nest.</li>
+      <li><code class="highlighter-rouge">+</code> for adjacent sibling elements, while <code class="highlighter-rouge">~</code> selects all sibling elements</li>
+      <li>Pseudo-class: <code class="highlighter-rouge">:</code> selects an element based on state</li>
+      <li>Pseudo-element: <code class="highlighter-rouge">::</code> selector</li>
+      <li>inline &gt; id &gt; class,pseudo &gt; element/tag</li>
+    </ul>
+
+    <p>Position:</p>
+    <ul>
+      <li>static: <code class="highlighter-rouge">default</code>, each block element on top of next one</li>
+      <li>relative: in relation to where it would be in normal flow</li>
+      <li>absolute: taken out of it’s normal flow, no longer affects other elements positions, still in relation to the document, meaning scrolling will affect</li>
+      <li>fixed: absolute, but in relation to the broswers window</li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="5-multimedia"><a href="../5-WebTek-MultiMedia.pdf">5-Multimedia</a></h3>
+    <ul>
+      <li>Balance between size and quality</li>
+      <li>gif, jpeg, png, svg</li>
+      <li>Non-interlaced graphic: loads from none slides down to whole image.</li>
+      <li>Interlaced graphic: starts blurry, gradually comes into focus.</li>
+      <li>Good practice: <code class="highlighter-rouge">Background image &lt; 20kb</code></li>
+      <li>Think hotspot, where will the users viewpoint be at?</li>
+      <li>imagemaps: <code class="highlighter-rouge">&lt;area	shape=“shape”	coords=“coordinates”	href=“url” alt=“text”/&gt;</code></li>
+    </ul>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">“supersite.gif”</span>	<span class="na">usemap=</span><span class="s">“#map1”</span><span class="nt">&gt;</span>
+<span class="nt">&lt;map</span>	<span class="na">name=</span><span class="s">“map1”</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;area</span>	<span class="na">coords=</span><span class="s">“0,0,50,50”</span>	<span class="na">href=</span><span class="s">“topleft.html”</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;area</span>	<span class="na">coords=</span><span class="s">“50,50,80,80”</span>	<span class="na">href=</span><span class="s">“bottomright.html”</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/map&gt;</span>
+</code></pre></div>    </div>
+    <ul>
+      <li>wav, mp3, wma, ogg, midi</li>
+      <li>mp4, webm, ogg</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+<ul>
+  <li>
+    <h3 id="8-forms"><a href="../8-WebTek-Forms.pdf">8-Forms</a></h3>
+    <ul>
+      <li>input types: <code class="highlighter-rouge">text:password:number</code> and so on, <code class="highlighter-rouge">checkbox</code> and <code class="highlighter-rouge">radio</code></li>
+      <li>textarea tag</li>
+      <li>fieldset and legend tag</li>
+      <li>option tag with select: dropdown</li>
+      <li>Form methods: <code class="highlighter-rouge">POST</code> and <code class="highlighter-rouge">GET</code>, <code class="highlighter-rouge">POST</code> higher character limit, URL doesn’t get changed.</li>
+      <li>Form validation, attribute <code class="highlighter-rouge">required</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+<ul>
+  <li>
+    <h3 id="8-inspector"><a href="../8-WebTek-InspectorUsability.pdf">8-Inspector</a></h3>
+    <p>Schneiderman’s eight golden rules of usability:</p>
+    <ul>
+      <li><strong>Strive for constistency</strong> - design/layour</li>
+      <li><strong>Cater to Universal Usability</strong> - easily for all ability levels to use</li>
+      <li><strong>Offer informative feedback</strong> - what wrong, what’s right? click, select, events and so on.</li>
+      <li><strong>Design dialogs to yield closure</strong> - talk to the user as feedback</li>
+      <li>
+        <h2 id="prevent-errors"><strong>Prevent Errors</strong></h2>
+      </li>
+    </ul>
+
+    <p>devtools</p>
+  </li>
+</ul>
+:ET

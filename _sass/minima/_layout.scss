@@ -9,6 +9,10 @@
   background-color: $grey-color;
   // Positioning context for the mobile navigation icon
   position: relative;
+  @include media-query($on-palm) {
+    border-top: 4px solid $grey-color-dark;
+    border-bottom: 6px solid $grey-color-light;
+  }
 }
 .site-title {
   color: $grey-color-light;
@@ -189,6 +193,11 @@
   flex: auto;
   div.wrapper {
     width: 100%;
+  }
+  @include media-query($on-palm) {
+    div.wrapper {
+      width: auto;
+    }
   }
 }
 

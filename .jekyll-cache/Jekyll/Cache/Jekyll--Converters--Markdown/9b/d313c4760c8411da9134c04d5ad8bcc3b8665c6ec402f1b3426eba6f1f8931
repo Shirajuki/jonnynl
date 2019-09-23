@@ -1,0 +1,14 @@
+I"r<hr />
+
+<ul>
+  <li>
+    <h3 id="2-theory"><a href="../2-WebTek_Theory.pdf">2-Theory</a></h3>
+    <p>Client-Server Architecture, client -&gt; server -&gt; client <em>repeat</em></p>
+    <ul>
+      <li>How the internet works: TCP/IP protocol, domain, ip address and DNS</li>
+      <li>WWW</li>
+      <li>HTML - markup language - tags/elements</li>
+    </ul>
+  </li>
+</ul>
+:ET

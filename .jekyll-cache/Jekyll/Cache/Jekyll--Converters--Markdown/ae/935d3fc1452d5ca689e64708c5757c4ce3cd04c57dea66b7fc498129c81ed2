@@ -1,0 +1,23 @@
+I"£<h3 id="2-theory"><a href="../2-WebTek_Theory.pdf">2-Theory</a></h3>
+<p>SHORT</p>
+<h3 id="3-html"><a href="../3-WebTek_HTML.pdf">3-HTML</a></h3>
+<p>SHORT</p>
+<h3 id="3-urls"><a href="../3-WebTek_URLs.pdf">3-URLs</a></h3>
+<p>SHORT</p>
+<h3 id="4-css-intro"><a href="../4-CSS-Intro.pdf">4-CSS-Intro</a></h3>
+<p>SHORT</p>
+<h3 id="4-css-selectorproperties"><a href="../4-CSS-Selectors-Properties.pdf">4-CSS-Selector/Properties</a></h3>
+<p>SHORT</p>
+<h3 id="5-multimedia"><a href="../5-WebTek-MultiMedia.pdf">5-Multimedia</a></h3>
+<p>SHORT</p>
+<h3 id="8-forms"><a href="../8-WebTek-Forms.pdf">8-Forms</a></h3>
+<ul>
+  <li>input types: <code class="highlighter-rouge">text:password:number</code> and so on, <code class="highlighter-rouge">checkbox</code> and <code class="highlighter-rouge">radio</code></li>
+  <li>textarea</li>
+  <li>option tag with select: dropdown</li>
+  <li>Form methods: <code class="highlighter-rouge">POST</code> and <code class="highlighter-rouge">GET</code>, <code class="highlighter-rouge">POST</code> higher character limit, URL doesnâ€™t get changed.</li>
+</ul>
+
+<h3 id="8-inspector"><a href="../8-WebTek-InspectorUsability.pdf">8-Inspector</a></h3>
+<p>devtools</p>
+:ET
