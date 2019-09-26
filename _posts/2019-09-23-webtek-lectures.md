@@ -84,7 +84,7 @@ categories: IT2805
   - mp4, webm, ogg
 
 <br/>
-- ### [8-Forms](../8-WebTek-Forms.pdf)
+- ### [6-Forms](../8-WebTek-Forms.pdf)
   - input types: `text:password:number` and so on, `checkbox` and `radio`
   - textarea tag
   - fieldset and legend tag
@@ -93,7 +93,7 @@ categories: IT2805
   - Form validation, attribute `required`
 
 <br/>
-- ### [8-Inspector](../8-WebTek-InspectorUsability.pdf)
+- ### [6-Inspector](../8-WebTek-InspectorUsability.pdf)
   #### **Schneiderman's eight golden rules of usability:**
   - **Strive for constistency** - design/layour
   - **Cater to Universal Usability** - easily for all ability levels to use
