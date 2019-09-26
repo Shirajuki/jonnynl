@@ -5,39 +5,39 @@ categories: EXPH0300
 ---
 
 ## Forelesning 1: Vitenskap, politikk og det åpne samfunnet
-##### 1. Hvorfor kaller Popper teorien sin ’kritisk rasjonalisme’?
+### 1. Hvorfor kaller Popper teorien sin ’kritisk rasjonalisme’?
   - Popper kaller teorien sin for 'kritisk rasjonalisme' for han anser først og fremst **kritikk og testing** som forutsetningen for kunnskapsøkning.
   - Det var viktig for ham å tydeliggjøre sine overbevisninger om hva som var falsifiserbare og hvilke som var metafysiske. Den metafysiske overenskomsten, rasjonalismen, forstod Popper som villigheten til en **rasjonell meningsutveksling og åpenheten for kritiske argumenter**, derav kritisk rasjonalisme
 
 >"Jeg kan ta feil, og du kan ha rett, men la oss sette oss sammen og diskutere saken kritisk, så vil vi til slutt ikke nødvendigvis ha blitt enige, men vi vil begge ha lært noe."
 
 
-##### 2. Hva kjennetegner en ekte vitenskapelig hypotese, ifølge kritisk rasjonalisme?
+### 2. Hva kjennetegner en ekte vitenskapelig hypotese, ifølge kritisk rasjonalisme?
   - Ifølge kritisk rasjonalisme skal man velge de hypoteser/teorier som har størst mulighet for falsifisering (størst empirisk innhold)
   -Vitenskapelige hypoteser kan altså bare falsifiseres (avkreftes), ikke verifiseres (bekreftes).
   - Vi skal med alle midler **forsøke å bevise at en hypotese er usann, og bare hypoteser som kan falsifiseres skal betraktes som vitenskapelige.** Hvis vi ikke klarer å bevise at en hypotese er usann, så er denne hypotesen bekreftet.
   -  Istedenfor å lete etter støtte for sine antagelser, bør man lete etter feil i dem.
 
 
-##### 3. Hvordan gjør vitenskapen fremskritt ifølge Popper?
+### 3. Hvordan gjør vitenskapen fremskritt ifølge Popper?
   - Vitenskapelig fremskritt skjer ifølge Popper ved at falsifiserte teorier erstattes av nye hypoteser som er «nærmere sannheten».
   - Selv om vitenskapelig fremskritt er mulig og reell, skjer den ikke ved å verifisere de antatt sanne teoriene, men ved å falsifisere de antatt usanne teoriene.
   - **Vitenskapelig fremskritt skjer ved stadige, små endringer (i tråd med læring ved prøving og feiling).** Fremskritt kan imidlertid også skje gjennom *paradigmeskifter* (systematisk skifte i måte å tenke på som er av betydelig størrelse og rekkevidde innen teori og ideer/samfunnsendrende), som ligner mer på vitenskapelige revolusjoner enn på gradvise endringer.
   - Problemstilling -> hypotese -> Feileliminasjon -> problemstilling2 -> hypotese2 -> ...
 
-##### 4. Skisser trinnene ved vitenskapelig testing ifølge Popper.
+### 4. Skisser trinnene ved vitenskapelig testing ifølge Popper.
   - Kriteriet på en teoris vitenskapelige status er dens testbarhet, dvs. dens falsifiserbarhet, —dens mulighet for å bli gjendrevet.
   - Hypotetisk-deduktiv metode:
   ![hypotetisk-deduktiv metode](https://upload.wikimedia.org/wikipedia/commons/b/b9/Vitenskapelig_metode.png)
 
 
-##### 5. Hva kjennetegner en logisk gyldig slutning?
+### 5. Hva kjennetegner en logisk gyldig slutning?
   - Et argument er logisk gyldig hvis og bare hvis: hvis premissene er sanne, så må konklusjonen være sann.
   - Logisk gyldighet angår forholdet mellom premissene og konklusjonen.
   - Logisk gyldighet angår ikke om premissene eller konklusjonen er sann(e).
 
 
-##### 6. Vis at følgende slutningsform er ugyldig ved hjelp av et moteksempel:
+### 6. Vis at følgende slutningsform er ugyldig ved hjelp av et moteksempel:
 ```
 Hvis P, så Q
 Q;
@@ -49,35 +49,35 @@ Ikke Q;
 Altså: ikke P
 ```
 
-##### 7. Hva er induksjon eller en induktiv slutning? Hvorfor er slike slutninger logisk ugyldige?
+### 7. Hva er induksjon eller en induktiv slutning? Hvorfor er slike slutninger logisk ugyldige?
   -  Induksjon/induktiv slutning er det å trekke en slutning fra det individuelle til det allmenne. Det vil si at på bakgrunn av et begrenset antall observasjoner slutter man til en **større sannsynlig generalisering**. Vanligvis kalles denne måten å trekke slutninger på for induktiv generalisering. - altså slutninger fra observasjon til teori.
   - Slike slutninger er logisk ugyldige fordi det kan alltids komme for dagen en ny observasjon som forkaster at generaliseringen ikke holder. Kunnskap er aldri sikker.
 
 
-##### 8. Hva mener Popper om rollen til induksjon i vitenskap?
+### 8. Hva mener Popper om rollen til induksjon i vitenskap?
   - **"Induksjosproblemet"**: Induktive generaliseringer er viktige. Slutninger i eksperimentell vitenskap er avhengig av induktive generaliseringer for å formulere og bekrefte universelle naturlige lover på bakgrunn av relativt få observasjoner. Likevel er det viktig å ta med i betraktning at induksjon slutter fra «noe» på en måte som bare fungerer med nødvendigheten for et «alt».
   - Denne typen slutninger benytter seg ofte av **observasjoner gjort tidligere til å si noe om det som skjer i fremtiden**, med bare det som slutning ender man opp i en form for sirkelargumentasjon (circulus in probando),
 
 
-##### 9. Hva er pseudovitenskap ifølge Popper? Gi noen eksempler.
+### 9. Hva er pseudovitenskap ifølge Popper? Gi noen eksempler.
   - **"Demarkasjonsproblemet"**: En teori som virker som/utgir seg for å være vitenskapelig, men i prinsippet ikke kan tilbakevises eller falsifiseres. Den er dermed ikke vitenskapelig eller har en pseudo-vitenskapelig karakter (skinn av vitenskapelighet).
   - Eksempler på pseudo-vitenskapelige teorier mener Popper er Marx’ historieteori, Freuds psykoanalyse og Adlers individualpsykologi. Disse kjennetegnes av at de ikke er uforenlige med mulige data, og at de derved ikke kan tilbakevises eller bli falsifisert.
 
 
-##### 10. Hva mener Popper med ’det åpne samfunn’, og hva slags type styre står et åpent samfunn i motsetning til?
+### 10. Hva mener Popper med ’det åpne samfunn’, og hva slags type styre står et åpent samfunn i motsetning til?
   - Rasjonalitet : Man skal ha villighet til å stille seg kritisk til enhver påstand. Man skal unngå tendensen om å bekrefte sine synspunkter.
   - Det liberale demokrati : Opposisjonen kan fritt kritisere flertallet. Betinger kompromissløs ytringsfrihet.
 
 
-##### 11. Hva er parallellen mellom et liberalt demokrati og vitenskapelig forskning, ifølge Popper?
+### 11. Hva er parallellen mellom et liberalt demokrati og vitenskapelig forskning, ifølge Popper?
   - ???
 
 
 ## Forelesning 2 — Virkelighetsoppfatninger og paradigmer
-##### 1. Hvorfor forutsetter prøving av vitenskapelige hypoteser hjelpehypoteser og tilleggsantagelser? Forklar, gjerne ved bruk av eksempler, hvorfor dette er problematisk for Poppers syn på falsifikasjon.
+### 1. Hvorfor forutsetter prøving av vitenskapelige hypoteser hjelpehypoteser og tilleggsantagelser? Forklar, gjerne ved bruk av eksempler, hvorfor dette er problematisk for Poppers syn på falsifikasjon.
   - Prøving av vitenskapelige hypoteser forutsetter: hjelpehypoteser og tillegsantagelser. Dette er fordi som induksjonsproblemet: benytter prøvingene seg ofte av observasjoner gjort tidligere. Problematisk for Poppers syn på falsifikasjon er dermed at det alltid finnes flere hypoteser som etterprøves, ikke bare en enkelt, og det kan gjøre den vanskelig å si hvilken hypotese som er blitt falsifisert dersom det oppstår en uoverensstemmelse med erfaringen. Så det er ikke bare til verifikasjon det knytter seg problemer, men også falsifikasjon
 
-##### 2. Forklar begrepene “paradigme” og “normalvitenskap” i Kuhns teori om vitenskapenes utvikling.
+### 2. Forklar begrepene “paradigme” og “normalvitenskap” i Kuhns teori om vitenskapenes utvikling.
   - **"Paradigme:"** I et paradigme inngår både måten å stille problemer på, måten å løse disse på og selve fremstillingen av resultatene.
   - Et allment annerkjent vitenskapelig resultat vil utgjøre et paradigme. Dette er som sagt forutsetninger vi tar for gitt – altså en ”uvitende” kunnskap.
   -  Et paradigme blir da forpliktende for hva som kan godtas som vitenskapelig arbeid, og vil derved styre videre utvikling av fagfeltet.
@@ -86,13 +86,13 @@ Altså: ikke P
   - Kuhn mente da at **normalvitenskap** ble styrt av allmenne paradigmer. Dette kan forklares med et puslespill; rammene er gitt, men bitene må på plass (problemene må løses). Dette forutsetter selvsagt at det er en bestemt måte å løse problemet på.
   - Vitenskapsteoretiske og filosofiske spørsmål holdes på avstand.
 
-##### 3. Hvordan utfolder en vitenskapelig revolusjon seg, ifølge Kuhn?
+### 3. Hvordan utfolder en vitenskapelig revolusjon seg, ifølge Kuhn?
   - Teori om vitenskapelige revolusjoner hevder at fremskritt skjer ved fundamentale omveltninger i synet på natur. Omveltningene innebærer at den teoretiske rammen for å oppfatte og å bedømme observasjoner skiftes ut.
   - Vitenskapelig utvikling foregår ikke som en kumulativ vekstprosess hvor man har en sammenhengende og stadig økning i den vitenskapelige kunnskap.
   - Bryter både med logisk positivistenes og den kritiske rasjonalismens syn.
   - Skifte i interessen bort i fra en vektlegging av teorier, påstander, begrepsanalyse, etc. og over til en interesse for vitenskapelig verdensanskuelse, forskningsprogrammer og bakgrunnsteorier.
 
-##### 4. Hvilke ulike måter kan Kuhns syn på inkommensurabilitet tolkes på?
+### 4. Hvilke ulike måter kan Kuhns syn på inkommensurabilitet tolkes på?
   - To paradigmer er inkommensurable — kan ikke sammenlignes eller sammenstilles — slik at de kan evalueres mot hverandre.
   - Inkommensurabilitet beror på at ulike paradigmer
     - ikke har felles fakta / data,
