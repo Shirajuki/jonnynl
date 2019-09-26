@@ -5,13 +5,49 @@ categories: EXPH0300
 ---
 
 # Obligatorisk øvingsoppgave på ex.phil. 0300
-Ifølge Karl Popper kan vi gjøre fremskritt i vitenskap gjennom å forkaste teorier som har blitt
+>Ifølge Karl Popper kan vi gjøre fremskritt i vitenskap gjennom å forkaste teorier som har blitt
 falsifisert gjennom testing. Ifølge Thomas Kuhn er vitenskapelige teorier gjerne knyttet til
 verdensbilder. Forklar hva disse tenkerne mener med å si disse tingene, og drøft i hvilken
 grad synene er i konflikt med hverandre. Diskuter spørsmålene med utgangspunkt i en eller
 flere episoder fra vitenskapshistorien eller samtidsdebatten.
 
->Dere, jeg snakka litt med han Ronny etter timen, og jeg kom med et eksempel på paradigmen om platetektonikk 😄 Han likte den godt, tror dere det kan være et godt eksempel i oppgaven?
+```
+Dere, jeg snakka litt med han Ronny etter timen, og jeg kom med et eksempel på paradigmen om platetektonikk 😄 Han likte den godt, tror dere det kan være et godt eksempel i oppgaven?
+```
+
+# Disposisjon
+- Innledning
+  - Popper og Kuhn sin problemstilling
+  - Avklaringer og begrensinger av det som skal bli skrevet om/utgangspunkt fra: platetektonikk
+- Bakgrunninformasjon
+  - Karl Popper
+    - intro av falsifikasjonisme
+    - om pseudovitenskap, hva popper står for/mot
+    - prøve- og feilemetoden
+  - Thomas Kuhn
+    - intro av hans vitenskapsteoretiske synspunkter - paradigme
+    - om paradigmeskifte - skifte av verdensbilder
+    - anomalier - data eller observasjoner som vanskelig lar seg innpasse i paradigmet
+- Drøfting
+  - Platetektonikk
+    - presentere teorien som paradigme, hvorfor revolusjonerende i sitt fagfelt.
+    - Før og nå?
+  - Diskutere problem/mulig på konflikt/sammenlikning
+    - Motsigelser
+- Avslutning
+  - Trekke sammen trådene ved presentere hovedpoengene i oppgaven. Lage forbindelse til innledningen. Avrunde konflikten. Muligens vår egen mening i hva som er "mer realistisk"
+
+***
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+***
+For n'te gang; Det du beskriver er hovedlinjene i den idealiserte, normative teorien teorien til Popper. Slik er det vitenskapen bør være; et ideal. Kuhn beskriver vitenskapen slik den faktisk utføres. Det er ikke riktig at «hypoteser formuleres for å nå opp til falsifikasjonskriteriet». Det er i den ideelle verden, men ikke i den virkelige. Det var bl.a det Kuhn avdekket gjennom sine historiske studier. Når det gjelder falsifikasjonskriteriet er det generell enighet om at god vitenskap innebærer at teorier skal KUNNE falsifiseres, men dette er ikke noe som den praktiske vitenskapelige aktivitet fokuserer på.
+
+Om du har tid og ønsker å lese litt om falsifikasjonskriteriet og om hvordan vitenskapen ser på det i dag, så ta for deg den glimrende boken til Rune Nydal, som jeg viser til i innledningen. I boken finner du underkapitler som Teorienes falsifiserbarhet, Forsvaret for falsifikasjonskriteriet, En diskusjon om falsifikasjonskriteriets fruktbarhet, osv. Jeg er sikker på at du vil finne dette og resten av boken svært meningsfylt. Rune Nydal har master i både fysikk og filosofi, og er i dag førsteamanuensis ved filosofisk fakultet, NTNU.
+
+Om det du viser til å ha lest av/om Kuhn er det eneste fortår jeg at du ikke forstår hva jeg forsøker å få frem.
 
 ***
 
