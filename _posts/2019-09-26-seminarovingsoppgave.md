@@ -17,7 +17,7 @@ Dere, jeg snakka litt med han Ronny etter timen, og jeg kom med et eksempel på 
 
 # Disposisjon
 - Innledning
-  - Popper og Kuhn sin problemstilling
+  - Popper og Kuhn sin problemstilling:
   - Avklaringer og begrensinger av det som skal bli skrevet om/utgangspunkt fra: platetektonikk
 - Bakgrunninformasjon
   - Karl Popper
@@ -26,7 +26,7 @@ Dere, jeg snakka litt med han Ronny etter timen, og jeg kom med et eksempel på 
     - prøve- og feilemetoden
   - Thomas Kuhn
     - intro av hans vitenskapsteoretiske synspunkter - paradigme
-    - om paradigmeskifte - skifte av verdensbilder
+    - om paradigmeskifte - hvorfor skifte av verdensbilder
     - anomalier - data eller observasjoner som vanskelig lar seg innpasse i paradigmet
 - Drøfting
   - Platetektonikk
