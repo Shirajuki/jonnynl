@@ -52,26 +52,26 @@ In this chapter we considered how different forms of information are represented
   - 1111 1100,1111 1111,1100 0000,1111 0000
   - 1111 1111,1100 0000,1111 0000,1111 1100
   - 1111 1111,1111 1100,1111 0000,1100 0000
-  - 1100 0000,1111 0000,1111 1100,1111 1111
+  - **1100 0000,1111 0000,1111 1100,1111 1111**
 
 
 2. The RGB setting for blue is (0 is off, 1 is on)
   - 0000 0000 0000 0000 0000 0000
   - 1111 1111 0000 0000 0000 0000
   - 0000 0000 1111 1111 0000 0000
-  - 0000 0000 0000 0000 1111 1111
+  - **0000 0000 0000 0000 1111 1111**
 
 
-3. People tend to be sensitive to small changes in ___, but not to small changes in ___.
+3. People tend to be sensitive to small changes in **___**, but not to small changes in **___**.
   - brightness,color
   - color,brightness
-  - brightness,color
+  - **brightness,color**
   - color,contrast
 
 
 4. Digital information
   - discrete
-  - continuous
+  - **continuous**
   - analog
   - none of the above
 
@@ -79,7 +79,7 @@ In this chapter we considered how different forms of information are represented
 5. According to the Nyquist rule, the sampling rate for sound should be roughly
   - half of what humans can hear
   - the same as what humans can hear
-  - twice what humans can hear
+  - **twice what humans can hear**
   - three times what humans can hear
 
 
@@ -87,11 +87,11 @@ In this chapter we considered how different forms of information are represented
     - the sampling rate
     - the precision of the sample
     - the size of the digitez file
-    - all of the above
+    - **all of the above**
 
 
 7. An analog-to-digital converter
-  - changes digital information to analog waves
+  - **changes digital information to analog waves**
   - converts continuous sound to digital sound
   - converts sound to an electric signal
   - sets approximated values
@@ -107,36 +107,42 @@ In this chapter we considered how different forms of information are represented
   - 1,411,200
   - 40,042,800
   - 84,672,000
-  - 320,342,400
+  - **320,342,400**
 
 10. Raymond Kurzweil is known as the inventor of
   - computer science
-  - text-to-speech generation
+  - **text-to-speech generation**
   - image compression
   - virtual reality
 
 
 ## Short Answer
-1. RGB values are usually stored as three **___**
-2. **___** is the limit that defines the maximum rate that information can be transmitted
-3. All colors with equal intensities of RGB subpixels are either **___**, **___**, or shades of gray.
-4. **___** is the number of waves per second.
-5. **___** sound removes the highest and lowest samplings as part of its compression algorithm.
-6. Pixel color is determined solely by the **___** of the color.
-7. In OCR, each pixel is an estimate of how **___** the corresponding area is.
-8. On the computer, **___** means to store or transmit information with fewer bits.
-9. A process that allows the computer to "read" printed characters is called **___**.
-10. To increase the **___** of a photo, you should increase the difference between the light and dark parts.
-11. When converting analog sound to digital sound, using **___** bits yield a more accurate digitization.
+1. RGB values are usually stored as three **bytes**
+2. **Speed of light** is the limit that defines the maximum rate that information can be transmitted
+3. All colors with equal intensities of RGB subpixels are either **black**, **white**, or shades of gray.
+4. **Hz/Hertz** is the number of waves per second.
+5. **MP3** sound removes the highest and lowest samplings as part of its compression algorithm.
+6. Pixel color is determined solely by the **intensity** of the color.
+7. In OCR, each pixel is an estimate of how **dark** the corresponding area is.
+8. On the computer, **compression** means to store or transmit information with fewer bits.
+9. A process that allows the computer to "read" printed characters is called **OCR/Optical Character Recognition**.
+10. To increase the **contrast** of a photo, you should increase the difference between the light and dark parts.
+11. When converting analog sound to digital sound, using **more** bits yield a more accurate digitization.
 12. Small changes in brightness is known as **___**.
 13. Small changes in color is known as **___**.
 14. **___** is a technique to reduce bits while storing images.
 
 ## Exercises
 1. Explain the phrases "bits are it" and "bits have no inherent meaning."
+  - Bits can represent all discrete information (e.g., numbers, colors, sounds, etc.); but there's no way we can determine what a bit sequence represents without more information than that.
 2. In the decimal to binary algorithm presented in this chapter, how do you determine what power of two to start the "place values" row of table?
+  - Decimal to binary conversion algorithm, the place value of all the powers need to be lesser than the given value.
 3. convert 1455 and 1557 to binary and then compute their addition, displaying the answer in binary. Show your work.
+  - 1455 = 0101 1010 1111
+  - 1557 = 0110 0001 0101
+  - 0101 1010 1111 + 0110 0001 0101 = 1455 + 1557 = 3012 = 1011 1100 0100
 4. In binary, add 1011,1001,110, and 1100.
+  - 1011 + 1001 + 110 + 1100 = 11 + 9 + 6 + 12 = 38 = 00100110
 5. Convert 168 and 123 to binary and then compute their addition. How many bytes does it take to represent each number= How many bytes are needed for the answer?
 6. What process could you use to remove "red eye" from a photo? Explain your algorithm in great detail.
 7. Explain how a picture with 300 pixels per inch could be converted to a picture with 100 pixels per inch.
