@@ -28,7 +28,7 @@ layout: default
         {% for tag in post.tags %}
         <span>
           {% capture tag_name %}{{ tag }}{% endcapture %}
-          <a href="/jonnynl/tag/{{ tagname | downcase }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code></a>
+          <a href="/jonnynl/tag/{{ tag_name | downcase }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code></a>
         </span>
         {% endfor %}
 

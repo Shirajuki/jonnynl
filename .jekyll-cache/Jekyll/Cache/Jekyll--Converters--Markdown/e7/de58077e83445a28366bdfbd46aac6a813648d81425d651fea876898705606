@@ -125,7 +125,7 @@
 <p><br /></p>
 <ul>
   <li>
-    <h3 id="8-forms"><a href="../8-WebTek-Forms.pdf">8-Forms</a></h3>
+    <h3 id="6-forms"><a href="../8-WebTek-Forms.pdf">6-Forms</a></h3>
     <ul>
       <li>input types: <code class="highlighter-rouge">text:password:number</code> and so on, <code class="highlighter-rouge">checkbox</code> and <code class="highlighter-rouge">radio</code></li>
       <li>textarea tag</li>
@@ -140,7 +140,7 @@
 <p><br /></p>
 <ul>
   <li>
-    <h3 id="8-inspector"><a href="../8-WebTek-InspectorUsability.pdf">8-Inspector</a></h3>
+    <h3 id="6-inspector"><a href="../8-WebTek-InspectorUsability.pdf">6-Inspector</a></h3>
     <h4 id="schneidermans-eight-golden-rules-of-usability"><strong>Schneiderman’s eight golden rules of usability:</strong></h4>
     <ul>
       <li><strong>Strive for constistency</strong> - design/layour</li>
