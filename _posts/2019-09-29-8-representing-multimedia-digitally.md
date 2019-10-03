@@ -62,7 +62,7 @@ In this chapter we considered how different forms of information are represented
   - **0000 0000 0000 0000 1111 1111**
 
 
-3. People tend to be sensitive to small changes in **___**, but not to small changes in **___**.
+3. People tend to be sensitive to small changes in **__**, but not to small changes in **__**.
   - brightness,color
   - color,brightness
   - **brightness,color**
