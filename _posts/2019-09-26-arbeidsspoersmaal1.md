@@ -28,6 +28,8 @@ categories: EXPH0300
 ### 4. Skisser trinnene ved vitenskapelig testing ifølge Popper.
   - Kriteriet på en teoris vitenskapelige status er dens testbarhet, dvs. dens falsifiserbarhet, —dens mulighet for å bli gjendrevet.
   - Hypotetisk-deduktiv metode:
+  <br/>
+
   ![hypotetisk-deduktiv metode](https://upload.wikimedia.org/wikipedia/commons/b/b9/Vitenskapelig_metode.png)
 
 
@@ -136,20 +138,38 @@ tilhørende dygder?
 14. Hva innebærer lykke i henhold til Aristoteles?
 
 ## Forelesning 4 og 5 — Den vitenskapelige revolusjonen
-1. Hva innebærer det å ha et instrumentelt kunnskapssyn, og på hvilken måte
-skiller det seg fra det aristoteliske kunnskapssynet?
-2. Hva er de viktigste forskjellene mellom et teleologisk og et mekanisk
-verdensbilde?
-3. I hvilken forstand kan man si at Kopernikus tilhører antikkens astronomi, og
-på hvilken måte representerer han et brudd?
-4. Forklar hvordan Thomas Kuhns begrep om vitenskapelige revolusjoner
+### 1. Hva innebærer det å ha et instrumentelt kunnskapssyn, og på hvilken måte skiller det seg fra det aristoteliske kunnskapssynet?
+  - Instrumentelt kunnskapssyn er syn hvor kunnskap er verdifullt fordi den er nyttig. Metoder som det å studere naturen, manipulere naturen, kunnskap som verktøy/instrumentell for å forbedre livet.
+  - Det skiller seg fra det aristoteliske kunnskapssynet siden:
+  - Aristotelisk kunnskapssynet (+Galileo/Newton) er at kunnskap er verdifullt i seg selv, tenkning, sansning, hukommelse. Om den er nyttig eller ikke.
+
+### 2. Hva er de viktigste forskjellene mellom et teleologisk og et mekanisk verdensbilde?
+  - Mekanisk - årsak/virkning, ser på verden som et en maskineri: bryter ned til flere mindre delsystem. Påvirkende/målbar - (mekaniske årsaker). Trykk og støt bevegelse.
+  - Kvantitativ: Bevegelsesproblemet er først og fremst et problem om matematisk beskrivelse .
+  - Teleologisk - forandringer skjer med hensyn til et formål. Levende ting har visse tilstander som de streber mot å realisere. (formålsårsaker)
+  - Kvalitativ: Karakterisering av hvordan vi umiddelbart opplever bevegelse.
+
+### 3. I hvilken forstand kan man si at Kopernikus tilhører antikkens astronomi, og på hvilken måte representerer han et brudd?
+  -  Kontinuitet ved at planeter går i "sirkler" baner, brudd ved at det er sola i sentrum. Heliosentrisk.
+  - Mest kontinuitet, del av middelalder tradisjon. Nøyaktige kalkulasjoner men ikke i virkeligheten. Sola i sentrum siden det er lettere matematisk å forklare. "Den siste middelalder astronom"
+
+### 4. Forklar hvordan Thomas Kuhns begrep om vitenskapelige revolusjoner
 passer på overgangen fra det geosentriske til det heliosentriske verdensbildet.
 (Stikkord: normalvitenskap, teoriladede observasjoner, anomalier,
 paradigmeskifte)
-5. Hva mente Galileo med at “naturens bok er skrevet med matematikkens tegn”
-og hvilke konsekvenser fikk det for forskningen hans?
-6. Hvilken rolle spilte eksperimenter og idealiserte betingelser i Galileos
-forskning?
+
+### 5. Hva mente Galileo med at “naturens bok er skrevet med matematikkens tegn” og hvilke konsekvenser fikk det for forskningen hans?
+  - Naturlovene er matematiske, alt kan beskrives med matematikk. "Bygget matematikk i nature".
+  - "Å måle det som er målbart og så gi det en matematisk beskrivelse; og å gjøre målbart det som ennå ikke kan måles."
+  - Da Gud skapte naturen, brukte Gud matematisk språk. Perfekt harmoni mellom matematikk og natur.
+  - Konsekvenser det fikk for forskningen hans: “Passiv observasjon” vs. eksperimenter:
+  - Sammenknytning av theoria og poiesis — det tekniske må til for teoridannelse.
+
+### 6. Hvilken rolle spilte eksperimenter og idealiserte betingelser i Galileos forskning?
+  - Forenkle og idealisere: For å kunne måle og dernest finne matematiske sammenhenger. F.eks. legemets fasong (lage kule), helningen på skråplanet, dvs. faktorer som virker på bevegelsen.
+  - Forenklingen er poengfull fordi virkeligheten er enkel.
+
+
 7. På hvilken måte bryter treghetsprinsippet med den aristoteliske fysikken?
 8. Hva menes med “determinisme”? Er det newtonske universet deterministisk?
 9. Hva ligger i skillet mellom primære (objektive) egenskaper og sekundære
