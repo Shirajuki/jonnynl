@@ -4,7 +4,8 @@ tags: EXPH0300
 categories: EXPH0300
 ---
 
-## Forelesning 1: Vitenskap, politikk og det åpne samfunnet
+Forelesning 1: Vitenskap, politikk og det åpne samfunnet
+======
 ### 1. Hvorfor kaller Popper teorien sin ’kritisk rasjonalisme’?
   - Popper kaller teorien sin for 'kritisk rasjonalisme' for han anser først og fremst **kritikk og testing** som forutsetningen for kunnskapsøkning.
   - Det var viktig for ham å tydeliggjøre sine overbevisninger om hva som var falsifiserbare og hvilke som var metafysiske. Den metafysiske overenskomsten, rasjonalismen, forstod Popper som villigheten til en **rasjonell meningsutveksling og åpenheten for kritiske argumenter**, derav kritisk rasjonalisme
@@ -75,7 +76,8 @@ Altså: ikke P
   - ???
 
 
-## Forelesning 2 — Virkelighetsoppfatninger og paradigmer
+Forelesning 2 — Virkelighetsoppfatninger og paradigmer
+======
 ### 1. Hvorfor forutsetter prøving av vitenskapelige hypoteser hjelpehypoteser og tilleggsantagelser? Forklar, gjerne ved bruk av eksempler, hvorfor dette er problematisk for Poppers syn på falsifikasjon.
   - Prøving av vitenskapelige hypoteser forutsetter: hjelpehypoteser og tillegsantagelser. Dette er fordi som induksjonsproblemet: benytter prøvingene seg ofte av observasjoner gjort tidligere. Problematisk for Poppers syn på falsifikasjon er dermed at det alltid finnes flere hypoteser som etterprøves, ikke bare en enkelt, og det kan gjøre den vanskelig å si hvilken hypotese som er blitt falsifisert dersom det oppstår en uoverensstemmelse med erfaringen. Så det er ikke bare til verifikasjon det knytter seg problemer, men også falsifikasjon
 
@@ -102,7 +104,8 @@ Altså: ikke P
     - ikke har samme problemstillinger og måte å løse disse på.
   - To paradigmer er inkommensurable (usammenlignbare): de er to forskjellige måter å se verden på. - Normativ / Deskriptiv
 
-## Forelesning 2 og 3 — Platon: ontologi og politikk
+Forelesning 2 og 3 — Platon: ontologi og politikk
+======
 1. Hva menes med relativisme? Forklar skillet mellom kulturell variasjon og
 verdirelativisme.
 2. Hva menes med den “sokratiske metoden”?
@@ -116,6 +119,7 @@ verdirelativisme.
 10. Forklar Habermas’ skille mellom formålsrasjonalitet og verdirasjonalitet.
 
 ## Forelesning 3 og 4 — Aristoteles
+======
 1. Forklar grunnbegrepene ‘ting’, ‘form’ og ‘stoff’.
 Kan hver enkelt av ting, form og stoff eksistere uavhengig av de andre to?
 2. Forsøk å sammenligne grunnbegrepene ‘ting’, ‘form’ og ‘stoff’ med Platons begreper
@@ -137,11 +141,12 @@ Hva er moralsk dygd?
 tilhørende dygder?
 14. Hva innebærer lykke i henhold til Aristoteles?
 
-## Forelesning 4 og 5 — Den vitenskapelige revolusjonen
+Forelesning 4 og 5 — Den vitenskapelige revolusjonen
+======
 ### 1. Hva innebærer det å ha et instrumentelt kunnskapssyn, og på hvilken måte skiller det seg fra det aristoteliske kunnskapssynet?
   - Instrumentelt kunnskapssyn er syn hvor kunnskap er verdifullt fordi den er nyttig. Metoder som det å studere naturen, manipulere naturen, kunnskap som verktøy/instrumentell for å forbedre livet.
   - Det skiller seg fra det aristoteliske kunnskapssynet siden:
-  - Aristotelisk kunnskapssynet (+Galileo/Newton) er at kunnskap er verdifullt i seg selv, tenkning, sansning, hukommelse. Om den er nyttig eller ikke.
+  - Aristotelisk kunnskapssynet (+Galilei/Newton) er at kunnskap er verdifullt i seg selv, tenkning, sansning, hukommelse. Om den er nyttig eller ikke.
 
 ### 2. Hva er de viktigste forskjellene mellom et teleologisk og et mekanisk verdensbilde?
   - Mekanisk - årsak/virkning, ser på verden som et en maskineri: bryter ned til flere mindre delsystem. Påvirkende/målbar - (mekaniske årsaker). Trykk og støt bevegelse.
@@ -166,19 +171,35 @@ paradigmeskifte)
   - Sammenknytning av theoria og poiesis — det tekniske må til for teoridannelse.
 
 ### 6. Hvilken rolle spilte eksperimenter og idealiserte betingelser i Galileos forskning?
+  - Som eksperiment: teleskop for å se på planeter og stjerner. Relaterer til det heliosentriske bildet.
+  - Antagelser: treghets- og relativitetsprinsippet. Ting som ikke blir påvirket av krefter, om system i bevegelse i konstant fart beveger seg eller ikke.
   - Forenkle og idealisere: For å kunne måle og dernest finne matematiske sammenhenger. F.eks. legemets fasong (lage kule), helningen på skråplanet, dvs. faktorer som virker på bevegelsen.
   - Forenklingen er poengfull fordi virkeligheten er enkel.
+  - **Komme nærmere idealiserte forhold** - enklere å beskrive. Enklere matematiske begreper --> **theoria og poiesis**
+  - Lover er simpelt bare generalisering: nei, kun generalisering som funker på eksperimentasjon.
+
+### 7. På hvilken måte bryter treghetsprinsippet med den aristoteliske fysikken?
+  - Den hastighet et legeme i bevegelse først har fått, vil bli strengt opprettholdt så lenge de ytre årsaker til akselerasjon eller retardasjon holdes borte. -> legeme kan bevege i vakuum.
+  - Trengs ikke forklaring av hvorfor det er bevegelse eller ro. Trengs forklaring av forandring av bevegelse.
+  - Aristoteles hevder at all bevegelse må forklares
+  - Aristoteles bevegelsesteori: må ha en kraft for at det skal skje bevegelse, om krafter stopper slutter legemet å bevege. Alle ting har sin rettmessige plass i kosmos. Alt er i orden.
+
+### 8. Hva menes med “determinisme”? Er det newtonske universet deterministisk?
+  - **Determinisme**: Verden er styrt av naturlover, som beskriver hvordan en tilstand virker på en annen tilstand. Alt er forutbestemt.
+  - Enhver hendelse har en genuin etterfølger, og enhver hendelse har en genuin forløper.
+  - Det newtonske universet er deterministisk ved at "alt kan beregnes matematisk". Dermed er alt forutbestemt.
+
+### 9. Hva ligger i skillet mellom primære (objektive) egenskaper og sekundære (subjektive) egenskaper? Hvilken betydning hadde dette skillet for forskningsprogrammet i renessansen?
+  - Primære - Kvantitativ - Materiens egenskaper — målbare
+  - Sekundære - kvalitativ - Subjektets reaksjon på materiens egentlige egenskaper. Eksisterer kun i bevisstheten. F.eks. varme, søtt og surt.
+
+### 10. Er det rimelig å si at paradigmet som Newton arbeidet innenfor er inkommensurabelt med det aristoteliske paradigmet
+ - Ja, siden paradigme tar utgangspunkt i forskjellige kunnskapsutgangspunkt
+ - Ulike oppfatninger, ergo inkommensurable.
 
 
-7. På hvilken måte bryter treghetsprinsippet med den aristoteliske fysikken?
-8. Hva menes med “determinisme”? Er det newtonske universet deterministisk?
-9. Hva ligger i skillet mellom primære (objektive) egenskaper og sekundære
-(subjektive) egenskaper? Hvilken betydning hadde dette skillet for
-forskningsprogrammet i renessansen?
-10. Er det rimelig å si at paradigmet som Newton arbeidet innenfor er
-inkommensurabelt med det aristoteliske paradigmet
-
-## Forelesning 6: Kunnskapsteori: rasjonalisme versus empirisme
+Forelesning 6: Kunnskapsteori: rasjonalisme versus empirisme
+======
 1. Hva er oppgaven til kunnskapsteori ifølge Descartes?
 2. Hva betyr det i filosofisk terminologi å være en rasjonalist?
 3. Angi i korte trekk Descartes’ rasjonalistiske metode for vitenskap.
