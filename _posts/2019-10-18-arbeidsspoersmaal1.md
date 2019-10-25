@@ -200,19 +200,47 @@ paradigmeskifte)
 
 Forelesning 6: Kunnskapsteori: rasjonalisme versus empirisme
 ======
-1. Hva er oppgaven til kunnskapsteori ifølge Descartes?
-2. Hva betyr det i filosofisk terminologi å være en rasjonalist?
-3. Angi i korte trekk Descartes’ rasjonalistiske metode for vitenskap.
-4. Hva er tvilens metode, og hvorfor er det nødvendig å tvile? Er Descartes skeptiker?
-5. Skisser trinnene i Descartes tvil og forklar hvordan tvilen kan opphøre med cogito
-ergo sum.
-6. Forklar kort hvordan Descartes deretter begrunner kunnskap om en ytre verden.
-7. Hva går Descartes dualisme ut på? Gi minst ett argument for og ett argument mot
-denne.
-8. Hva betyr det å være empirist? Hvilken mer moderne debatt svarer debatten mellom
-empirisme og rasjonalisme til?
-9. Skisser grunntrekkene i Humes empirisme (stikkord: inntrykk og ideer, enkle versus
-sammensatte ideer, begrepskunnskap versus faktakunnskap).
-10. Forklar hvorfor Hume mener vi ikke kan få kunnskap om årsaker, fremtiden, jeg-et,
-eller ytre gjenstander
-11. Hva menes med at Hume er naturalist? Er Hume skeptiker?
+### 1. Hva er oppgaven til kunnskapsteori ifølge Descartes?
+ - Oppgaven til kunnskapsteori er å gi oss sikker kunnskap om eksistens. Finne de fundamentale trekkene i vitenskapen (aksiomer). Stoppe vitenskapen fra å bli sett på som heksekunst (noe som kan skje om man ikke bygger vitenskap på et bra og stødig grunnlag)
+
+### 2. Hva betyr det i filosofisk terminologi å være en rasjonalist?
+  - Å være en rasjonalist betyr at en mener at det er fornuft, og ikke sansene, som er grunnlaget for kunnskap. (fundamentale innsikter, argumentativ logisk tenkning/aksiomatisk system)
+
+### 3. Angi i korte trekk Descartes’ rasjonalistiske metode for vitenskap.
+- Subjekt går gjennom metodisk tvil for å finne grunnlaget til kunnskap, cogito. Ved dette utvikler en videre metoder for å kunne tenke om verden/gi oss mer kunnskap om eksistens.
+- Tvil som metode og ikke sansene: forkaste alt som i prinsippet kan tviles på, og se hva som evt. står igjen.
+- Analytisk syntetisk metode:
+  - Klar og tydelig: betydning (geometri og aritmetikk)
+  - Analyse: kompleks enhet delt opp i enkeltdeler. Forstå hver del. F. eks. analysere funksjonen av hver del i et ur
+  - Syntese: forstå det hele satt sammen.
+  - Systematisk
+
+### 4. Hva er tvilens metode, og hvorfor er det nødvendig å tvile? Er Descartes skeptiker?
+- Tvilens metode er en kritisk prøving av alle sine sanseerfaringer og erkjenninger. Alt kan betviles unntatt at en tviler - “cogito ergo sum”. Tvil fører til eksempler som ikke kan betviles (matematikk) og dermed er det et grunnlag for å finne påstander en kan stole på.
+
+### 5. Skisser trinnene i Descartes tvil og forklar hvordan tvilen kan opphøre med cogito-ergo-sum.
+- Tviler på tradisjon, ikke fundamentalt for innsikt.
+- Tviler på sanser, kan ikke alltid stoles på, sansene kan ta feil.
+- Jeg tviler på jeget. Jeg tviler på at jeg tviler på at jeg tviler. Ergo tviler jeg. Jeg tenker på at jeg tviler; ergo tenker jeg = cogito ergo sum
+  Jeg har tvilt, og det at jeg har tvilt kan ikke jeg selv tvile på, fordi i det jeg tviler på om det har tvilt så tviler det jo. Metodisk tenkning og tvil opphører seg dermed med cogito ergo sum.
+- Tvil er en slags innebygd del i rasjonalismen. Kan ikke falsifiseres.
+
+### 6. Forklar kort hvordan Descartes deretter begrunner kunnskap om en ytre verden.
+- Jeget er en tenkende ting uten utstrekning altså res cogitans, tenkning og opplevelser er ikke materialistisk. Den ytre verden (’utenfor’ jeget), res extensa (utstrakt virkelighet) er gitt gjennom den perfekte allmektige gud (Materie: utstrekning og tetthet, det sekundære som farge kommer fra cogitans). Siden gud er god, er gud ikke en bedrager må verden være slik som vi opplever den, likt med det vi sanser den.
+
+### 7. Hva går Descartes dualisme ut på? Gi minst ett argument for og ett argument mot denne.
+- Dualisme:
+- All materie kan plottes i et koordinatsystem, primær innsikt.
+- Res cogitans, opplever verden, sekundær innsikt.
+- Interaksjons problemet, mellom res cogitans og res extensa. (essensiell og materiell)
+- Ting, eksistens forming. Oppleve materien.
+  - For:
+  - Mot:   
+
+### 8. Hva betyr det å være empirist? Hvilken mer moderne debatt svarer debatten mellom empirisme og rasjonalisme til?
+### 9. Skisser grunntrekkene i Humes empirisme (stikkord: inntrykk og ideer, enkle versus sammensatte ideer, begrepskunnskap versus faktakunnskap).
+- Hume forsørger som Descartes å sikre vitenskap, men ikke gjennom aksiomer, men heller prinsippet om menneskenaturen. Tilbake til Newtons eksperimentelle tenkemåte. Hypotetisk deduktiv. Gjetninger på hvordan verden er, deretter tester vi det ut for å se om det virker. Forskjell med Aksiomatisk deduktiv. 2 Stillinger, rasjonalistene hevder fornuft som en kilde og mer. Hume, empirist, benekter fornuft som kilde til å finne vitenskapelig innsikt. --> direkte realisme vs. representativ realisme (danne forestilling i sin bevisthet. Forestilling gitt som resultat av lys --> øye --> hjerne --> nervesystem --> forestilling om objektet). Idea - formidler sinnet og virkeligheten, kan ikke gi oss virkeligheten direkte, men heller gjennom forestillinger. Forskjell på sanseinntrykk vs. forestillinger (tenkning).
+
+### 10. Forklar hvorfor Hume mener vi ikke kan få kunnskap om årsaker, fremtiden, jeg-et, eller ytre gjenstander
+- Uklart i at det finnes en ytre verden, jeget, krysstalitet, at verden finnes i det hele tatt.
+### 11. Hva menes med at Hume er naturalist? Er Hume skeptiker?

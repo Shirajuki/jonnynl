@@ -110,6 +110,11 @@ categories: IT2805
   - Provide hierarchy of information
   - Use white space, have space for your website
   - F-shape / E-shape - visuals matter (banner-blindness)
-
   - Being different might cost you - links(blue) for instance.
   devtools
+
+<br/>
+  - ### [n-Javascript]()
+    #### **Schneiderman's eight golden rules of usability:**
+    [JSONP](https://www.ime.ntnu.no//api/fdv/rooms?callback=something)
+    Python as server using -m **** port
