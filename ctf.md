@@ -1,3 +1,9 @@
+---
+layout: page
+title: ARCHIVE
+permalink: /ctf/
+---
+
 # Shirajuki's CTF Resource/Archive
 
 > Mostly taken from <https://dox.xil.se/ctf/readme.md?raw=true#>
@@ -5,11 +11,11 @@
 ## Tools
 
 ### Android reversing
+* [adb](https://developer.android.com/studio/command-line/adb)
 * [Android APK Decompiler](http://www.javadecompilers.com/apk) Online decompile tool
 * [apktool](http://ibotpeaches.github.io/Apktool/) APK extractor, uses smali do disassemble dex
 * [dex2jar](https://github.com/pxb1988/dex2jar) Dex to java decompiler, fails sometimes
 * [jadx-gui](https://github.com/skylot/jadx) Alternative dex to java decompiler, might not fail when dex2jar fails
-* [adb](https://developer.android.com/studio/command-line/adb)
 
 ### Binary exploitation / PWN
 * Binary tools
@@ -62,13 +68,13 @@
  * [cryptohack](https://cryptohack.org/user/shirajuki/)
 
 ### Forensics tools
+* [Autopsy](https://www.autopsy.com/download/)
 * [Volatility](https://github.com/volatilityfoundation)
-* [autopsy](https://www.autopsy.com/download/)
 
 ### Hash
+* [crackstation](https://crackstation.net/) Cracks unsalted md5, sha1 etc.
 * [hashcat](https://hashcat.net/oclhashcat/) Powerful hash cracker
 * [HashPump](https://github.com/bwall/HashPump) Hash length extention attack tool
-* [crackstation](https://crackstation.net/) Cracks unsalted md5, sha1 etc.
 
 ### Markdown
 * [quick cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
@@ -85,7 +91,7 @@
  * [k in RSA](https://crypto.stackexchange.com/questions/27113/what-is-k-in-rsa)
 
 ### Network tools
-* [nmap]()
+* [nmap](https://nmap.org/book/man.html)
 * [Online port scanner](http://www.t1shopper.com/tools/port-scan/)
 * [Reverse IP domain search](http://www.yougetsignal.com/tools/web-sites-on-web-server/)
 * [aircrack-ng](http://www.aircrack-ng.org/)
@@ -109,8 +115,8 @@
 * [StegOnline](https://georgeom.net/StegOnline/checklist)
 * [Stegsolve.jar](https://github.com/eugenekolo/sec-tools/blob/master/stego/stegsolve/stegsolve/stegsolve.jar)
 * [StegCracker](https://github.com/Paradoxis/StegCracker)
-* [zsteg](https://github.com/zed-0xff/zsteg)
 * [steghide](https://github.com/StefanoDeVuono/steghide)
+* [zsteg](https://github.com/zed-0xff/zsteg)
 
 ### Password cracker
 * [jtr/John The Ripper](http://www.openwall.com/john/) Password cracker that supports many standard formats (/etc/shadow etc)
@@ -122,6 +128,7 @@
 ### Web
 * [SQLMap](https://github.com/sqlmapproject/sqlmap )
 * [SQLInjections](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection)
+* [XXE](https://github.com/swisskyrepo/PayloadsAllTheThings)
 
 ## Writeups
 
