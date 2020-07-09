@@ -1,0 +1,12 @@
+I"<!-- ALGORITHMS -->
+<h1 id="algorithms">Algorithms</h1>
+<h2 id="learning-objectives">Learning objectives</h2>
+<ul>
+  <li><strong>The Concept of an Algorithm:</strong> An informal review, The Formal Definition of an Algorithm, The Abstract Nature of Algorithms</li>
+  <li><strong>Algorithm Representation:</strong> Primitives, Pseudocode</li>
+  <li><strong>Algorithm Discovery:</strong> The Art of Problem Solving, Getting a Foot in the Door</li>
+  <li><strong>Iterative Structures:</strong> The Sequential Search Algorithm, Loop Control, The Insertion Sort Algorithm</li>
+  <li><strong>Recursive Structures:</strong> The Binary Search Algorithm, Recursive Control</li>
+  <li><strong>Efficiency and Correctness:</strong> Algorithm Efficiency, Software verification</li>
+</ul>
+:ET

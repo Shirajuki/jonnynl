@@ -1,0 +1,99 @@
+I"'<!-- ALGORITHMS -->
+<h1 id="algorithms">Algorithms</h1>
+<h2 id="learning-objectives">Learning objectives</h2>
+<ul>
+  <li><strong>The Concept of an Algorithm:</strong> An informal review, The Formal Definition of an Algorithm, The Abstract Nature of Algorithms</li>
+  <li><strong>Algorithm Representation:</strong> Primitives, Pseudocode</li>
+  <li><strong>Algorithm Discovery:</strong> The Art of Problem Solving, Getting a Foot in the Door</li>
+  <li><strong>Iterative Structures:</strong> The Sequential Search Algorithm, Loop Control, The Insertion Sort Algorithm</li>
+  <li><strong>Recursive Structures:</strong> The Binary Search Algorithm, Recursive Control</li>
+  <li><strong>Efficiency and Correctness:</strong> Algorithm Efficiency, Software verification</li>
+</ul>
+
+<hr />
+
+<h1 id="summary-5">SUMMARY 5</h1>
+<h3 id="the-concept-of-an-algorithm">The Concept of an Algorithm:</h3>
+<p>Machine cycle,CPU = a simple algorithm</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>As long as the halt instruction has not been executed continue to execute the following steps:
+a. Fetch an instruction
+b. Decode the instruction
+c. Execute the instruction
+</code></pre></div></div>
+<blockquote>
+  <p>An algorithm is an ordered set of unambiguous, executable steps that defines a terminating process.</p>
+</blockquote>
+
+<p>An algorithm is abstraxt and distinct from it’s representation. It can be represented in many ways:</p>
+<ul>
+  <li>Algebraic formula</li>
+  <li>Instruction</li>
+  <li>Electronic circuit</li>
+</ul>
+
+<h3 id="algorithm-representation">Algorithm Representation</h3>
+<p><strong>Primitive:</strong> well-defined set of building blocks from which algorithm representations can be constructed. Definitions, ambiguity, rules to represent more complex ideas constitutes a <strong>programming language</strong></p>
+
+<p><strong>Pseudocode:</strong> a notational system in which ideas can be expressed informally during the algorithm development.
+<br />Before: Algol and Pascal
+<br />Now: Java, C, Python</p>
+
+<h3 id="algorithm-discovery">Algorithm Discovery</h3>
+<p><strong>Art of problem solving: (Polya’s list)</strong>
+<br />Phase 1. Understand the problem
+<br />Phase 2. Get an idea of how an algorithmic function might solve the problem
+<br />Phase 3. Formulate the algorithm and represent it as a program
+<br />Phase 4. Evaluate the program for accuracy and for its potential as a tool for solving other problems</p>
+
+<ul>
+  <li>Working on the problem backward</li>
+  <li>Stepwise refinement (step by step)</li>
+  <li>Top-down/bottom-up methodology</li>
+</ul>
+
+<h3 id="iterative-structures">Iterative Structures</h3>
+<p><strong>The Sequential Search Algorithm:</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">Search</span><span class="p">(</span><span class="n">List</span><span class="p">,</span> <span class="n">Target</span><span class="p">):</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">List</span> <span class="ow">is</span> <span class="n">empty</span><span class="p">):</span>
+    <span class="n">Declare</span> <span class="n">search</span> <span class="n">a</span> <span class="n">failure</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">Select</span> <span class="n">the</span> <span class="n">first</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">List</span> <span class="n">to</span> <span class="n">be</span> <span class="n">TestEntry</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">TargetValue</span> <span class="o">&gt;</span> <span class="n">TestEntry</span> <span class="ow">and</span> <span class="n">there</span> <span class="n">remain</span> <span class="n">entries</span> <span class="n">to</span> <span class="n">be</span> <span class="n">considered</span><span class="p">):</span>
+      <span class="n">Select</span> <span class="n">the</span> <span class="nb">next</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">List</span> <span class="k">as</span> <span class="n">TestEntry</span><span class="o">.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">TargetValue</span> <span class="o">==</span> <span class="n">TestEntry</span><span class="p">):</span>
+      <span class="n">Declare</span> <span class="n">search</span> <span class="n">a</span> <span class="n">success</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="n">Declare</span> <span class="n">search</span> <span class="n">a</span> <span class="n">failure</span>
+</code></pre></div></div>
+<p><strong>The Insertion Sort Algorithm:</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">Sort</span><span class="p">(</span><span class="n">List</span><span class="p">):</span>
+  <span class="n">N</span> <span class="o">=</span> <span class="mi">2</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">N</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">exceed</span> <span class="n">the</span> <span class="n">length</span> <span class="n">of</span> <span class="n">List</span><span class="p">):</span>
+    <span class="n">Select</span> <span class="n">the</span> <span class="n">Nth</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">List</span> <span class="k">as</span> <span class="n">the</span> <span class="n">pivot</span> <span class="n">entry</span><span class="o">.</span>
+    <span class="n">Move</span> <span class="n">the</span> <span class="n">pivot</span> <span class="n">entry</span> <span class="n">to</span> <span class="n">a</span> <span class="n">temporary</span> <span class="n">location</span> <span class="n">leaving</span> <span class="n">a</span> <span class="n">hole</span> <span class="ow">in</span> <span class="n">List</span><span class="o">.</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">there</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">name</span> <span class="n">above</span> <span class="n">the</span> <span class="n">hole</span> <span class="ow">and</span> <span class="n">that</span> <span class="n">name</span> <span class="ow">is</span> <span class="n">greater</span> <span class="n">than</span> <span class="n">the</span> <span class="n">pivot</span><span class="p">):</span>
+      <span class="n">Move</span> <span class="n">the</span> <span class="n">name</span> <span class="n">above</span> <span class="n">the</span> <span class="n">hol</span> <span class="n">down</span> <span class="n">into</span> <span class="n">the</span> <span class="n">hole</span> <span class="n">leaving</span> <span class="n">a</span> <span class="n">hole</span> <span class="n">above</span> <span class="n">the</span> <span class="n">name</span><span class="o">.</span>
+    <span class="n">Move</span> <span class="n">the</span> <span class="n">pivot</span> <span class="n">entry</span> <span class="n">into</span> <span class="n">the</span> <span class="n">hole</span> <span class="ow">in</span> <span class="n">List</span><span class="o">.</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div></div>
+<h3 id="recursive-structures">Recursive Structures</h3>
+<p><strong>The Binary Search Algorithm:</strong></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">Search</span><span class="p">(</span><span class="n">List</span><span class="p">,</span> <span class="n">TargetValue</span><span class="p">):</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">List</span> <span class="ow">is</span> <span class="n">empty</span><span class="p">):</span>
+    <span class="n">Report</span> <span class="n">that</span> <span class="n">the</span> <span class="n">search</span> <span class="n">failed</span><span class="o">.</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">TestEntry</span> <span class="o">=</span> <span class="n">the</span> <span class="s">"middle"</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">List</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">TargetValue</span> <span class="o">==</span> <span class="n">TestEntry</span><span class="p">):</span>
+      <span class="n">Sublist</span> <span class="o">=</span> <span class="n">portion</span> <span class="n">of</span> <span class="n">List</span> <span class="n">preceding</span> <span class="n">TestEntry</span>
+      <span class="n">Search</span><span class="p">(</span><span class="n">Sublist</span><span class="p">,</span> <span class="n">TargetValue</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">TargetValue</span> <span class="o">&gt;</span> <span class="n">TestEntry</span><span class="p">):</span>
+      <span class="n">Sublist</span> <span class="o">=</span> <span class="n">portion</span> <span class="n">of</span> <span class="n">List</span> <span class="n">following</span> <span class="n">TestEntry</span>
+      <span class="n">Search</span><span class="p">(</span><span class="n">Sublist</span><span class="p">,</span><span class="n">TargetValue</span><span class="p">)</span>
+</code></pre></div></div>
+<h3 id="efficiency-and-correctness">Efficiency and Correctness</h3>
+<p>Big-O-notation / big-theta-notation
+O(log(n)),O(n),O(n<strong>2),O(n</strong>3) …</p>
+
+<h1 id="review-questions">REVIEW QUESTIONS</h1>
+<h2 id="multiple-choice">Multiple Choice</h2>
+:ET

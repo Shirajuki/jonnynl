@@ -1,0 +1,172 @@
+I"$<h1 id="shirajukis-ctf-resourcearchive">Shirajuki’s CTF Resource/Archive</h1>
+
+<blockquote>
+  <p>Mostly taken from <a href="https://dox.xil.se/ctf/readme.md?raw=true#">https://dox.xil.se/ctf/readme.md?raw=true#</a></p>
+</blockquote>
+
+<h2 id="tools">Tools</h2>
+
+<h3 id="android-reversing">Android reversing</h3>
+<ul>
+  <li><a href="https://developer.android.com/studio/command-line/adb">adb</a></li>
+  <li><a href="http://www.javadecompilers.com/apk">Android APK Decompiler</a> Online decompile tool</li>
+  <li><a href="http://ibotpeaches.github.io/Apktool/">apktool</a> APK extractor, uses smali do disassemble dex</li>
+  <li><a href="https://github.com/pxb1988/dex2jar">dex2jar</a> Dex to java decompiler, fails sometimes</li>
+  <li><a href="https://github.com/skylot/jadx">jadx-gui</a> Alternative dex to java decompiler, might not fail when dex2jar fails</li>
+</ul>
+
+<h3 id="binary-exploitation--pwn">Binary exploitation / PWN</h3>
+<ul>
+  <li>Binary tools</li>
+  <li><a href="https://www.onlinedisassembler.com/odaweb/">Online Disassembler</a></li>
+  <li><a href="http://ropshell.com">ROP shell</a></li>
+  <li><a href="http://binvis.io">Binvis</a></li>
+  <li><a href="https://github.com/devttys0/binwalk">binwalk</a> Analyze a blob and find files within</li>
+  <li>Binary unpackers</li>
+  <li><a href="http://ntinfo.biz/">Detect It Easy</a></li>
+  <li><a href="https://github.com/crackinglandia/fuu">FUU Fast Universal Unpacker</a></li>
+  <li><a href="http://www.softpedia.com/get/Programming/Packers-Crypters-Protectors/PEiD-updated.shtml">PEiD</a></li>
+  <li><a href="http://legroom.net/software/uniextract">Universal Extractor</a></li>
+  <li>PWNtools</li>
+  <li><a href="https://github.com/binjitsu/binjitsu">binjitsu</a></li>
+  <li><a href="https://github.com/niklasb/libc-database">libc database</a></li>
+  <li><a href="https://github.com/JonathanSalwan/ROPgadget">ROPGadget</a></li>
+  <li><a href="https://rafalcieslak.wordpress.com/2013/04/02/dynamic-linker-tricks-using-ld_preload-to-cheat-inject-features-and-investigate-programs/">How to preload libc fakes</a>, implement them and use LD_PRELOAD, but it can be nice to copypaste</li>
+  <li><a href="https://github.com/longld/peda">GDB-PEDA</a> Make GDB great again!</li>
+  <li><a href="https://github.com/radareorg/radare2">radare2</a></li>
+  <li><a href="https://ghidra-sre.org/">ghidra</a></li>
+</ul>
+
+<h3 id="ciphers-converters-and-decoders">Ciphers/ Converters and decoders</h3>
+<ul>
+  <li><a href="http://dcode.fr/">lots of cipher decoding</a></li>
+  <li><a href="https://www.base64decode.org/">base64 encoder/decoder</a></li>
+  <li><a href="https://www.branah.com/ascii-converter">hex, dec, bin and ascii converter</a></li>
+</ul>
+
+<h3 id="code-formatters">Code Formatters</h3>
+<ul>
+  <li><a href="http://jsbeautifier.org">JS Beautifier</a></li>
+  <li><a href="https://jsonformatter.curiousconcept.com">JSON Formatter</a></li>
+</ul>
+
+<h3 id="coding-learn2code">Coding/ Learn2code</h3>
+<ul>
+  <li><a href="https://cses.fi/problemset/">CSES</a></li>
+  <li><a href="https://www.codechef.com/">codechef</a></li>
+</ul>
+
+<h3 id="crypto">Crypto</h3>
+<ul>
+  <li><a href="http://www.numpy.org/">numpy</a> powerful number cruncher</li>
+  <li><a href="http://pythonhosted.org/pycrypto/">pycrypto</a> various crypto and hash implementations (sha-1, aes, …)</li>
+  <li><a href="https://pypi.python.org/pypi/PyNaCl/">pynacl</a> python bindings to nacl (elliptic curve etc)</li>
+  <li><a href="https://github.com/AntonKueltz/fastecdsa">fastecdsa</a> fast elliptic curve cryptography in python</li>
+  <li>Factoring RSA keys</li>
+  <li><a href="http://factordb.com/">factordb</a> online factor tool/database.</li>
+  <li><a href="http://www.sympy.org/en/index.html">sympy</a> includes ntheory.factorint() which is the best allround factoring algo. Solves most ctf-cases.</li>
+  <li><a href="https://sourceforge.net/projects/yafu/">yafu</a> includes factor(), not good at pq that are similar for big modulo</li>
+  <li><a href="https://pypi.python.org/pypi/primefac">primefac</a> python module to factor large numbers, works in parallell</li>
+  <li><a href="https://www.alpertron.com.ar/ECM.HTM">ECM factorization applet</a> Horrible java applet but it can find p and q fast if they are close.</li>
+  <li><a href="http://quipqiup.com/">quipqiup</a> Substitution cracker</li>
+  <li><a href="https://www.sagemath.org/download.html">sagemath</a> I should get sagemath for python3 soon…</li>
+  <li>Learning platforms:</li>
+  <li><a href="https://cryptopals.com/">cryptopals</a></li>
+  <li><a href="https://cryptohack.org/user/shirajuki/">cryptohack</a></li>
+</ul>
+
+<h3 id="forensics-tools">Forensics tools</h3>
+<ul>
+  <li><a href="https://www.autopsy.com/download/">Autopsy</a></li>
+  <li><a href="https://github.com/volatilityfoundation">Volatility</a></li>
+</ul>
+
+<h3 id="hash">Hash</h3>
+<ul>
+  <li><a href="https://crackstation.net/">crackstation</a> Cracks unsalted md5, sha1 etc.</li>
+  <li><a href="https://hashcat.net/oclhashcat/">hashcat</a> Powerful hash cracker</li>
+  <li><a href="https://github.com/bwall/HashPump">HashPump</a> Hash length extention attack tool</li>
+</ul>
+
+<h3 id="markdown">Markdown</h3>
+<ul>
+  <li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">quick cheatsheet</a></li>
+</ul>
+
+<h3 id="mathematics">Mathematics</h3>
+<ul>
+  <li><a href="http://www2.math.uconn.edu/~troby/math2210f16/LT/sec6_4.pdf">Gram-Schmidt</a></li>
+  <li><a href="https://docs.sympy.org/latest/modules/ntheory.html#sympy.ntheory.residue_ntheory.legendre_symbol">Quadratic residue and Legendre symbol</a></li>
+  <li>Elliptic Curves</li>
+  <li><a href="https://crypto.stackexchange.com/questions/11743/scalar-multiplication-on-elliptic-curves">Scalar-multiplication</a></li>
+  <li>RSA</li>
+  <li><a href="http://course1.winona.edu/eerrthum/math347/SquareRoots.pdf">modular square roots</a></li>
+  <li><a href="https://github.com/mimoo/RSA-and-LLL-attacks">Lattice based attacks on RSA</a> Coppersmith, Boneh Durfee etc</li>
+  <li><a href="https://stackoverflow.com/questions/3537360/calculating-binomial-coefficient-nck-for-large-n-k">Lucas theorem</a></li>
+  <li><a href="https://crypto.stackexchange.com/questions/27113/what-is-k-in-rsa">k in RSA</a></li>
+</ul>
+
+<h3 id="network-tools">Network tools</h3>
+<ul>
+  <li><a href="https://nmap.org/book/man.html">nmap</a></li>
+  <li><a href="http://www.t1shopper.com/tools/port-scan/">Online port scanner</a></li>
+  <li><a href="http://www.yougetsignal.com/tools/web-sites-on-web-server/">Reverse IP domain search</a></li>
+  <li><a href="http://www.aircrack-ng.org/">aircrack-ng</a></li>
+  <li><a href="http://www.secdev.org/projects/scapy/">Scapy</a></li>
+</ul>
+
+<h3 id="osint">OSINT</h3>
+<ul>
+  <li><a href="http://tineye.com">Reverse image search</a></li>
+  <li><a href="https://www.google.no/imghp?hl=no">google image search</a></li>
+</ul>
+
+<h3 id="signal-decoding">Signal decoding</h3>
+<ul>
+  <li><a href="https://github.com/EliasOenal/multimon-ng">Digital radio transmission decoder</a></li>
+  <li><a href="http://www.fon.hum.uva.nl/praat/">PRAAT</a> Used to map <a href="https://www.xil.se/post/sharifctf-2016-misc-sound-rspkt/">sound of keystrokes to keys</a></li>
+  <li><a href="https://morsecode.world/international/decoder/audio-decoder-adaptive.html">Morse Sound Decoder</a></li>
+</ul>
+
+<h3 id="ssl-tools">SSL tools</h3>
+<ul>
+  <li><a href="https://github.com/robertdavidgraham/heartleech">heartleech</a> snoop private key from heartbleed pcap data <a href="https://github.com/hexpresso/WU-2016/tree/master/insomnihack-ctf-2016/crypto/pcapbleeding">see writeup</a>.</li>
+  <li><a href="https://www.exploit-db.com/exploits/32745">python heartbleed</a></li>
+</ul>
+
+<h3 id="stegano">Stegano</h3>
+<ul>
+  <li><a href="https://github.com/Y-Vladimir/SmartDeblur">SmartDeblur</a></li>
+  <li><a href="https://georgeom.net/StegOnline/checklist">StegOnline</a></li>
+  <li><a href="https://github.com/eugenekolo/sec-tools/blob/master/stego/stegsolve/stegsolve/stegsolve.jar">Stegsolve.jar</a></li>
+  <li><a href="https://github.com/Paradoxis/StegCracker">StegCracker</a></li>
+  <li><a href="https://github.com/StefanoDeVuono/steghide">steghide</a></li>
+  <li><a href="https://github.com/zed-0xff/zsteg">zsteg</a></li>
+</ul>
+
+<h3 id="password-cracker">Password cracker</h3>
+<ul>
+  <li><a href="http://www.openwall.com/john/">jtr/John The Ripper</a> Password cracker that supports many standard formats (/etc/shadow etc)</li>
+  <li><a href="https://github.com/hyc/fcrackzip">fcrackzip</a></li>
+</ul>
+
+<h3 id="prng">PRNG</h3>
+<ul>
+  <li><a href="https://github.com/altf4/untwister">untwister</a> Can recover seed from various PRNG such as Mersenne Twister, PHP, Ruby.</li>
+</ul>
+
+<h3 id="web">Web</h3>
+<ul>
+  <li><a href="https://github.com/sqlmapproject/sqlmap">SQLMap</a></li>
+  <li><a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection">SQLInjections</a></li>
+  <li><a href="https://github.com/swisskyrepo/PayloadsAllTheThings">XXE</a></li>
+</ul>
+
+<h2 id="writeups">Writeups</h2>
+
+<h3 id="rsa">RSA</h3>
+<ul>
+  <li><a href="https://github.com/networknerd/CTF_Writeups/blob/master/2020/ASISCTF_2020/Crypto/BabyRSA/README.md">greatest common divisor</a></li>
+</ul>
+
+:ET

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ARCHIVE
+title: ctf
 permalink: /ctf/
 ---
 

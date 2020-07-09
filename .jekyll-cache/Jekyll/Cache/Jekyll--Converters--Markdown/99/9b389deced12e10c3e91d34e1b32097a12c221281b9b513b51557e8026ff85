@@ -1,0 +1,135 @@
+I"z<h1 id="representere-flyttall">Representere flyttall</h1>
+<p>46,67 = 4<em>10<strong>1 + 7*10</strong>0 + 6</em>10<strong>-1 + 7*10</strong>-2</p>
+<ul>
+  <li>Det samme med base 2</li>
+</ul>
+
+<h3 id="hva-blir-5890625-binært">Hva blir 5.890625 binært?</h3>
+<ul>
+  <li>101,111001</li>
+</ul>
+
+<h3 id="hva-blir-587825-binært">Hva blir 5.87825 binært?</h3>
+<ul>
+  <li>5 = 101, så 101,xxxxxx</li>
+  <li>0.87825, mellom 1 og <strong>1/2</strong> -&gt; 101,1</li>
+  <li>0.37825, mellom 1/2 og <strong>1/4</strong> -&gt; 101,11</li>
+  <li>0.12825, mellom 1/4 og <strong>1/6</strong> -&gt; 101,111</li>
+  <li>0.00325, mindre enn <strong>1/16</strong> -&gt; 101,1110</li>
+  <li>0.00325, mindre enn <strong>1/32</strong>-&gt; 101,11100</li>
+  <li>0.00325, mindre enn <strong>1/64</strong>-&gt; 101,111000</li>
+  <li>0.00325, mindre enn <strong>1/128</strong> -&gt; 101,1110000</li>
+  <li>0.00325, mindre enn <strong>1/256</strong> -&gt; 101,11100000</li>
+  <li>0.00325, mellom 1/256 og 1/512 -&gt; 101,111000001</li>
+  <li>etc…</li>
+</ul>
+
+<h3 id="for-å-lagre-et-flyttall">For å lagre et flyttall:</h3>
+<ul>
+  <li>5.89062</li>
+  <li>0: -5 -&gt; 0.89062</li>
+  <li>5.89062 = 101,111001</li>
+  <li>Tall foran komma er alltid en dermed lagres det til:</li>
+  <li>0: -8 -&gt; 01,111001</li>
+</ul>
+
+<h3 id="ieee-standard-for-floating-point-numbers">IEEE standard for floating-point numbers:</h3>
+<ul>
+  <li>Single-precision
+    <ul>
+      <li>32 bits (4 bytes)</li>
+      <li>24 bits til fortegn og mantise</li>
+      <li>8 bits til eksponent</li>
+      <li>omtrent 7 signifikante desimale siffere</li>
+    </ul>
+  </li>
+  <li>Double-precision
+    <ul>
+      <li>64 bits (8 bytes)</li>
+      <li>55 bits til fortegn og mantise</li>
+      <li>11 bits til eksponent</li>
+      <li>Omtrent 16 desimale siffere</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="hvordan-konvertere-fra-dec-til-ieee-flyttall">Hvordan konvertere fra dec til IEEE flyttall?</h3>
+<ul>
+  <li>639,6875 = 1001111111,1011</li>
+  <li>flytte 9 plasser = 1,0011111111011 * 2**9</li>
+  <li>fortegn positivt, lagres til: 0</li>
+  <li>eksponent: 9 + 127 = 136 = 100010000 (127 for å representere både negative og positive tall)</li>
+  <li>mantisen (alt til høyre foran punktum): 0011111111011</li>
+  <li>Singe-precision git: 0,100010000,0011111111011000000000 (fortegn,eksponent,mantise)</li>
+</ul>
+
+<h3 id="10-som-ieee">10 som IEEE?</h3>
+<ul>
+  <li>fortegn: 0 for positiv</li>
+  <li>eksponent:
+    <ul>
+      <li>største 2er potens som er mindre enn 10</li>
+      <li>3, siden 2**3 = 8</li>
+      <li>3 + 127 = 130</li>
+      <li>130 = 10000010</li>
+    </ul>
+  </li>
+  <li>mantise:
+    <ul>
+      <li>divider 10 på 8 gir 1,25</li>
+      <li>0.25 = 1/4, kan eksponered med 2 = 2**-2</li>
+      <li>-&gt; 0,01</li>
+      <li>01 + 00000000000000000000000 -&gt; 0100000000000000000000000</li>
+    </ul>
+  </li>
+  <li>10 som IEEE 32 bits flyttall: 0 10000010 0100000000000000000000000</li>
+</ul>
+
+<h1 id="digitale-bilder-og-video">Digitale bilder og video</h1>
+<ul>
+  <li>Lang sekvens av RGB piksler, 2D men representeres strekt ut etter rad i en minne</li>
+  <li>EKS:
+    <ul>
+      <li>bilde på 8 x 10 tommer på 300 piksler per tomme (dpi) (<strong>OPPLØSNING</strong>)
+        <ul>
+          <li>80 * (300 * 300) = 7 200 000 piksler (7.2 megapiksler)</li>
+        </ul>
+      </li>
+      <li>representerer farger med 3 bytes per piksel: (<strong>LAGRING</strong>)
+        <ul>
+          <li>3 * 7.2 i minnet = 21.6MB</li>
+        </ul>
+      </li>
+      <li>sende bildet over en 56kbps linje vil ta (21 600 000*8)/56000 = 3 085 sekunder</li>
+    </ul>
+  </li>
+  <li>fargedybde: 3*8bits = 3 * 2<strong>8 =&gt; 256</strong>3 kombinasjoner =&gt;  1.67 millioner</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>bildeformat</th>
+      <th style="text-align: left">fargedybde</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>.GIF</td>
+      <td style="text-align: left">8bit</td>
+      <td>$1600</td>
+    </tr>
+    <tr>
+      <td>.JPEG</td>
+      <td style="text-align: left">24bit</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>.PNG</td>
+      <td style="text-align: left">8/24bit + (8bit)</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+:ET

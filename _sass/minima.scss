@@ -1,12 +1,10 @@
 @charset "utf-8";
-
 // Define defaults for each variable.
-
-$base-font-family: 'Trebuchet MS', Helvetica, sans-serif !default;
-$base-font-size:   16px !default;
+$base-font-family: "Menlo", "Meslo LG", monospace;
+$base-font-size:   14px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
+$base-line-height: 1 !default;
 
 $spacing-unit:     30px !default;
 $spacing-unit-bot: 15px !default;
@@ -20,9 +18,9 @@ $text-color2:      #eee !default;
 // $grey-color-light: lighten($grey-color, 70%) !default;
 // $grey-color-dark:  darken($grey-color, 35%) !default;
 
-$text-color:       #111 !default;
-$background-color: #fdfdfd !default;
-$brand-color:      #2a7ae2 !default;
+$text-color:       #dfdfdf !default;
+$background-color: #252525 !default;
+$brand-color:      #ff7e7e !default;
 
 $grey-color:       #252525 !default;
 $grey-color-light: lighten($grey-color, 45%) !default;
@@ -58,6 +56,18 @@ strong {
 }
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
+}
+@mixin header-before($size) {
+	&::before {
+		position: absolute;
+		top: 0;
+		left: -1rem;
+		color: $brand-color;
+		content: "#";
+		font-weight: bold;
+		font-size: $size;
+		background-color: $background-color;
+	}
 }
 // Import partials.
 @import

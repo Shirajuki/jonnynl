@@ -1,0 +1,89 @@
+I"J<h1 id="short">Short</h1>
+
+<h2 id="linje-svitsjing-circuit-switching">Linje svitsjing (circuit switching)</h2>
+<ul>
+  <li>Kommunikasjon mellom endepunkter
+    <h2 id="pakke-svitsjing">Pakke-svitsjing</h2>
+  </li>
+  <li>Kommunikasjon delt mellom uilike parter av felles linje, pakkes inn i rammer: datapakker/datagram</li>
+</ul>
+
+<h2 id="lan-man-wan">LAN, MAN, WAN</h2>
+<ul>
+  <li>Nettverk i ulike størrelser</li>
+  <li>(Local, Wide, Metropolitian Area Network)
+    <h2 id="lan-topologier">Lan topologier</h2>
+  </li>
+  <li>Bus, Ring, Star, Mesh
+    <h4 id="buss-topologi">Buss-topologi</h4>
+    <p>Koblet til et felles medium via kabel. Koordinering, en og en kommunikasjon. Nettverket blir sårbart.</p>
+    <h4 id="ring-topologi">Ring-topologi</h4>
+    <p>Lukket sløyfe, går rundt i sirkel en etter en. Sårbart når det skjer avbrudd i sløyfen.</p>
+    <h4 id="stjerne-topologi">Stjerne-topologi</h4>
+    <p>Hub eller switch. Koblet sammen i et sentralt punkt. Hub’en tar i mot data fra sendere og ruter den videre til riktig mottaker. Når hub fortsatt virker vil nettverk også det, node har ikke noe å si.</p>
+    <h4 id="mesh-topologi">Mesh-topologi</h4>
+    <p>Direkte kopling mellom hver datamaskin i nettverket. Høy kostnad. Trenger bare minst 1 av mange node kjørende for å holde nettverket oppe. Ingen hub.</p>
+  </li>
+</ul>
+
+<h2 id="addressering-i-lans">Addressering i LANs</h2>
+<ul>
+  <li><strong>MAC</strong> (Media Access Control) (hardware addresse)</li>
+  <li><code class="highlighter-rouge">EKS: e4:b3:18:11:22:33</code></li>
+  <li>De 3 første OUI(org. gitt IEEE), de 3 siste NIC(org. gitt pc-id)</li>
+  <li>blokk1 = navnet til produsent</li>
+  <li>blokk
+    <h2 id="unicast-broadcast-multicast">Unicast, Broadcast, Multicast</h2>
+  </li>
+  <li>Typer av pakke levering</li>
+</ul>
+
+<h1 id="nettverk">Nettverk</h1>
+
+<h2 id="konseptet-universelle-tjenester">Konseptet Universelle tjenester</h2>
+<ul>
+  <li>Tillate kommunikasjon mellom datamaskiner uavhengig av type nettverk de sitter på. Dvs. auto connect.
+    <h2 id="ruter">Ruter</h2>
+  </li>
+  <li>Datamasin som tar pakke fra et nett, sendes til et annet nett. Kan kople sammen ulike typer av nettverk.</li>
+  <li>Bruker protokoller for å da støtte kommunikasjon mellom ulike typer nettverk.
+    <h2 id="internett-arkitektur">Internett-arkitektur</h2>
+    <h2 id="virtuelle-nettverk">Virtuelle nettverk</h2>
+  </li>
+  <li>Programvare som skaper en illusjon av et kommunikasjonssystem av mange datamaskiner.</li>
+  <li>Muliggjøres av TCP/IP</li>
+  <li>User case, bruker nettverk for noe bestemt, uten å forstå den helt.
+    <h2 id="tcpip">TCP/IP</h2>
+    <p>| TYPE              | LAYER   |
+| —————– |:——- |
+| Application       | Layer 5 |
+| Transport         | Layer 4 |
+| Internet          | Layer 3 |
+| Network Interface | Layer 2 |
+| Physical          | Layer 1 |</p>
+  </li>
+</ul>
+
+<h2 id="ip-addressering">IP-addressering</h2>
+<ul>
+  <li>på et lokalt nettverk, skal alle datamaskinene kunne se/høre hverandre.
+    <h3 id="classful-ip-adressing">Classful IP adressing</h3>
+    <h3 id="lokal-og-global">Lokal og global</h3>
+    <h3 id="ipv4-dotted-decimal-notation">IPv4 Dotted Decimal Notation</h3>
+  </li>
+  <li>32 bit Binary Number = Equivalent dotted</li>
+  <li>0000 0000 1111 1111 2222 2222 3333 3333 = 192.168.0.1
+    <h3 id="ipv4-subnetting-og-klasseløs-adresering">IPv4 Subnetting og klasseløs adresering</h3>
+    <h2 id="subnett-masker-adresse-maskiner">Subnett-masker (adresse-maskiner)</h2>
+  </li>
+  <li>større fleksibilitet på ip-adresse
+    <h2 id="ipv6-adressering">IPv6-adressering</h2>
+  </li>
+  <li>64 bits</li>
+  <li>64 bits på interface (computer), 64-K bits på subnet og K bits for GLobal prefix
+    <h3 id="ipv6-colon-hexadecimal-notation">IPv6 Colon Hexadecimal Notation</h3>
+  </li>
+  <li>1099:20:234:40ba:9f:9195:69fd:ffff</li>
+  <li>0 forenkles og blir tatt vekk!</li>
+</ul>
+:ET
