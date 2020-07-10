@@ -1,7 +1,7 @@
 @charset "utf-8";
 // Define defaults for each variable.
 $base-font-family: "Menlo", "Meslo LG", monospace;
-$base-font-size:   14px !default;
+$base-font-size:   18px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1 !default;
@@ -46,9 +46,7 @@ $on-large:         $on-laptop !default;
 // }
 // Notice the following mixin uses max-width, in a deprecated, desktop-first
 // approach, whereas media queries used elsewhere now use min-width.
-strong {
-  font-size: 1rem;
-}
+
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
     @content;

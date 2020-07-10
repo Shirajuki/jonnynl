@@ -1,12 +1,34 @@
-<h2 class="post-list-heading">Archive</h2>
+<h1 class="post-list-heading">Archive</h1>
 {% capture temptags %}
   {% for tag in site.tags %}
     {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
   {% endfor %}
 {% endcapture %}
 {% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
+<h2>Fall 2019 - First Semester</h2>
 {% for temptag in sortedtemptags %}
   {% assign tagitems = temptag | split: '#' %}
-  {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
-  <a class="tags" href="/tag/{{ tagname | downcase }}"><code class="highligher-rouge"><nobr>{{ tagname }}</nobr></code></a>
+  {% capture tagname %}{{ tagitems[1] | downcase }}{% endcapture %}
+	{% if tagname == "exph0300" or tagname == "it2805" or tagname == "tdt4109" or tagname == "ma0001"  %}
+	  <a class="tags" href="/tag/{{ tagname | downcase }}"><code class="highligher-rouge"><nobr>{{ tagname }}</nobr></code></a>
+	{% endif %}
 {% endfor %}
+<br/><br/>
+<h2>Spring 2020 - Second Semester</h2>
+{% for temptag in sortedtemptags %}
+  {% assign tagitems = temptag | split: '#' %}
+  {% capture tagname %}{{ tagitems[1] | downcase }}{% endcapture %}
+	{% if tagname == "ttm4100" or tagname == "tdt4180" or tagname == "tdt4100" or tagname == "ma0301" %}
+	  <a class="tags" href="/tag/{{ tagname | downcase }}"><code class="highligher-rouge"><nobr>{{ tagname }}</nobr></code></a>
+	{% endif %}
+{% endfor %}
+<br/><br/>
+<h2>Fall 2020 - Third Semester</h2>
+{% for temptag in sortedtemptags %}
+  {% assign tagitems = temptag | split: '#' %}
+  {% capture tagname %}{{ tagitems[1] | downcase }}{% endcapture %}
+	{% if tagname == "øko1001" or tagname == "ttm4185" or tagname == "tdt4160" or tagname == "tdt4120" or tagname == "it1901" %}
+	  <a class="tags" href="/tag/{{ tagname | downcase }}"><code class="highligher-rouge"><nobr>{{ tagname }}</nobr></code></a>
+	{% endif %}
+{% endfor %}
+<br/><br/>

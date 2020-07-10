@@ -1,4 +1,4 @@
-I"J<h1 id="short">Short</h1>
+I"]<h1 id="short">Short</h1>
 
 <h2 id="linje-svitsjing-circuit-switching">Linje svitsjing (circuit switching)</h2>
 <ul>
@@ -29,7 +29,7 @@
 <h2 id="addressering-i-lans">Addressering i LANs</h2>
 <ul>
   <li><strong>MAC</strong> (Media Access Control) (hardware addresse)</li>
-  <li><code class="highlighter-rouge">EKS: e4:b3:18:11:22:33</code></li>
+  <li><code class="language-plaintext highlighter-rouge">EKS: e4:b3:18:11:22:33</code></li>
   <li>De 3 første OUI(org. gitt IEEE), de 3 siste NIC(org. gitt pc-id)</li>
   <li>blokk1 = navnet til produsent</li>
   <li>blokk

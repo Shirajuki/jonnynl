@@ -19,23 +19,23 @@ permalink: /ctf/
 
 ### Binary exploitation / PWN
 * Binary tools
- * [Online Disassembler](https://www.onlinedisassembler.com/odaweb/)
- * [ROP shell](http://ropshell.com)
- * [Binvis](http://binvis.io)
- * [binwalk](https://github.com/devttys0/binwalk) Analyze a blob and find files within
+	* [Online Disassembler](https://www.onlinedisassembler.com/odaweb/)
+	* [ROP shell](http://ropshell.com)
+	* [Binvis](http://binvis.io)
+	* [binwalk](https://github.com/devttys0/binwalk) Analyze a blob and find files within
 * Binary unpackers
- * [Detect It Easy](http://ntinfo.biz/)
- * [FUU Fast Universal Unpacker](https://github.com/crackinglandia/fuu)
- * [PEiD](http://www.softpedia.com/get/Programming/Packers-Crypters-Protectors/PEiD-updated.shtml)
- * [Universal Extractor](http://legroom.net/software/uniextract)
+	* [Detect It Easy](http://ntinfo.biz/)
+	* [FUU Fast Universal Unpacker](https://github.com/crackinglandia/fuu)
+	* [PEiD](http://www.softpedia.com/get/Programming/Packers-Crypters-Protectors/PEiD-updated.shtml)
+	* [Universal Extractor](http://legroom.net/software/uniextract)
 * PWNtools
- * [binjitsu](https://github.com/binjitsu/binjitsu)
- * [libc database](https://github.com/niklasb/libc-database)
- * [ROPGadget](https://github.com/JonathanSalwan/ROPgadget)
- * [How to preload libc fakes](https://rafalcieslak.wordpress.com/2013/04/02/dynamic-linker-tricks-using-ld_preload-to-cheat-inject-features-and-investigate-programs/), implement them and use LD_PRELOAD, but it can be nice to copypaste
- * [GDB-PEDA](https://github.com/longld/peda) Make GDB great again!
- * [radare2](https://github.com/radareorg/radare2)
- * [ghidra](https://ghidra-sre.org/)
+	* [binjitsu](https://github.com/binjitsu/binjitsu)
+	* [libc database](https://github.com/niklasb/libc-database)
+	* [ROPGadget](https://github.com/JonathanSalwan/ROPgadget)
+	* [How to preload libc fakes](https://rafalcieslak.wordpress.com/2013/04/02/dynamic-linker-tricks-using-ld_preload-to-cheat-inject-features-and-investigate-programs/), implement them and use LD_PRELOAD, but it can be nice to copypaste
+	* [GDB-PEDA](https://github.com/longld/peda) Make GDB great again!
+	* [radare2](https://github.com/radareorg/radare2)
+	* [ghidra](https://ghidra-sre.org/)
 
 ### Ciphers/ Converters and decoders
 * [lots of cipher decoding](http://dcode.fr/)
@@ -56,16 +56,16 @@ permalink: /ctf/
 * [pynacl](https://pypi.python.org/pypi/PyNaCl/) python bindings to nacl (elliptic curve etc)
 * [fastecdsa](https://github.com/AntonKueltz/fastecdsa) fast elliptic curve cryptography in python
 * Factoring RSA keys
- * [factordb](http://factordb.com/) online factor tool/database.
- * [sympy](http://www.sympy.org/en/index.html) includes ntheory.factorint() which is the best allround factoring algo. Solves most ctf-cases.
- * [yafu](https://sourceforge.net/projects/yafu/) includes factor(), not good at pq that are similar for big modulo
- * [primefac](https://pypi.python.org/pypi/primefac) python module to factor large numbers, works in parallell
- * [ECM factorization applet](https://www.alpertron.com.ar/ECM.HTM) Horrible java applet but it can find p and q fast if they are close.
+	* [factordb](http://factordb.com/) online factor tool/database.
+	* [sympy](http://www.sympy.org/en/index.html) includes ntheory.factorint() which is the best allround factoring algo. Solves most ctf-cases.
+	* [yafu](https://sourceforge.net/projects/yafu/) includes factor(), not good at pq that are similar for big modulo
+	* [primefac](https://pypi.python.org/pypi/primefac) python module to factor large numbers, works in parallell
+	* [ECM factorization applet](https://www.alpertron.com.ar/ECM.HTM) Horrible java applet but it can find p and q fast if they are close.
 * [quipqiup](http://quipqiup.com/) Substitution cracker
 * [sagemath](https://www.sagemath.org/download.html) I should get sagemath for python3 soon...
 * Learning platforms:
- * [cryptopals](https://cryptopals.com/)
- * [cryptohack](https://cryptohack.org/user/shirajuki/)
+	* [cryptopals](https://cryptopals.com/)
+	* [cryptohack](https://cryptohack.org/user/shirajuki/)
 
 ### Forensics tools
 * [Autopsy](https://www.autopsy.com/download/)
@@ -83,12 +83,12 @@ permalink: /ctf/
 * [Gram-Schmidt](http://www2.math.uconn.edu/~troby/math2210f16/LT/sec6_4.pdf)
 * [Quadratic residue and Legendre symbol](https://docs.sympy.org/latest/modules/ntheory.html#sympy.ntheory.residue_ntheory.legendre_symbol)
 * Elliptic Curves
- * [Scalar-multiplication](https://crypto.stackexchange.com/questions/11743/scalar-multiplication-on-elliptic-curves)
+	* [Scalar-multiplication](https://crypto.stackexchange.com/questions/11743/scalar-multiplication-on-elliptic-curves)
 * RSA
- * [modular square roots](http://course1.winona.edu/eerrthum/math347/SquareRoots.pdf)
- * [Lattice based attacks on RSA](https://github.com/mimoo/RSA-and-LLL-attacks) Coppersmith, Boneh Durfee etc
- * [Lucas theorem](https://stackoverflow.com/questions/3537360/calculating-binomial-coefficient-nck-for-large-n-k)
- * [k in RSA](https://crypto.stackexchange.com/questions/27113/what-is-k-in-rsa)
+	* [modular square roots](http://course1.winona.edu/eerrthum/math347/SquareRoots.pdf)
+	* [Lattice based attacks on RSA](https://github.com/mimoo/RSA-and-LLL-attacks) Coppersmith, Boneh Durfee etc
+	* [Lucas theorem](https://stackoverflow.com/questions/3537360/calculating-binomial-coefficient-nck-for-large-n-k)
+	* [k in RSA](https://crypto.stackexchange.com/questions/27113/what-is-k-in-rsa)
 
 ### Network tools
 * [nmap](https://nmap.org/book/man.html)
@@ -133,5 +133,5 @@ permalink: /ctf/
 ## Writeups
 
 ### RSA
-* [greatest common divisor](https://github.com/networknerd/CTF_Writeups/blob/master/2020/ASISCTF_2020/Crypto/BabyRSA/README.md)
+* [common divisor](https://github.com/networknerd/CTF_Writeups/blob/master/2020/ASISCTF_2020/Crypto/BabyRSA/README.md)
 

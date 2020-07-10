@@ -1,4 +1,4 @@
-I"�*<!-- DIGITAL REPRESENTATION -->
+I"+<!-- DIGITAL REPRESENTATION -->
 <h1 id="representing-multimedia-digitally">Representing Multimedia Digitally</h1>
 <h2 id="light-sound-magic">Light, Sound, Magic</h2>
 <h2 id="learning-objectives">Learning objectives</h2>
@@ -195,7 +195,7 @@
   <li>Explain how colored light and colored paint differ. Provide concrete examples in your explanation.</li>
   <li>Provide three advantages og using digital sound over analog sound. Are there any disadvantages? Explain your answer in detail.</li>
   <li>Assuming you had a small file of 0’s and 1’s as follows, use run-length encoding to compress this file.
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0000 0000 1100 0000
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0000 0000 1100 0000
 1111 1111 0011 1111
 0011 1111 0000 0000
 1100 0000 0000 0000
@@ -203,6 +203,6 @@
   </li>
   <li>MP3 is a lossy compression that loses some pieces of information. Why is it okay to lose information?</li>
   <li>Devise an algorithm that allows you to remove certain letters from the following sentence and yet retain it’s clarity, making it understandable by most humans:
-<code class="highlighter-rouge">Ultimately, new technical advances transform every facet of human life and society.</code></li>
+<code class="language-plaintext highlighter-rouge">Ultimately, new technical advances transform every facet of human life and society.</code></li>
 </ol>
 :ET
