@@ -3,7 +3,7 @@ author: shirajuki
 email: jonnynl@stud.ntnu.no
 description: > # this means to ignore newlines until "show_excerpts:"
   Jonny's e-notebook sorted by courses with tags. Site built with <3 thanks to jekyll and github pages.
-baseurl: /jonnynl
+baseurl: /
 permalink: /tag/:categories/:title/
 show_excerpts: false # set to true to show excerpts on the homepage
 paginate: 10

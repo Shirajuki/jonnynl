@@ -144,7 +144,7 @@
 	height: 140px;
 	width: 100%;
 	.wrapper {
-		width: 95%;
+		width: 85%;
 	}
 }
 
@@ -211,7 +211,7 @@
 	flex: auto;
 	@include media-query($on-palm) {
 		div.wrapper {
-			width: 95%;
+			width: 85%;
 		}
 	}
 }

@@ -1,0 +1,556 @@
+I"&�<h1 id="innkapsling-og-validering---teorispørsmål">Innkapsling og validering - Teorispørsmål</h1>
+
+<ol>
+  <li>
+    <p>a) Hva er forskjellen på <strong>public</strong>, <strong>protected</strong> og <strong>private</strong>?
+<strong>public</strong> brukes når andre klasser skal kunne instansiere klassen direkte med **new <klasse>(…)**. **protected**-konstruktører brukes for å initialisere felt i en superklasse og kalles av subklassens konstruktør med **super(…)**. **private** brukes på hjelpekonstruktører internt i en klasse og kalles med **this(…)**.
+b) Hva bør i utgangspunktet alle variablene dine være deklarert som? 
+Innkapsling handler om å: 
+1) hindre at en kan sette objekter til en ulovlig tilstand og 
+2) skjule representasjonsdetaljer slik at en kan gjøre endringer uten at andre klasser også må endres.</klasse></p>
+  </li>
+  <li>
+    <p>Hvilke to metoder er vanlig å ha for variabler i Java? 
+Generelt er det en fordel å redusere settet med metoder, siden det gir frihet til å endre klasse siden. Når felt initaliseres i en konstruktør, så trengs som oftest ikke set-metoder. Her trenger en heller ikke get-metoder, siden metodene som stiller spørsmål og sjekker svar utgjør et komplett API for klassen.</p>
+  </li>
+</ol>
+
+<p>get-metoder gir tilgang til tilstanden uten å “avsløre” hvilke felt som brukes for å representere tilstanden.</p>
+
+<ol>
+  <li>
+    <p>Hva er forskjellen på ugyldig tilstand og ugyldig argument? 
+Hva er formålet med / begrunnelsen for å implementere en eller flere konstruktører for en klasse : En konstruktør har som formål å *initialisere *et objekt, slik at det fra starten av har en *gyldig *tilstand.</p>
+  </li>
+  <li>
+    <p>Hva er meningen med innkapsling og validering? 
+Innkapsling skal sikre et objekt starter og forblir i en <em>gyldig tilstand</em> og at innholdet kan leses og endres uten å avdekke den <em>interne representasjonen og implementasjonen</em>. Mekanismen er bruk av synlighetsmodifikatorer, som reduserer muligheten (andre) klasser har til å referere til felt og metoder.</p>
+  </li>
+</ol>
+
+<p>En kan kategorisere innkapslingsmetoder som enten lese- eller endringsmetoder. Den viktigste oppgaven til endringsmetodene, bortsett fra å utføre selve endringen er å sjekke (validere) om den nye verdien (eller nye verdiene) er lovlige/gyldige, før de evt. endres, f.eks. at et navn kun inneholder bokstaver og mellomrom.</p>
+
+<ol>
+  <li>Trenger man å validere argumenter som tas inn i konstruktøren?</li>
+</ol>
+
+<p><strong>public final int hours, minutes;
+final</strong> betyr her at feltet ikke kan endres <em>etter</em> at det er satt i konstruktøren. Selv om feltene er <strong>public</strong> så sikres innkapsling ved at felt-verdiene forblir korrekte, siden kode utenfor klassen ikke kan sette feltene til ugyldige verdier Imidlertid er det ikke i tråd med innkapsling at kode gjøres avhengig av at data er lagret i spesifikke felt. Ved bruk av get-metoder får implementasjonsklassen større frihet til å endre interne detaljer, uten at annen kode blir påvirket.</p>
+
+<p><strong>final</strong> betyr her at feltet ikke skal kunne endres etter at det er initialisert. Da må en enten initialisere i deklarasjonen eller i en eller flere konstruktører, eller en kombinasjon.</p>
+
+<p>Klasser utformet slik at instanser ikke skal kunne endres etter at de er opprettet, <em>generelle</em> fordeler og ulemper med klasser som gir ikke-modifiserbare (immutable) instanser er at klassen blir enklere, og minsker bl.a. behovet for validering. Instanser kan brukes av flere deler av et program, uten risiko for at en del endrer på dem og ødelegger for en annen del. Ulempen er at en må lage nye instanser hvis de må rettes på, istedenfor å endre dem direkte.</p>
+
+<p>Den generelle teknikken og navnekonvensjonen(e) for å representere og kapsle inn en enkel verdi, f.eks. tall eller objektreferanse, som skal kunne endres etter at objektet er opprettet:
+<strong>private T value;
+public T getValue() { … }
+**(Dersom X er boolean/Boolean, så brukes gjerne “is” som prefiks istedenfor ”get”).
+**public void setValue(T value) { … }</strong></p>
+
+<p>Med static-modifikatoren vil metodene ikke kunne referere til et bestemt RadioAlphabet-objekt. En kan for så vidt gjøre alfabetet static også, men da vil en bare kunne ha ett globalt alfabet.
+En metode kan være <strong>static</strong> siden den ikke bruker felt eller metoder som er ikke-<strong>static</strong>.</p>
+
+<p>I forhold til innkapsling, hovedgrunnen til å la en konstruktør ta en eller flere parametre : Parametrene til en konstruktør er informasjon som trengs for å gi objektet en gyldig starttilstand, som oftest verdien til felt som må være satt og det ikke finnes noen fornuftig default-verdi.</p>
+
+<p>Java ved gitte forutsetninger vil automatisk opprette en konstruktør for en klasse, slik at instanser av klassen kan opprettes, selv om en ikke eksplisitt har definert en konstruktør for klassen. Betingelsen(e) for at Java skal gjøre dette : Forutsetningen for å automatisk opprette en konstruktør er at den er instansierbare dvs. ikke abstrakt, og det ikke er definert noen andre konstruktører. En slik konstruktør vil være <strong>public</strong> og ha tom parameterliste.</p>
+
+<p>En annen teknikk for initialisering enn deklarasjon er å bruke en eller flere konstruktører. Dette er metoder med samme navn som klassen som blir implisitt kalt ved bruk av new (med eller uten argumenter). Fordeler:
+	- en kan skrive mer komplisert kode for initialisering, med f.eks. valg og validering
+	- en kan (tvinges til å) oppgi argumenter som kan brukes i initialiseringen
+	- konstruktører hjelper en å sikre tilstand ved bruk av innkapsling
+Ulemper:
+	- koden for initialisering blir ofte langt unna feltene den initialiserer
+	- det er lett å glemme å initialisere felt</p>
+
+<p>Dette handler om<a href="https://www.ntnu.no/wiki/display/tdt4100/Innkapsling"> innkapsling</a>, som har to aspekter: 1) sikring av gyldig tilstand og 2) skjuling av implementasjonsdetaljer, så koden lettere kan endres uten at andre klasser påvirkes. Av disse to er aspekt 1) viktigst.</p>
+
+<p>Den første teknikken krever mindre kode og er derfor enklere å lese og skrive. Siden en bruker <strong>final</strong>-modifikatoren så sikres aspekt 1), siden verdiene/tilstanden ikke kan endres tross at feltet er <strong>public</strong>. Imidlertid så er det andre aspektet ved innkapsling ikke ivaretatt, siden feltet er eksponert. Derfor er den andre teknikken å foretrekke, som ivaretar begge aspektene.</p>
+
+<p>Objekter som ikke kan endres, kan deles/brukes i flere datastrukturer uten fare for kluss. Hvis delte objekter kan endres, så må en være mer nøye på hva en gjør.</p>
+
+<p>finne passende datastruktur og innkapslingsmetoder. En trenger bare én add-metode, selv om det er vist to har. For å gå gjennom segmentene trenger en både én metode for <strong>count/size</strong> (ellers vet en ikke når iterasjonen skal stoppe) og én for å hente ut et element.
+Det var veldig mange som lurte på formuleringen “gå gjennom dem basert på indeks”, antageligvis fordi det ikke var sagt at dette var <em>innkapsling for andre klasser</em>, ikke til bruk internt i klassen.</p>
+
+<h1 id="grensesnittinterface---teorispørsmål">Grensesnitt/Interface - Teorispørsmål</h1>
+
+<ol>
+  <li>
+    <p>Hvilket nøkkelord i Java brukes for å angi at en klasse implementerer et grensesnitt?</p>
+  </li>
+  <li>
+    <p>Hva er forskjellen på en klasse og et grensesnitt?</p>
+  </li>
+  <li>
+    <p>Nevn tre bruksområder hvor det er en fordel å bruke grensesnitt.</p>
+  </li>
+  <li>
+    <p>Kan grensesnitt definere private metoder?</p>
+
+    <ol>
+      <li>Hvorfor gir/gir ikke dette mening?</li>
+    </ol>
+  </li>
+  <li>
+    <p>Kan et grensesnitt implementere et annet grensesnitt?</p>
+  </li>
+  <li>
+    <p>Kan et grensesnitt arve et annet grensesnitt?</p>
+  </li>
+  <li>
+    <p>Hva er forskjellen på å implementere et grensesnitt og å arve fra en annen klasse?</p>
+  </li>
+  <li>
+    <p>Hva er forskjellen på en abstrakt klasse og et grensesnitt?</p>
+
+    <ol>
+      <li>Hvilke muligheter har man i en abstrakt klasse som man ikke har i et grensesnitt?</li>
+    </ol>
+  </li>
+  <li>
+    <p>Definer (skriv ned) et grensesnitt etter hukommelsen.</p>
+  </li>
+  <li>
+    <p>Kan et grensesnitt inneholde variabler?</p>
+
+    <ol>
+      <li>Hva må eventuelt en variabel deklareres som for å være tillatt i et grensesnitt?</li>
+    </ol>
+  </li>
+  <li>
+    <p>Kan et grensesnitt definere konstruktører?</p>
+  </li>
+</ol>
+
+<p>Et grensesnitt skal ikke ha konstruktører og statiske metoder. Det er faktisk lov å ha statiske metoder i grensesnitt i Java, men det hører ikke med i objektorientert tenkning.</p>
+
+<p>Dice-grensesnittet *må *utvide (extends) Iterable<Integer> *og kan *liste opp metoden(e) fra Iterable. for et grensesnitt kan gjenta metoder fra et grensesnitt det utvider, men må ikke.</Integer></p>
+
+<h1 id="arv---teorispørsmål">Arv - Teorispørsmål</h1>
+
+<ol>
+  <li>
+    <p>Hva er forskjellen på en abstrakt klasse og et grensesnitt?
+En abstrakt klasse er en klasse som ikke kan instansieres, enten fordi den er ufullstendig ved at den deklarerer én eller flere abstrakte (tomme) metoder, eller fordi det ikke gir mening. Ingen av de tre klassene bør være abstrakte, siden alle er fullstendige og implementerer en nyttig relasjon.</p>
+  </li>
+  <li>
+    <p>Hvilke krav må en subklasse oppfylle for at det skal være naturlig for den å arve fra en superklasse?</p>
+  </li>
+  <li>
+    <p>Hvilket nøkkelord brukes for å arve fra en annen klasse i Java?</p>
+  </li>
+  <li>
+    <p>Hvor mange klasser kan en subklasse arve fra?</p>
+  </li>
+  <li>
+    <p>Du har tre klasser: Human, Person og Student. Student arver fra Person, og Person arver fra Human. Du lager et objekt av hver klasse: human, person, student.</p>
+
+    <ol>
+      <li>
+        <p>Har student tilgang til feltene og metodene i Human?</p>
+      </li>
+      <li>
+        <p>Hva vil “human instanceof Student” returnere?</p>
+      </li>
+      <li>
+        <p>Hva vil “student instanceof Human” returnere?</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Når en subklasse arver fra en superklasse, får den tilgang til konstruktørene til superklassen?</p>
+
+    <ol>
+      <li>Når får den eventuelt (ikke) det?</li>
+    </ol>
+  </li>
+  <li>
+    <p>Forklar hvordan bruk av protected-felt/metoder fungerer ved arv.</p>
+  </li>
+  <li>
+    <p>Kan man instansiere en abstrakt klasse?
+2 klasser har en del felles egenskaper, som kan samles i en felles superklasse kalt <strong>MenuItem</strong>:
+Her er poenget å samle det som er felles. Klassen bør være abstract, siden det ikke gir mening å instansere den.</p>
+  </li>
+  <li>
+    <p>Er det nødvendig å bruke annotasjonen @Override når man redefinerer en arvet metode?</p>
+  </li>
+  <li>
+    <p>Du har arvet en metode fra en superklasse og redefinert den i din egen klasse. Hvordan kan man bruke metoden som var definert i superklassen?</p>
+  </li>
+  <li>
+    <p>Du skriver din egen konstruktør i en subklasse, men ønsker å kalle superklassens konstruktør for å slippe å kopiere kode. Hvordan gjør du dette?</p>
+  </li>
+</ol>
+
+<ul>
+  <li>Når en arver så kan en ikke kun arve de metodene en ønsker, men får alle med på kjøpet. Da vil en være nødt til å redefinere alle en ikke trenger/ønsker at skal være tilgjengelig.</li>
+  <li>Det vil ikke alltid være logisk riktig at klassen skal være **instanceof List<X>**</X></li>
+  <li>(Teknikken kan bare brukes for én slik liste, siden en bare kan arve fra én implementasjonsklasse).</li>
+</ul>
+
+<p><strong>super()</strong> kaller konstruktøren i superklassen og trengs for å sikre at også superklassens konstruktør blir kjørt. Her er super-klassen implisitt Object-klassen. Hvis linja ikke er med, så vil et tilsvarende kall, altså til en konstruktør uten argumenter, bli lagt til av kompilatoren. Derfor kan vi trygt fjerne linja.</p>
+
+<p>Poenget her at siden <strong>Course</strong> og <strong>Meal</strong> nå har en felles superklasse, så blir det enklere å ha datastrukturer med begge disse objekttypene i. Dette forenkler både <strong>Menu</strong>- og <strong>Table</strong>-klassene. En blir her bedt om å skrive mye kode på nytt, og siden eksamen var digital, så bør det være greit i praksis. Det er greit å bare skrive de delene som blir endret, til nød forklare endringene med tekst.</p>
+
+<p>Det disse tre implementasjonene har felles er <strong>score</strong>-verdien, så denne kan legges i den abstrakte <strong>AbstractScorer</strong>-klassen, initialiseres ved å kalle <strong>super(score)</strong> øverst i subklasse-konstruktørene og leses med <strong>getScore()</strong>:</p>
+
+<p>En antar at det finnes ulike klasser for ulike typer fremkomstmidler en kan leie. Hver type skal kunne ha sine egne sett med verdier brukt til prising, f.eks. pris pr. time og pris pr. Tidsforlengelse. Hvordan arvingsmekanismen kan benyttes?</p>
+<ul>
+  <li>Det naturlige er da å lage en abstrakt klasse <strong>Vehicle</strong> som inneholder priselementer (pris per time, forsentbot etc) og gettere/settere (som <strong>getHourRate</strong>, <strong>setLocation</strong> m.m). Ikke alle av disse trenger å være abstrakte, eksempelvis kan det som har med lokasjon å gjøre være implementert i Vehicle. Alle fremkomstmidler (<strong>Bike</strong>, <strong>Hoverboard</strong> og slikt) og må så arve denne klassen og kan redefinere metoder for å endre verdiene/logikken som brukes i prisberegningen. Der en i <strong>BikeRental</strong> (som egentlig burde skifte navn til <strong>VehicleRental</strong>) refererer til <strong>Bike</strong> må en nå i stedet referere til den abstrakte klassen <strong>Vehicle</strong>.</li>
+</ul>
+
+<p>Vi lager en abstrakt klasse basert på Trip og gjør estimateTime abstract:
+Så lar vi Trip arve fra denne og implementere estimateTime som over.
+Andre varianter (interface) vil gjøre det samme, men implementere estimateTime med annen logikk. Det er strengt tatt ikke nødvendig å ha en abstrakt klasse, en kan alternativt bare arve fra Trip.</p>
+
+<p><strong>SimpleTable</strong> og <strong>CompositeTable</strong> blir subklasser av Table, som selv enten blir et grensesnitt eller en abstrakt klasse med i hvertfall <strong>getCapacity</strong>-metoden. De to variantene er vist under. <strong>SimpleTable</strong> kan ta over det meste av <strong>Table</strong>-koden, evt. arve alt. <strong>CompositeTable</strong> kapsler inn informasjonen fra <strong>mergeTable</strong> og bruker de to <strong>Table</strong>-objektene til å beregne kapasiteten. Alternativt kan <strong>Table</strong> beholde <strong>capacity</strong>-feltet og <strong>getCapacity()</strong>-metoden og de to andre initialiserer <strong>capacity</strong> med <strong>super(…)</strong>. Vi har her ikke lagt opp til at <strong>CompositeTable</strong>-objekter skal få et løpenummer, men det er greit å la den funksjonaliteten være en del av en abstract <strong>Table</strong>-(super)klasse.</p>
+
+<p>Her er poenget å skille ut det som har med <strong>score</strong> å gjøre i en abstrakt superklasse, nemlig feltet <strong>score</strong>, (den delen av) konstruktøren som tar inn og setter <strong>score</strong> og <strong>getScore</strong> og <strong>setScore</strong>. Dette er viktigst.</p>
+<ul>
+  <li>Hvis en lar den abstrakte superklassen implementere Dice-grensesnittet evt. deklarer en del av Dice sine metoder som abstrakte metoder, så kan enda flere metoder implementeres, f.eks. trenger toString og getValueCount bare getDieCount og getDieValue. En trenger ikke implementere disse, men forklare at det går an og vil være lurt.</li>
+</ul>
+
+<h1 id="delegering---teorispørsmål">Delegering - Teorispørsmål</h1>
+
+<ol>
+  <li>
+    <p>Forklar forholdet mellom en delegat og en delegerende.
+<a href="https://www.ntnu.no/wiki/display/tdt4100/Delegeringsteknikken">Delegeringsteknikken</a> i praksis, hvor en instans av (en implementasjon av) et grensesnitt bruker en eller flere andre instanser av (implementasjoner av) samme grensesnitt, til å gjøre jobben.</p>
+  </li>
+  <li>
+    <p>I et firma med en Manager og flere Coworkers, hvem er naturlig de(n) delegerende og hvem er delegat(er)?</p>
+  </li>
+  <li>
+    <p>Forklar hvordan det kan være nyttig å benytte grensesnitt i forbindelse med delegering.</p>
+
+    <ol>
+      <li>Ved å benytte grensesnitt for en delegat-klasse, hvilke fordeler får man?</li>
+    </ol>
+  </li>
+  <li>
+    <p>Når kan det være smart å benytte delegeringsteknikken fremfor arv?</p>
+  </li>
+</ol>
+
+<p>Delegering er en teknikk hvor et objekt, videreformidler kall til en “delegat” når det er behov for delegatens ferdigheter. I dette tilfellet er det viktig at TimeSlot-objektene som ligger i delegaten regnes med i logikken. F.eks. må <strong>getTimeSlotAt(…)</strong>-metoden sjekke egne TimeSlot-objekter og delegatens og returnere det tidligste av de to.</p>
+
+<p>I del 2 ble utregning av kostnad ‘hardkodet’ inn i <strong>rentBike</strong>. Hvis man skal støtte utregning av kostnader ved hjelp av delegering, så må man lage et grensesnitt (interface) som inneholder en metode for beregning av pris. I LF har vi laget grensesnittet <strong>PricePolicy</strong>, som blir implementert av klassen <strong>DefaultPricePolicy</strong>. I del 2 ble all beregning gjort i en egen hjelpemetode, <strong>computePrice</strong>. Det er derfor helt greit at grensesnittet inneholder nettopp denne metoden. I <strong>BikeRental</strong> må en så opprette et <strong>DefaultPricePolicy</strong>-objekt, og kalle dennes <strong>computePrice</strong> for å beregne pris. Hvis en vil bruke en annen prisingslogikk, så bruker man bare en annen implementasjon.</p>
+
+<p>en kan også bruke delegering for å tilby <em>individuell</em> prising (altså pr. <strong>Person</strong>), f.eks. Bonus-ordninger: I 3a ble det lagt opp til delegering av kostnadsberegning, men dette var ikke knyttet til enkeltpersoner. For å implementere individuell prising kan en heller lage et sett med ulike <strong>PricePolicy</strong>, (studenter, barn, voksne etc.) og knyttet disse til <strong>Person</strong>-objektet (med gettere og settere). Når <strong>rentBike</strong> skal beregne kostnad må en så delegere til <strong>Person</strong>-objektet (som igjen ligger i <strong>Bike</strong>) sin <strong>PricePolicy</strong>.</p>
+
+<p>Delegeringsteknikken er mer fleksibel enn arv, fordi en når som helst kan bytte ut TimeEstimator-objektet og dermed også endre oppførselen til estimateTime-metoden. Arv-mekanismen frigjøres dessuten til andre mer “verdige” formål.</p>
+
+<p>Poenget her er å gjøre som beskrevet i oppgaven, å bruke <strong>rel2</strong> på resultatet av å bruke <strong>rel1</strong>. Her sjekkes det ikke for duplikater (som det sjelden er behov for med relasjoner av denne typen). Dette er <em>delegeringsteknikken</em> i praksis, som kjennetegnes ved at et <em>delegerende</em> objekt, som skal utføre en oppgave, ber en eller flere <em>delegater</em> om å utføre (omtrent) samme oppgave, for så å kombinere resultatene. Her delegeres det til <strong>rel1</strong> og <strong>rel2</strong>, som implementerer samme grensesnitt som <strong>Relation2</strong>.</p>
+
+<h1 id="observatør-observert-teknikken---teorispørsmål">Observatør-observert-teknikken - Teorispørsmål</h1>
+
+<ol>
+  <li>
+    <p>På hvilken måte kan observatør-observert-teknikken hjelpe til å holde tilstanden i et program konsistent?
+Observatør-observert-teknikken brukes når en eller flere objekter, her kalt observatører, må holdes konsistent med et annet objekt, her kalt observert, og det observerte objektet sin implementasjon ikke skal være for tett knyttet til observatørenes. Teknikken er basert på at det observerte objektet sier fra til en eller flere observatører om at tilstanden er endret, slik at observatørene kan oppdatere sin tilstand ift. deres regler for konsistens.</p>
+  </li>
+  <li>
+    <p>Nevn (minst) tre metoder som burde være med i de aller fleste implementasjoner av observatør-observert-teknikken.</p>
+  </li>
+  <li>
+    <p>Hvorfor kan det være lurt å benytte grensesnitt for den observerte parten i et observatør-observert-forhold?</p>
+  </li>
+  <li>
+    <p>Hvorfor kan det være lurt å benytte grensesnitt for observatør-parten i et observatør-observert-forhold?</p>
+  </li>
+  <li>
+    <p>Tenk at en nettside oppdateres jevnlig, og du ønsker å få et varsel til mobilen din hver gang nettsiden oppdateres. Hvilken av partene er den observerte og og hvilken er observatør?</p>
+  </li>
+  <li>
+    <p>Hvorfor lønner det seg å bruke observatør-observert-teknikken fremfor å jevnlig sjekke om et objekt har endret tilstand?</p>
+  </li>
+</ol>
+
+<p>Dette er standard bruk av observatør-observert-teknikken, altså må en ha felt med liste av lyttere, metoder for å legge til og fjerne lyttere og helst en hjelpemetode for å varsle dem.</p>
+
+<p>Observatør-observert-teknikken, lytte til endringer. Lytting med 1) et grensesnitt, 2) liste av lyttere, 3) add/remove-metoder for lyttere, 4) metode til lytterne og 5) kall av metode når endring skjer.</p>
+
+<p>Observerbarhet krever:
+	1. at en holder styr på lytterne og
+	2. at alle endringsmetoder kaller lytternes lyttermetode.</p>
+
+<p>Observert-observatør-teknikken brukes til å følge med på hvordan tilstanden til objekter endres over tid, typisk for å sikre konsistens med andre objekter, f.eks. et GUI med “indre” objekter. Et objekt er observerbart dersom en kan lese ut alle relevant tilstand og en kan få beskjed (lytte på hendelser) om når og hvordan denne tilstanden endres.
+	Det siste spørsmålet er et lurespørsmål: Dice er allerede observerbar! Siden tilstanden ikke kan endres, så trenger en ikke å støtte lyttere. Hvis tilstanden kunne endres, så måtte man 1) definert et lyttergrensesnitt, 2) hatt metoder for å administrere (registrere og avregistrere) lyttere, 3) hatt metode(r) for å sende ut varsler om tilstandsendringer og 4) kalt disse metodene i alle metoder som faktisk endrer tilstanden.</p>
+
+<p>Den generelle teknikken er <em>observatør-observert</em>, som både brukes for å si fra om at tiden går og om at <strong>Trip</strong> er endret. Tiden håndteres ved å anta at det finnes en <strong>Clock</strong>-klasse, som kan si fra hvert minutt til et sett med lyttere. En kan f.eks. ha grensesnittet <strong>ClockListener</strong> med <strong>minuttPassed()</strong>-metoden og metodene <strong>addClockListener</strong> og <strong>removeClockListener</strong>. <strong>Trip</strong> må gjøres <em>observerbar</em>: 1) en må ha lese-metoder for alle relevante data og 2) en må kunne registrere lyttere (som implementerer et lyttergrensesnitt f.eks. kalt <strong>TripChangedListener</strong>) som får beskjed når objektet endres (f.eks. vha. en metode kalt <strong>tripChanged</strong>).</p>
+
+<p>Hva innebærer observerbarhet? Hvordan en gjør en (egenskap i en) klasse observerbar?</p>
+<ul>
+  <li>Observerbarhet handler om å la et eller flere objekter (observatørene/lytterne) få beskjed om endringer i et annet objekt (den observerte). Observert-klassen må administrere et sett med lyttere (objekter som implementerer et lyttergrensesnitt), vha. felt for Collection av lyttere og add/remove-metoder. Alle steder hvor tilstanden (til egenskapen) endres, må det skytes inn kode som sier fra til lytterne (kall på fire-metode, som går gjennom lytterne).</li>
+  <li>Capacity-egenskapen beregnes på bakgrunn av <strong>tables</strong>- og <strong>seatings</strong>-listene, og derfor må lytterne varsles hver gang disse endres (av <strong>addTable</strong>, <strong>removeTable</strong>, <strong>addSeating</strong> og <strong>removeSeating</strong>). Det skilles ikke mellom om kapasiteten øker eller minker, selv om det er økning som <strong>GuestManager</strong> er interessert i. Lyttere registreres med <strong>add</strong>/<strong>removeCapacityListener</strong>-metoder og en <strong>fireCapacityChanged</strong>-metode, som varsler lytterne (CapacityListener-implementasjoner), kalles av endringsmetodene.</li>
+</ul>
+
+<p>Standardteknikken krever et passende lyttergrensesnitt og en liste av lyttere som kalles på passende sted. En bruker gjerne en Collection for å lagre lytterne og add/remove-metoder for å administrere lytterne.</p>
+<ul>
+  <li>LF definerer lyttergrensesnittet <strong>TreatmentListener</strong>. Dette grensesnittet har én metode, som kalles idet doktor-pasient-koblingen etableres, altså på tidspunktet det passer å gi beskjed til pasienten om hvilken doktor hen skal gå til. Metoden bør ta inn faktisk pasient, doktor og akuttmottak (<strong>TreatmentUnit</strong>).</li>
+  <li>Endringer som må gjøres i <em>den</em> <em>observerte</em>, <strong>TreatmentUnit</strong>, er at alle lytterne lagres i en <strong>private</strong> <strong>Collection</strong> av type <strong>TreatmentListener</strong>, og at den legger inn relevante <strong>public add/remove</strong> til denne. I tillegg defineres hjelpemetoden <strong>fireTreatmentStarted</strong>, som kalles rett etter at <strong>setPatient</strong> har etablert en ny doktor-pasient-kobling (i både <strong>startTreatment(Doctor)</strong> og <strong>startTreatment(Patient)</strong>).</li>
+</ul>
+
+<h1 id="typer---teorispørsmål">Typer - Teorispørsmål</h1>
+
+<ol>
+  <li>**Collection<String> strings = new ArrayList<String>()**
+a) Hva er sammenhengen med typen deklarert på venstre-side og typen deklarert på høyre-side?
+Hvordan påvirker **String**-spesialiseringen (altså det som står mellom **&lt; &gt;**) bruken av **strings**-variabelen?
+</String></String>    <ul>
+      <li>Typen på høyresiden må være den samme eller en subklasse (inkl. implementasjonsklasse, som her) av typen på venstresiden. Spesialiseringen må være den samme. <strong>String</strong>-spesialiseringen påvirker parametertyper og returtyper for <strong>Collection</strong>- og <strong>ArrayList</strong>-metodene. F.eks. vil <strong>get</strong> returnere <strong>String</strong> og <strong>add</strong> og <strong>set</strong>-metodene vil ta en <strong>String</strong> som parameter.
+b) Hvordan påvirker det videre programmering at det står <String>?</String></li>
+    </ul>
+  </li>
+  <li>
+    <p>Hva er casting?</p>
+  </li>
+  <li>
+    <p>a) Hva er forskjellen på int og Integer?
+b) Gi et eksempel på når en må bruke Integer.</p>
+  </li>
+  <li>
+    <p>Hva er typen til følgende uttrykk? 
+a) “Java” + “Gøy”;  // String + String = String
+b) 1/2;  // int / int = int
+c) (“J”+”ava”).charAt(2);  // char</p>
+  </li>
+  <li>Public Eksamen(String besvarelser…){} 
+Hvor mange String-objekter kan sendes inn i denne konstruktøren?</li>
+</ol>
+
+<p>Man må deklarere <em>typen</em> til alle felt, variabler og parametre (i motsetning f.eks. Python, Javascript og Matlab). De viktigste fordelene er at det blir lettere å:</p>
+
+<ol>
+  <li>
+    <p>oppdage/hindre feil bruk av verdier (for verktøy, kompilator og programmerer)</p>
+  </li>
+  <li>
+    <p>tilby hjelp til kodingen, f.eks. foreslå metoder</p>
+  </li>
+  <li>
+    <p>kompilere til effektiv kode</p>
+  </li>
+</ol>
+
+<p>At metoder i en klasse kan ha samme navn kalles “overloading”. For å avgjøre hvilken som skal kalles, brukes de deklarerte typene til argumentene (ikke returverdien). Merk at dette er noe annet enn polymorfi, som handler om at subklasser kan ha ulike implementasjoner av metoder definert i en felles superklasse.</p>
+
+<p>Hensikten med å definere en <strong>toString()</strong>-metode er at <strong>toString()</strong>-metoden brukes implisitt når Java lager String-objekter av instanser ifm. bruk av <strong>+</strong> og IO og sikrer at tilstanden til instanser blir presentert på en nyttig måte.</p>
+
+<p>Hvordan er klassen kodet så det forklarende ordet/navnet vises ved utskrift, f.eks. med <strong>System.out.println(…)</strong>? Ved utskrift så brukes implisitt <strong>toString()</strong>-metoden, som er implementert og returnerer <strong>label</strong>.</p>
+
+<p>Et funksjonelt grensesnitt har bare én abstrakt metode, og resultatet av å utføre metoden skal alltid være det samme for samme argumenter. Dette gjør at man kan tenke på implementasjonen som en matematisk funksjon. Det er også et poeng (men underordnet) at grensensittet er ment å være den <em>primære</em> funksjonen til klassen som implementerer den. Ellers gir det ikke så mye mening å bruke anonyme klasser/lambda-uttrykk til å implementere grensesnittet. Et eksempel på dette er <strong>Comparator</strong>, som kun implementeres for å sammenligne argumentene. <strong>Comparable</strong>-derimot, implementeres av dataklasser og er derfor en sekundær funksjon, som det ikke er noe poeng å implementere som primærfunksjon.</p>
+
+<p><strong>DiceScorer</strong>-grensesnittet er funksjonelt fordi det 1) har kun én abstrakt metode og 2) er ment å være primærtfunksjonen til klassen som implementerer den.</p>
+
+<p>Funksjonelle grensesnitt har bare én metode (krav 1), og den metoden er <em>funksjonell</em> fordi den for samme input(-parametre) alltid gir samme output(-verdi). En annen måte å si det siste på er at den ikke har intern tilstand som påvirker oppførselen og som kan endres. Det er også vanlig å tenke på grensesnitt-metoden som klassens <em>hovedfunksjon</em>.</p>
+
+<p><strong>CapacityListener</strong>-grensesnitt er (teknisk sett) funksjonelt, siden det bare har én (abstrakt) metode (og kan derfor implementeres med lambda-syntaksen). Dette kreves i et svar som får poeng i det hele tatt. I tillegg bør andre argumenter (for at grensesnittet ikke er funksjonelt) trekkes inn, f.eks. at metoden typisk ikke er implementasjonens primære funksjon og at en ikke tenker på den som en matematisk funksjon som kun er avhengig av argumentene.</p>
+
+<p>Hjelpemetode <strong>tokenize</strong>, som kan være nyttig ved innlesing og som kan antas ferdig implementert. Modifikatorer?
+En slik hjelpemetode bør for det første være markert som <strong>private</strong>, siden det ikke er naturlig at dette er en tjeneste som tilbys andre klasser. For det andre bør den være markert som <strong>static</strong>, siden den ikke bruker (leser eller endrer) tilstanden til noe <strong>Family</strong>-objekt. Eneste grunn til at den ikke skal være <strong>static</strong>, er hvis en subklasse av <strong>Family</strong> har behov for å redefinere den, og det er ikke aktuelt her.</p>
+
+<p>Her er poenget at en trenger en <em>global</em> teller, som en får til i Java ved bruk av <strong>static</strong>. Denne må brukes og økes i <strong>Table</strong> sin konstruktør.</p>
+
+<h1 id="testing---teorispørsmål">Testing - Teorispørsmål</h1>
+
+<ol>
+  <li>
+    <p>Hvilke tre “faser” går man gjennom under kjøring av en JUnit-test?</p>
+
+    <ol>
+      <li>Hva må de ulike metodene i hver “fase” hete?</li>
+    </ol>
+  </li>
+  <li>
+    <p>Hvor mange test- metoder kan en JUnit-test inneholde?</p>
+  </li>
+  <li>
+    <p>Hva er meningen med testing av programmer på enhetsnivå (Slik JUnit gjør)?</p>
+  </li>
+</ol>
+
+<p>Den <em>generelle</em> testeteknikken som JUnit-testing (og JExercise) baserer seg på er å rigge opp objekter med en før-tilstand, endre tilstanden og sammenligne med forventet etter-tilstand. Noen ganger er det ingen før- og etter-tilstand, da en kun sjekker et selvstendig metodekall, dvs. sammenligner returverdi med fasiten.</p>
+<ul>
+  <li>bruk av <strong>assertTrue</strong> og <strong>==</strong> og **ikke assertEquals **for å sjekke for identisk likhet.</li>
+</ul>
+
+<p>For å teste iterasjon med foreach-løkker, må vi bruke metoden som en slik løkke (implisitt) bruker, nemlig <strong>iterator()</strong>-metoden og <strong>Iterator</strong>-objektet som denne returnerer. Her brukes objektene som er rigget opp i <strong>setUp</strong>-metoden.</p>
+
+<p>hvorfor det er mer komplisert å teste <strong>rentBike</strong> og <strong>returnBike</strong> enn å teste <strong>getRentedBikes</strong>. Hvilke aspekter ved disse metodene er det som gjør det mer komplisert?</p>
+<ul>
+  <li><strong>getRentedBikes</strong> kan testes ved å sjekke bare returverdier, etter å ha rigget opp diverse objekter, siden metoden ikke har <em>side-effekter</em>. Effekten av <strong>rentBike</strong> og <strong>returnBike</strong> er derimot endring av diverse datastrukturer, så disse må sjekkes etterpå.</li>
+</ul>
+
+<h1 id="unntakexception">Unntak/Exception</h1>
+
+<p>I metoder som endrer (en verdi i) et objekt, så bør argumenter valideres. Dette må skje før selve endringen og i tilfelle ugyldig(e) verdier så kastes et unntak av typen <strong>IllegalArgumentException(…)</strong>.</p>
+
+<p>En såkalt <em>checked exception</em> er en subklasse av Exception som ikke samtidig er en subklasse av RuntimeException. En slik Exception må deklareres vha. <strong>throws</strong> og den kallende metoden må enten håndtere unntaket med <strong>try</strong>/<strong>catch</strong> eller deklarere det med <strong>throw</strong>s.</p>
+
+<p>Checked exception : en <strong>Exception</strong> som ikke er en <strong>RuntimeException</strong> er en <em>checked</em> exception. En slik unntakstype krever enten try/catch eller en <strong>throws</strong>-deklarasjon for å unngå kompileringsfeil.</p>
+
+<p>Metoder som sjekker argumentene sine før de utfører evt. endringer på objektet kalles <em>validering</em> (og er en viktig del av innkapsling). Det er lurt å skille ut valideringen i en egen metode som kalles fra endringsmetodene. Metoden kan være <strong>protected</strong>, så subklasser kan redefinere og gjenbruke valideringslogikken. Det er vanligst å bruke en såkalt <em>unchecked exception</em> (usjekket unntak), som <strong>IllegalArgumentException</strong>.</p>
+
+<p><strong>throws</strong>-deklarasjonen forteller leseren av koden at konstruktørene kan utløse unntak. Siden unntakene er en subklasse av <strong>RuntimeException</strong> og dermed ikke <em>checked</em>, så er det ikke nødvendige.</p>
+
+<h1 id="ulike-grensesnitt-typer">Ulike grensesnitt typer</h1>
+
+<p>Standard funksjonelle grensesnitt, inkl. **Predicate<T>**, **Consumer<T>**, **Supplier<T>**, **Function&lt;T, R&gt;**, **BiFunction&lt;T1, T2, R&gt;**, **BinaryOperator<T>** og **UnaryOperator<T>**</T></T></T></T></T></p>
+
+<p>Grensesnitt som <strong>Predicate</strong> er et såkalt <em>funksjonelt</em> grensesnitt, siden det har én metode som (er ment som å) oppfører seg som en matematisk funksjon.</p>
+
+<p>Metoden deklareres som **Collection<Person> getMatchingPersons(Collection<Person> persons, Predicate<Person> test)**. Koden kan skrives på (minst) to måter, enten som en én-linjer med **Stream**-teknikken eller med en løkke som tester og legger til en resultat-liste. Kallet gjøres enklest med lambda-notasjonen:
+**getMatchingPersons(persons, p -&gt; p.getGender() == ’M’ &amp;&amp; p.getAge() == 18)**</Person></Person></Person></p>
+
+<p>Collection-rammeverket** (Collection<T>-, List<T>-, Set<T>, Map&lt;K, V&gt;-, Iterator<T>- og Iterable<T>-**grensesnittene og** ArrayList<T>- og HashMap&lt;K, V&gt;-klassene)**, inkludert bruk av **&lt;&gt; **i deklarasjoner, såkalte generics
+Hvis en klasse implementerer **Iterable** så kan en bruke en instans av klassen på høyresiden av :-tegnet i en for-each-løkka, og iterere over alle verdier "inni" objektet. Her betyr det at vi kan skrive ... **for (double v : values) { ... }**</T></T></T></T></T></T></p>
+
+<p>Typen bør være et grensesnitt fra <strong>Collection</strong>-rammeverket, enten <strong>Collection</strong> eller <strong>List</strong>, som er spesialisert til element-typen <strong>Course</strong>. Her brukes <strong>Collection</strong>, fordi en ikke trenger andre metoder enn den deklarerer.</p>
+
+<p>Her er poenget å velge en type som passer til hvordan feltet brukes og verdien den blir tilordnet. Verdien som tilordnes er av typen **List<Course>**, så typen må enten være **List** eller en av dens superklasser, som er **Collection** og **Iterable**. Hvis vi bare trenger metodene i **Collection**, som **List** arver fra, så er det bedre å bruke **Collection** i deklarasjonen.</Course></p>
+
+<p>For å kunne iterere med et <strong>Meal</strong>-objekt bak kolonet i en <strong>for</strong>-løkke, så må <strong>Meal</strong>-klassen implementere **Iterable<Course>** og derfor ha en **iterator()**-metode som returnerer **Iterator<Course>**.</Course></Course></p>
+
+<p>Her er poenget å skjønne hvordan tabeller virker (opprettes, leses fra og skrives til) og logikken bak <strong>valueCounters</strong>-feltet, samt hvordan iterere med <strong>Iterator</strong> (<strong>hasNext()</strong> og <strong>next()</strong>) og <strong>Iterable</strong> (<strong>iterator()</strong>).</p>
+
+<p>En kan lage en egen klasse som kombinerer mobilnummer og antall minutter i forkant de skal få varsel, eller bruke en <strong>Map&lt;String, Integer&gt;</strong>.</p>
+
+<p>Hvis en klasse implementerer <strong>Iterable</strong>, så kan referanser til denne klassen brukes på høyresiden av kolonet i en for-each-løkke, f.eks. for (Person child : person). Se også <strong>getChildren</strong>-koden over.
+Et (litt mindre relevant, og ikke påkrevd) alternativ er **Iterable.forEach(Consumer<Person>)**. Dette er en såkalt **default**-metode (kom ikke frem i vedlegget) som en får gratis når en implementerer **Iterable**.</Person></p>
+
+<p>Forklar med tekst og kode sammenhengen mellom for-each-syntaksen, altså den på formen for (<type> <var> : <uttrykk>) ..., og **Iterable**- og **Iterator**-grensesnittene.</uttrykk></var></type></p>
+<ul>
+  <li>Den vanlige måten å gå gjennom en liste med elementer er med kode som den under til venstre. Dette kalles en <strong>for-each</strong>-løkke, fordi den går gjennom hvert element i lista. Dette er egentlig spesial-syntaks for iterator-basert iterasjon, det er bare det at du aldri ser iteratoren. Funksjonelt sett er <strong>for-each</strong>-løkka til venstre ekvivalent med den <strong>Iterator</strong>-baserte løkka under til høyre. Det er egentlig en smaksak hvilken en bruker, men den venstre varianten er å foretrekke fordi den både er enklere å skrive og lese.</li>
+  <li>Hvis en tenker over det, så er det nettopp <strong>iterator()</strong>-metoden, som er nøkkelen til at <strong>for-each</strong>-løkka virker. Det holder at <strong>stringListe</strong> i kode-eksemplet har en slik metode, for at den skal kunne “omskrives” til koden til høyre som den tilsvarer. Denne koblingen mellom <strong>for-each</strong>-løkka og <strong>iterator()</strong>-metoden er ikke tilfeldig, og for å gjøre koblingen eksplisitt og mulig å utnytte for klasser utenfor Collection-rammeverket, så er <strong>iterator()</strong>-metoden definert i et eget grensesnitt ved navn <strong>Iterable</strong> (i <strong>java.lang</strong>-pakken, så en slipper egen import-setning). Det er altså fordi en <strong>ArrayList</strong> implementerer <strong>Iterable</strong> at en <strong>for-each</strong>-løkke med en <strong>ArrayList</strong> virker! Og <strong>ArrayList</strong> implementerer <strong>Iterable</strong> fordi den implementerer <strong>List</strong>, og <strong>List</strong> utvider <strong>Collection</strong> som utvider <strong>Iterable</strong>. Denne koblingen mellom <strong>ArrayList</strong> og <strong>Iterable</strong> er illustrert under med et klassediagram:</li>
+</ul>
+
+<p>sortering med** Comparable<T> **og** Comparator<T>**</T></T></p>
+
+<p>Ved å implementere <strong>Comparable</strong>-grensesnittet så kan <strong>Value</strong>-objekter sorteres vha. Java sine innebygde sort-metoder.</p>
+
+<p>Dersom <strong>Course</strong>-klassen implementerer <strong>Comparable</strong>, dvs. sammenligning med et annet <strong>Course</strong>-objekt, så kan <strong>Collections.sort</strong>- og <strong>List.sort</strong>-metodene brukes til sortering av <strong>Course</strong>-objekter.</p>
+
+<p><strong>Exam</strong>-objekter skal også kunne sorteres, men på <strong>to måter</strong>! Hvordan begge sorteringene kan støttes og skriv nødvendig kode : I tillegg til <strong>Comparable</strong>, som bygger sorteringsrekkefølgen inn i klassen selv, så kan en implementere en **Comparator<Exam>**, som er en annen klasse som sammenligne to **Exam**-objekter:</Exam></p>
+
+<p><strong>Table</strong> må implementere <strong>Comparable&lt;Table&gt;</strong> for at <strong>sort</strong>-metoden skal kunne brukes og virke. Alternativt kan man lage en (implementasjon av) <strong>Comparator&lt;Table&gt;</strong>, f.eks. med <strong>(t1,t2) -&gt; t1.getCapacity() – t2.other.getCapacity()</strong>.</p>
+
+<p>IO med byte- og tegnstrømmer <strong>(InputStream/OutputStream **og</strong> Reader/Writer **med subklasser) og filer</p>
+
+<ul>
+  <li>
+    <p><strong>InputStream</strong>-/<strong>OutputStream</strong>-klassene håndterer <strong>byte</strong>-verdier, mens <strong>Reader</strong>-/<strong>Writer</strong>-klassene håndterer char-verdier (dvs. implementerer koding av tegn til/fra bytes iht. Unicode-regler).</p>
+  </li>
+  <li>
+    <p>Input/output-metoder kaster ofte <strong>IOException</strong>, som er en såkalt “checked exception”. Slike brukes gjerne for feil som er utenfor vår kontroll. Disse krever at kode må fange dem opp med <strong>try/catch</strong> eller deklarere med <strong>throws</strong> at de kastes videre.</p>
+  </li>
+  <li>
+    <p>Strømmer bruker gjerne ressurser utenfor Java og <strong>close()</strong>-metoden sikrer at Java samhandler riktig med disse, f.eks. frigjør dem. For å sikre at dette alltid skjer, er det vanlig å ha <strong>close()</strong>-kallet i en <strong>try/finally</strong>-blokk.</p>
+  </li>
+</ul>
+
+<h1 id="streams">Streams</h1>
+
+<p>return allBikes.stream().filter(bike -&gt; bike.getRenter() == null &amp;&amp; bike.getLocation().distance(location) &lt;= distance).count();</p>
+
+<p>return allBikes.stream().filter(bike -&gt; bike.getRenter() != null).collect(Collectors.toList());</p>
+
+<p>getRentedBikes().stream().filter(bike -&gt; getStationNearby(bike, 30.0) != null).collect(Collectors.toList());</p>
+
+<p>diceCol.stream().map(Dice::getScore).reduce(0, (n1, n2) -&gt; n1 + n2)</p>
+
+<p>diceCol.stream().mapToInt(Dice::getScore).sum()</p>
+
+<h1 id="inputoutput-io">Input/Output (IO)</h1>
+
+<p>Det viktigste med <strong>save</strong>-metoden er at den først skriver ut alle linjer av type 1, altså den person-informasjonen som er nødvendig for å <strong>lage</strong> Person-objektene før foreldre-barn-koblingen etableres. Vi velger å lage en <strong>PrintWriter</strong> rundt <strong>OutputStream</strong>-en vi får inn, for å muliggjøre bruke av <strong>print</strong> og <strong>println</strong>. Vi kunne brukt en <strong>PrintStream</strong>, men en <strong>Writer</strong> anbefales jo for tekst (trekker ikke for bruk av <strong>PrintStream</strong>). Så skrives alle linjene av type 2 ut. Derfor blir det to iterasjoner over alle medlemmene. Navn får anførselstegn (“) rundt (merk måten ” inkluderes i en String). Her sjekkes det om en person har barn (kan gjøre på mange måter), så det ikke blir linjer med en forelder, men det er strengt tatt ikke definert som et krav (det står ”sequence of names”, og en sekvens kan jo ha bare ett element). Hvis en har linjer med bare én forelder, så er det viktig at load-metoden håndterer det riktig. Det er vanlig at den som setter opp en <strong>OutputStream</strong> også lukker den, og derfor avslutter vi <em>ikke</em> med <strong>pw.close()</strong>. Vi avslutter imidlertid med <strong>pw.flush()</strong> for å sikre at all vår output sendes ut med en gang (trekker ikke for manglende bruk av <strong>close()</strong>/<strong>flush()</strong>).</p>
+
+<p><strong>load</strong>-metoden klassifiserer hver linje som en av de tre typene ved å først sjekke om den er tom eller starter med # (type 3) og så sjekker om første token i en linje er en gyldig <strong>Gender</strong> (type 1). Ellers er den av type 2. Her gjøres det ingen sjekk på om formatet er korrekt, f.eks. om et barn i en linje av type 2 faktisk er registrert som familiemedlem. Det er kanskje litt uklart hvorvidt og evt. hvordan <strong>tokenize</strong> håndterer <strong>#</strong>, så det er greit at den brukes før en sjekker for linjer av type 3.</p>
+
+<p>Unntak håndteres ikke av metodene, så de må deklareres med <strong>throws</strong>. Det er naturlig å bruke <strong>IOException</strong>, for den utløses ved bruk av <strong>InputStream</strong> og <strong>OutputStream</strong>. En kunne brukt <strong>Exception</strong> or å markere (at vi er klar over) at det er mye som kan gå galt, men det anbefales å bruke den mest spesifikke typen. Vi kunne fanget opp og ignorert unntak, men det kan lett maskere feil vi ønsker å avdekke.</p>
+
+<p><strong>public void save(OutputStream out) throws IOException {</strong></p>
+
+<p><strong>PrintWriter pw = new PrintWriter(out);</strong></p>
+
+<p><strong>…</strong></p>
+
+<p><strong>pw.flush()</strong></p>
+
+<p><strong>}
+public void load(InputStream in) throws IOException {</strong></p>
+
+<p><strong>Scanner scanner = new Scanner(in);</strong></p>
+
+<p><strong>…</strong></p>
+
+<p><strong>scanner.close();</strong></p>
+
+<p><strong>}</strong></p>
+
+<h1 id="fxml">FXML</h1>
+
+<p>Av FXML-koden kan en lese at det grafiske grensesnittet (appen) knyttes til <strong>BikeRental</strong> ved hjelp av klassen <strong>BikeRentalController</strong>. Dette er i tråd med navnekonvensjonene brukt i tidligere eksamener. Det refereres til to tekstfelt som en i koden kobler seg til med henholdsvis  @FXML private TextField <strong>fromInput</strong> og <strong>toInput</strong>. Likeledes må en lage tre metoder (@FXML private void <strong>plus1HourAction</strong>, <strong>minus1HourAction</strong> og <strong>rentAction</strong>) som kalles når knappene i grensesnittet trykkes inn.</p>
+
+<p>Her er vi mest opptatt av:
+	- @FXML-annotasjonene
+	- riktig type og navn for variablene og metoden
+	- at en henter input fra <strong>dieCountInput</strong> og setter output med <strong>diceOutput</strong></p>
+
+<h1 id="diagrammer">Diagrammer</h1>
+
+<p>Grovt sett beskriver diagrammer to ulike aspekter ved et program:</p>
+
+<ul>
+  <li>
+    <p>Tilstand/oppførsel ved kjøretid, altså hva som skjer når programmet kjøres, f.eks. tilstanden til objektstrukturer. Eksempler er **<a href="https://www.ntnu.no/wiki/display/tdt4100/Objekttilstandsdiagrammer">Objektdiagramme<strong>r](https://www.ntnu.no/wiki/display/tdt4100/Objektdiagrammer), **[Objekttilstandsdiagramme</strong>r</a> og **<a href="https://www.ntnu.no/wiki/display/tdt4100/Sekvensdiagrammer">Sekvensdiagramme**r</a>.</p>
+  </li>
+  <li>
+    <p>Design, altså hvordan programkoden er strukturert, f.eks. hvilke klasser som finnes og hvordan de henger sammen. **<a href="https://www.ntnu.no/wiki/display/tdt4100/Klassediagrammer">Klassediagramme**r</a> er et eksempel.</p>
+  </li>
+</ul>
+
+<p>PLANTUML</p>
+
+<ul>
+  <li>Hide circle : hides class/interface/abstract icon</li>
+</ul>
+
+<p>De ulike diagramdelene, altså boksene, strekene/pilene og tegnene (ord, tall og <em>):
+Diagrammet er omtrent som et klassediagram, så boksene tilsvarer klasser. Navnet øverst en boks er klassenavnet, mens de andre er egenskaper, dvs. data, som instansene vil ha. Strekene er assosiasjoner (eller relasjoner), som sier noe om hvordan instanser kan kobles sammen. Tallene på enden av strekene angir hvor mange koblinger en instans kan ha (</em> betyr ubegrenset), såkalt <em>multiplisitet</em>. Pilene sier noe om i hvilken retning en kan følge en kobling, ingen betyr begge retninger, mens én pil betyr bare i den retningen.
+Egenskapene og assosiasjonene blir typisk til felt med type som passer til multiplisiteten. En må velge hvordan dataene skal <em>kapsles inn</em>, altså konstruktører med parametre, gettere og settere, og evt. add- og remove-metoder og andre metoder.</p>
+
+<p><strong>O</strong><strong>bjektdiagrammer (objekter med tilstand og koblinger)</strong></p>
+
+<p>er en diagramtype som viser tilstanden til et program, ved å illustrere “snapshots” av objektstrukturer.</p>
+
+<p>Hva er forskjellen (hensikt og innhold) mellom <em>objektdiagrammer *og *objekttilstandsdiagrammer</em>?</p>
+
+<p>Et <em>objektdiagram</em> viser oppbygning av og koblinger mellom objekter/instanser, og brukes for å illustrere tilstanden til (eller en mulig tilstand til) et program. Et <em>objekttilstandsdiagram</em> viser hvordan slike strukturer endres over tid, ved kall av metoder (typisk endringsmetoder), og brukes til å illustrere (mulig) objektoppførsel og utviklingen av tilstanden til et program.</p>
+
+<p><strong>O</strong><strong>bjekttilstandsdiagrammer</strong></p>
+
+<p>Hvis en tenker på objektdiagrammer som tilstander og kobler dem sammen med transisjoner, så får en objekttilstandsdiagram, som viser hvordan objektstrukturer utvikler seg over tid.</p>
+
+<p>Objekttilstandsdiagrammer brukes til å beskrive oppførselen til et objekt. Viktig fordel og ulempe/begrensning.</p>
+
+<ul>
+  <li>
+    <p><strong>Fordeler</strong>: Eksempel på forløp kan være enklere å forstå enn en komplett definisjon i form av regler (invarianter). Diagrammer kan være mer intuitive enn tekst. Det er lett å skrive test-kode basert på diagrammet.</p>
+  </li>
+  <li>
+    <p><strong>Ulemper</strong>: Diagrammene blir lett store, hvis de skal dekke alle relevante tilfeller. Det er kun i enkle tilfeller en kan beskrive oppførselen komplett.</p>
+  </li>
+</ul>
+
+<p><img src="image_0.png" alt="image alt text" /></p>
+
+<p><strong>S</strong><strong>ekvensdiagrammer</strong></p>
+
+<p>Interaksjonsdiagrammer viser hvordan objekter i en objektstruktur bruker hverandre, dvs. kaller hverandres metoder. Det finnes to varianter: samhandlingsdiagrammer utvider objektdiagrammer med visning av (sekvenser av) metodekall, og sekvensdiagrammer viser metodekall mellom objekter langs en tidslinje.</p>
+
+<p><strong>K</strong><strong>lassediagrammer (klasser og assosiasjoner inkl. kardinalitet)</strong></p>
+
+<p>viser klassestrukturen til et program, med innholdet i klasser (attributter og operasjoner) og hvordan de er koblet sammen med arv og assosiasjoner.</p>
+
+:ET
