@@ -47,7 +47,7 @@ $on-large:         $on-laptop !default;
 // Notice the following mixin uses max-width, in a deprecated, desktop-first
 // approach, whereas media queries used elsewhere now use min-width.
 strong {
-  font-size: 1.15rem;
+  font-size: 1rem;
 }
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
