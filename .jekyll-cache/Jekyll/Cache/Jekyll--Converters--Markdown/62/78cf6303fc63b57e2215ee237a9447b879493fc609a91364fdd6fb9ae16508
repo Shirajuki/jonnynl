@@ -1,0 +1,354 @@
+I"-b<h1 id="ch2-application-layer"><strong>Ch2. Application Layer</strong></h1>
+<ul>
+  <li>Network applications are the raisons d’etre of a computer network-if we couldn’t conceive of any useful applications, there wouldn’t be any need for networking infra-structure and protocols to support them. → Applications</li>
+  <li>Conceptual and implementation aspects of network applications</li>
+  <li>Key application-layer concepts:
+    <ul>
+      <li>network services required by applications, clients and servers, processes and transport layer interfaces.</li>
+    </ul>
+  </li>
+  <li>Several network applications in detail:
+    <ul>
+      <li>Web, e-mail, DNS, P2P file distribution and video streaming.</li>
+    </ul>
+  </li>
+  <li>Network application development over both TCP and UDP. → Socket interface
+    <ul>
+      <li>Client-server applications in python</li>
+      <li>Socket programming assignment</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="21-principles-of-network-applications"><strong>2.1 Principles of Network Applications</strong></h2>
+<ul>
+  <li>Transform idea into a real-world network application.</li>
+  <li>Writing programs that run on different end systems’ and communicate with each other over the network.
+    <ul>
+      <li>Example: Web: browser program running in the user’s host and the Web server program running in the Web server host.</li>
+      <li>Example2: P2P file-sharing system, client - host
+<strong>2.1.1 Network Application Architectures</strong></li>
+    </ul>
+  </li>
+  <li>The application Architecture: designed by the application developer and dictates how the application is structured over the various end systems. There’s 2:
+    <ul>
+      <li>The client-server architecture
+        <ul>
+          <li>Always-on host (server) services requests from many other hosts (clients). Example is Web application. Client do not directly communicate with each other, but through the host.</li>
+          <li>Server has a fixed, well-known address (IP address), and it’s always-on. Client can thus always contact the server by sending a packet to the server’s IP. (Web, FTP, Telnet, e-mail)</li>
+          <li>Popular social-networking site → server handling through data center housing a large number of hosts, creates virtual servers. Google has for example 30 to 50 data centers around the world. Containing hundreds of thousands of servers each.</li>
+        </ul>
+      </li>
+      <li>peer-to-peer (P2P) architecture
+        <ul>
+          <li>Minimal / no reliance on dedicated servers in data centers. Exploits direct communication between pairs of intermittently connected hosts, called peers. Peers are desktop/laptop controlled by users, home/university/office. Communicate without passing through a dedicated server. (BitTorrent) peer-assisted download acceleration.</li>
+          <li>Self-scalability: Each peer generates workload by requesting files, each peer also adds service capacity to the system by distributing files to other peers. Cost-effective but face challenges of security, performance and reliability due to high decentralized structure.
+<strong>2.1.2 Processes communicating</strong></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Processes (a program running within an end system) that communicate.</li>
+  <li>Processes running on different host communicate. → by exchanging messages across the computer network.</li>
+</ul>
+
+<p><strong>Client and Server Processes</strong></p>
+<ul>
+  <li>Pairs of processes that send messages to each other over a network. Client browser exchanges messages with a Web server process. In P2P a process is sent from one peer to another peer.</li>
+  <li>Client and Server</li>
+</ul>
+
+<p><strong>The interface between the process and the computer network</strong></p>
+<ul>
+  <li>Socket: a process sends messages into, receives messages from, the network through a software interface called Socket</li>
+  <li>A process is analogous to a house and it’s socket is analogous to it’s door.</li>
+  <li>A socket is the interface between the application layer and the transport layer within a host: Application Programming Interface (API)</li>
+</ul>
+
+<p><strong>Addressing processes</strong></p>
+<ul>
+  <li>The host is identified by its IP address and a destination port number. Since a host can run many network applications.
+<strong>2.1.3 Transport Services Available to Applications</strong></li>
+  <li>Transport layer Protocol</li>
+  <li>Reliable Data Transfer - loss tolerant applications</li>
+  <li>Throughput - bandwidth-sensitive applications - clastic applications</li>
+  <li>Timing</li>
+  <li>Security
+<strong>2.1.4 Transport Services Provided by the Internet</strong>
+(reliable data transfer, throughput, timing, and security.)</li>
+  <li><strong>TCP-services</strong>: connection-oriented service and a reliable data transfer service.
+    <ul>
+      <li>Connection-oriented service. TCP has the client and server exchange transport-layer control information with each other before the application-level messages begin to flow. This so-called handshaking procedure alerts the client and server, allowing them to prepare for an onslaught of packets. After the handshaking phase, a TCP connection is said to exist between the sockets of the two processes. The connection is a full-duplex connection in that the two processes can send messages to each other over the connection at the same time.</li>
+      <li>Reliable data transfer service. The communicating processes can rely on TCP to deliver all data sent without eITor and in the proper order. When one side of the application passes a stream of bytes into a socket, it can count on TCP to deliver the same stream of bytes to the receiving socket, with no missing or duplicate bytes</li>
+    </ul>
+  </li>
+  <li>TCP also includes a congestion-control mechanism, a service for the general welfare of the Internet rather than for the direct benefit of the communicating processes. The TCP congestion-control mechanism throttles a sending process (client or server) when the network is congested between sender and receiver. → Secure Sockets Layer (SSL)</li>
+  <li><strong>UDP Services</strong>: UDP is a no-frills, lightweight transport protocol, providing minimal services.
+    <ul>
+      <li>Connectionless, unreliable data transfer service, no guarantee the message will reach. Doesn’t include a congestion-control mechanism
+<strong>2.1.5 Application-Layer Protocols</strong></li>
+    </ul>
+  </li>
+  <li>The types of messages exchanged, for example, request messages and response messages</li>
+  <li>The syntax of the various message types, such as the fields in the message and how the fields are delineated</li>
+  <li>The semantics of the fields , that is, the meaning of the information in the fields</li>
+  <li>Rules for determining when and how a process sends messages and responds to messages</li>
+  <li>Some application-layer protocols are specified in RFCs and are therefore in the public domain. For example, the Web’s application-layer protocol , HTTP (the HyperText Transfer Protocol [RFC 2616]), is available as an RFC
+<strong>2.1.6 Network Applications Covered in This Book</strong></li>
+  <li>P2P apps, Web: HTTP, e-mail, DNS</li>
+</ul>
+
+<h2 id="22-the-web-and-http"><strong>2.2 The Web and HTTP</strong></h2>
+<p><strong>2.2.1 Overview of HTTP</strong></p>
+<ul>
+  <li>The HyperText Transfer Protocol (HTTP), the Web ‘ s application-layer protocol, is at the heart of the Web. It is defined in [RFC 1945] and [RFC 2616].</li>
+  <li>A client program and a server program. Talk to each other by exchanging HTTP messages</li>
+  <li>Web-browsers, web-servers, URL</li>
+  <li>HTTP stateless protocol</li>
+</ul>
+
+<p><strong>2.2.2 Non-Persistent and Persistent Connection</strong></p>
+<ul>
+  <li>Non-persistent connections
+    <ul>
+      <li>Connections of file transmission are stablished serially. Round-trip-time (RTT). - Packet-propagation-delays, packet-queueing delays, packet-processing delays. → Handshake relays. (pipelining).</li>
+    </ul>
+  </li>
+  <li>persistent connections.
+    <ul>
+      <li>A brand-new connection establishes and maintained for each requested object. TCP buffers allocated and TCP variables kept both in the client and server.</li>
+      <li>each object suffers a delivery delay of two RTTs-one RTT to establish the TCP connection and one RTT to request and receive an object.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>2.2.3 HTTP Message Format</p>
+
+<p>The HTTP specifications [RFC 1945; RFC 2616; RFC 7540] include the definitions
+of the HTTP message formats. There are two types of HTTP messages, request mes-
+sages and response messages.</p>
+<ul>
+  <li>HTTP Request Message
+    <ul>
+      <li>Request line, header line, GET, POST , HEAD, PUT, and DELETE</li>
+    </ul>
+  </li>
+  <li>HTTP Response Message
+    <ul>
+      <li>Status line, six header lines, entity body</li>
+      <li>200 OK: Request succeeded and the information is returned in the response.</li>
+      <li>301 Moved Permanently: Requested object has been permanently moved; the new URL is specified in Location: header of the response message. The client software will automatically retrieve the new URL.</li>
+      <li>400 Bad Request: This is a generic error code indicating that the request could not be understood by the server</li>
+      <li>404 Not Found: The requested document does not exist on this server.</li>
+      <li>505 HTTP Version Not Supported: The requested HTTP protocol version is not supported by the server.
+<strong>2.2.4 User-Server Interaction: Cookies</strong>
+<strong>2.2.5 Web Caching</strong>
+        <ol>
+          <li>The browser establishes a TCP connection to the Web cache and sends an HTTP request for the object to the Web cache.</li>
+          <li>The Web cache checks to see if it has a copy of the object stored locally. If it does, the Web cache returns the object within an HTTP response message to the client browser.</li>
+          <li>If the Web cache does not have the object, the Web cache opens a TCP connection to the origin server, that is, to www. some school . e du . The Web cache then sends an HTTP request for the object into the cache-to-server TCP connection. After receiving this request, the origin server sends the object within an HTTP response to the Web cache.</li>
+          <li>When the Web cache receives the object, it stores a copy in its local storage and sends a copy, within an HTTP response message, to the client browser (over the existing TCP connection between the client browser and the Web cache).</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Let’s now do a very crude calculation to estimate this delay. The traffic intensity on the LAN is <strong>(15 requests/sec)· (1 Mbits/request)/(100 Mbps) = 0.15</strong> whereas the traffic intensity on the access link (from the Internet router to institution router) is <strong>(15 requests/sec)· (1 Mbits/request)/(15 Mbps) = 1</strong></p>
+
+<p>Through the use of <strong>Content Distribution Networks (CDNs)</strong>, Web caches are
+increasingly playing an important role in the Internet. A CDN company installs many
+geographically distributed caches throughout the Internet, thereby localizing much of
+the traffic. <strong>The Conditional GET</strong></p>
+
+<h2 id="23-the-web-and-http"><strong>2.3 The Web and HTTP</strong></h2>
+<p><strong>User agents</strong>, <strong>mail servers</strong>, and the <strong>Simple Mail Transfer Protocol (SMTP). Message queue.</strong></p>
+
+<p><strong>2.3.1 SMTP</strong></p>
+<ol>
+  <li>Alice invokes her user agent for e-mail, provides Bob’s e-mail address (for example, bob@someschool .e du), composes a message, and instructs the user agent to send the message.</li>
+  <li>Alice’s user agent sends the message to her mail server, where it is placed in a message queue.</li>
+  <li>The client side of SMTP, running on Alice’s mail server, sees the message in the message queue. It opens a TCP connection to an SMTP server, running on Bob’s mail server.</li>
+  <li>After some initial SMTP handshaking, the SMTP client sends Alice’s message into the TCP connection</li>
+  <li>At Bob’s mail server, the server side of SMTP receives the message. Bob’s mail server then places the message in Bob’s mailbox.</li>
+  <li>Bob invokes his user agent to read the message at his convenience.</li>
+</ol>
+
+<p><strong>2.3.2 Comparison with HTTP</strong>
+First, HTTP is mainly a <strong>pull protocol</strong> someone loads information on a Web server and users use HTTP to pull the information from the server at their convenience. In particular,
+the TCP connection is initiated by the machine that wants to receive the file. On the
+other hand, SMTP is primarily a <strong>push protocol</strong>.</p>
+
+<p><strong>2.3.3 Mail Message Formats</strong>
+<strong>2.3.4 Mail Access Protocols</strong>
+<strong>Post Office Protocol-Version 3 (POP3), Internet Mail Access Protocol (IMAP),</strong> and HTTP.
+POP3 is a mail service Cool.
+IMAP is a mail protocol, allow users to create folders and move messages from one to another.
+Web-Based E-Mail using HTTPs</p>
+
+<h2 id="24-dns---the-internets-directory-service"><strong>2.4 DNS - The Internet’s Directory Service</strong></h2>
+<p>Hostname for IP addresses
+<strong>2.4.1 Services Provided by DNS</strong></p>
+<ul>
+  <li><strong>Domain name system (DNS).</strong> The DNS is (1) a distributed database implemented in a hierarchy of** DNS servers,**</li>
+  <li><strong>Host aliasing, canonical hostname</strong></li>
+  <li><strong>Mail server aliasing</strong></li>
+  <li><strong>Load distribution</strong>
+<strong>2.4.2 Overview of How DNS Work</strong></li>
+  <li><strong>A single point of failure</strong></li>
+  <li><strong>Traffic volume</strong></li>
+  <li><strong>Distant centralized database</strong></li>
+  <li>
+    <p><strong>Maintenance</strong></p>
+  </li>
+  <li><strong>A Distributed, Hierarchical Database</strong></li>
+  <li><strong>Root DNS servers, Top-level domain (TLD) server.</strong></li>
+  <li><strong>Authoritative DNS servers</strong></li>
+  <li>
+    <p><strong>Local DNS server</strong></p>
+  </li>
+  <li><strong>DNS Caching</strong>
+<strong>2.4.3 DNS Records and Messages</strong></li>
+  <li><strong>Resource records (RRs)</strong> provide hostname-to-IP address mappings.</li>
+  <li><strong>TTL</strong> time to live of the resource record.
+    <ul>
+      <li><strong>Type=A</strong>: name - hostname, value - ip address.</li>
+      <li><strong>Type=NS</strong>: name - domain, value - hostname</li>
+      <li><strong>Type=CNAME</strong>: value is canonical hostname for the alias hostname name</li>
+      <li><strong>Type=MX</strong>: value is canonical hostname of a mail server that has an alies hostname name</li>
+    </ul>
+  </li>
+  <li><strong>DNS messages:</strong>
+<img src="https://lh4.googleusercontent.com/ZGEu0qJvS_ifk6Z55yya_JP7LBxynOYrC313oCntSLF_xgCrBBHr65IVp9ZH36p867iAc0STGRxYbA5k-GYpCy-0_kTILS6rmXbTm2_sdXRV6xL0osoobWHFxL7jWMHJ6idR9KBfPtNlMCHnqw" alt="" />
+    <h2 id="25-dns---peer-to-peer-file-distribution"><strong>2.5 DNS - Peer-to-Peer File Distribution</strong></h2>
+    <p><strong>Scalability of P2P Architectures</strong>
+Let’s first determine the distribution time for the client-server architecture,
+which we denote by <strong>D_cs</strong>. In the client-server architecture, none of the peers aids in
+distributing the file. We make the following observations:</p>
+  </li>
+  <li>The server must transmit one copy of the file to each of the <strong>N</strong> peers. Thus the server must transmit <strong>NF</strong> bits. Since the server’s upload rate is us, the time to distribute the file must be at least <strong>NF/u_s</strong></li>
+  <li>Let <strong>d_min</strong> denote the download rate of the peer with the lowest download rate, that is, <strong>d_min = min(d_1, d_p, … , d_N)</strong>. The peer with the lowest download rate cannot obtain all <strong>F</strong> bits of the file in less than <strong>F/d_min</strong> seconds. Thus the minimum distribution time is at least <strong>F/d_min</strong>. Putting these two observations together, we obtain
+<strong>D_cs &gt;= max(NF/u_s,  F/d_min)</strong></li>
+  <li>This provides a lower bound on the minimum distribution time for the client-server architecture. In the homework problems you will be asked to show that the server can schedule its transmissions so that the lower bound is actually achieved. So let’s take this lower bound provided above as the actual distribution time, that is,
+<strong>D_cs = max(NF/u_s,  F/d_min)</strong>
+So, for example, if the number of peers from one week to the next increases
+a thousand-fold from a thousand to a million, the time required to distribute the file
+to all peers increases by 1,000</li>
+  <li>At the beginning of the distribution, only the server has the file. To get this file into the community of peers, the server must send each bit of the file at least once into its access link. Thus, the minimum distribution time is at least <strong>F/u_s</strong> (Unlike the client-server scheme, a bit sent once by the server may not have to be sent by the server again, as the peers may redistribute the bit among themselves.)</li>
+  <li>As with the client-server architecture, the peer with the lowest download rate cannot obtain all <strong>F</strong> bits of the file in less than <strong>F/d_min</strong> seconds. Thus the minimum distribution time is at least <strong>F/d_min</strong></li>
+  <li>Finally, observe that the total upload capacity of the system as a whole is equal to the upload rate of the server plus the upload rates of each of the individual peers, that is, <strong>u_total = u_s + u_1 + · · · + u_N</strong>· The system must deliver (upload) <strong>F</strong> bits to each of the <strong>N</strong> peers, thus delivering a total of <strong>NF</strong> bits. This cannot be done at a rate faster than <strong>u_total</strong>. Thus, the minimum distribution time is also at least <strong>NF/(u_s + u_1 + · · · + u_N).</strong>
+Putting these three observations together, we obtain the minimum distribution
+time for P2P, denoted by <strong>D_p2p</strong>·
+<strong>D_p2p &gt;= max( F/u_s , F/d_min, NF/(u_s + sum(u_i for i in N)) )</strong>
+Actual minimum distribution time, that is:
+<strong>D_p2p = max( F/u_s , F/d_min, NF/(u_s + sum(u_i for i in N)) )</strong></li>
+</ul>
+
+<p><strong>BitTorrent - Torrent, chunks, tracker</strong>
+When a peer joins a torrent, it registers itself with the tracker and periodically informs the tracker that it is still in the torrent. In this manner, the tracker keeps track of the peers that are participating in the torrent.
+When a new peer, Alice, joins the torrent, the tracker randomly selects a subset of peers (for concreteness, say 50) from the set of participating peers, and sends the IP addresses of these 50 peers to Alice. Possessing this list of peers, Alice attempts to establish concurrent TCP connections with all the peers on this list. Let’s call all the peers with which Alice succeeds in establishing a TCP connection “neighboring peers.”(In Figure 2.24, Alice is shown to have only
+three neighboring peers. Normally, she would have many more.) As time evolves, some of these peers may leave and other peers ( outside the initial 50) may attempt to establish TCP connections with Alice. So a peer’ s neighboring peers will fluctuate over time. At any given time, each peer will have a subset of chunks from the file, with different peers having different subsets. Periodically, Alice will ask each of her neighboring peers (over the TCP connections) for the list of the chunks they have. If Alice has <strong>L</strong> different neighbors, she will obtain <strong>L</strong> lists of chunks. With this knowledge, Alice will issue requests (again over the TCP connections) for chunks she currently does not have.
+<strong>Unchoked and/or optimistically unchoked.</strong>
+<strong>Distributed Hast Table (DHT).</strong> A distributed hash table is a simple database,
+with the database records being distributed over the peers in a P2P system. DHTs have
+been widely implemented (e.g., in BitTorrent) and have been the subject of extensive
+Research.</p>
+
+<h2 id="26-video-streaming-and-content-distribution-networks"><strong>2.6 Video Streaming and Content Distribution Networks</strong></h2>
+<p><strong>2.6.1 Internet Video</strong>
+<strong>2.6.2 HTTP Streaming and DASH</strong>
+<strong>Dynamic Adaptive Streaming over HTTP (DASH)</strong>. In DASH, the video is encoded into several different versions, with each version having a different bit rate and, correspondingly, a different quality level. The client dynamically requests chunks of video segments of a few seconds in
+length. When the amount of available bandwidth is high, the client naturally selects
+chunks from a high-rate version; and when the available bandwidth is low, it naturally
+selects from a low-rate version. The client selects different chunks one at a time with
+HTTP GET request messages. <strong>Manifest file</strong>
+<strong>2.6.3 Content Distribution Networks</strong>
+In order to meet the challenge of distributing massive amounts of video data
+to users distributed around the world, almost all major video-streaming companies
+make use of** Content Distribution Networks (CDNs). (private CON and third-party CDN)**</p>
+<ul>
+  <li><strong>Enter Deep</strong> - philosophy Akamai</li>
+  <li><strong>Bring Home</strong> - philosophy LimeLight, ISP at home. IXPS (Internet Exchange Points)
+<strong>CLUSTERS</strong>
+<strong>Cluster Selection Strategies</strong></li>
+  <li><strong>Geographically closest</strong></li>
+  <li><strong>Real-time measurements</strong>
+<strong>2.6.4 Case Studies: Netflix, YouTube, and Kankan</strong>
+    <h2 id="27-socket-programming-creating-network-applications"><strong>2.7 Socket Programming: Creating Network Applications</strong></h2>
+    <p><strong>2.7.1 Socket Programming with UDP</strong></p>
+  </li>
+  <li>UDPClient.py
+from socket import*
+serverName = ‘hostname ‘
+serverPort = 12000
+clientSocket = socket(AF_INET, SOCK_ DGRAM) # use IPv4, UDP socket
+message= raw_ input( ‘Input lowercase sentence:’ )
+clientSocket.sendto(message.encode(), (serverName , serverPort))
+modifiedMessage, serverAddress = clientSocket.recvfrom(2048)
+print(modifiedMessage. decode())
+clientSocket.close()</li>
+  <li>UDPServer.py
+  From socket import *
+  serverPort = 12000
+  serverSocket = socket(AF_INET, SOCK_DGRAM)
+  serverSocket.bind((‘’, serverport))
+  print(“The server is ready to recieve”)
+  While True:
+      message, clientAddress = serverSocket.recvfrom(2048)
+      modifiedMessage = message.decode.upper()
+      serverSocket.sendto(modifiedMessage.encode(), clientAddress)
+<strong>2.7.2 Socket Programming with TCP</strong></li>
+  <li>TCPClient.py
+from socket import*
+serverName = ’servername’
+serverPort = 12000
+clientSocket = socket(AF_INET, SOCK_ STREAM) # use IPv4, TCP socket
+message= raw_ input( ‘Input lowercase sentence:’ )
+clientSocket.send(sentence.encode())
+modifiedSentence = clientSocket.recv(1048)
+print(‘From server:’, modifiedSentence.decode())
+clientSocket.close()</li>
+  <li>TCPServer.py
+  From socket import *
+  serverPort = 12000
+  serverSocket = socket(AF_INET, SOCK_STREAM)
+  serverSocket.bind((‘’, serverPort))
+  serverSocket.listen(1) # 1 queued connection only
+  print(“The server is ready to receive”)
+  While True:
+      connectionSocket, addr = serverSocket.accept()
+      sentence = connectionSocket.recv(1048).decode()
+      capitalizedSentence = sentence.upper()
+      connectionSocket.send(capitalizedSentence.encode())
+**			**connectionSocket.close()</li>
+</ul>
+
+<h1 id="lecture-4---chapter-2-recap"><strong>Lecture 4 - chapter 2 recap</strong></h1>
+<h2 id="file-distribution-client-server-vs-p2p"><strong>File distribution: Client-server vs. P2P</strong></h2>
+<ul>
+  <li>How much time to distribute file from one server to N peers?</li>
+  <li><strong>Client-server</strong>
+    <ul>
+      <li>Server sequentially sends N copies in <strong>NF/u_2</strong> time</li>
+      <li>Client-i takes <strong>F/d_f</strong> time to download</li>
+      <li>Time to distribute F to N clients using client/server approach:
+        <ul>
+          <li><strong>Dcs &gt;= max { NF/u_s , F/d_min }</strong></li>
+          <li>Tiden det tar for server å sende <strong>N</strong> kopier av filen med størrelse <strong>F</strong> (bits) inn i nettet når kapasiteten den veien er <strong>U_s</strong> (bits / sec).</li>
+          <li>Tiden det tar for klienten med laveste nedlastings hastighet <strong>d_min</strong> å hente filen.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>P2P
+    <ul>
+      <li>Server must send at least one copy (<strong>F/u_s</strong> time )</li>
+      <li>Client i takes <strong>F/d_i</strong> time to download</li>
+      <li><strong>NF</strong> bits must be downloaded (aggregate)</li>
+      <li>Fastest possible upload rate: <strong>u_s + Sum(u_i)</strong></li>
+      <li><strong>DP2P &gt;= max { F/us , F/dmin , NF/(us + Sui )}</strong></li>
+    </ul>
+  </li>
+</ul>
+
+:ET

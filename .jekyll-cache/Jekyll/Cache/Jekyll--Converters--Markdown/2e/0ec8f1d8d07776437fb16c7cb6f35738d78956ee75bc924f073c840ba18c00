@@ -1,0 +1,22 @@
+I"�<h1 id="ch2-application-layer"><strong>Ch2. Application Layer</strong></h1>
+<ul>
+  <li>Network applications are the raisons d’etre of a computer network-if we couldn’t conceive of any useful applications, there wouldn’t be any need for networking infra-structure and protocols to support them. → Applications</li>
+  <li>Conceptual and implementation aspects of network applications</li>
+  <li>Key application-layer concepts:
+    <ul>
+      <li>network services required by applications, clients and servers, processes and transport layer interfaces.</li>
+    </ul>
+  </li>
+  <li>Several network applications in detail:
+    <ul>
+      <li>Web, e-mail, DNS, P2P file distribution and video streaming.</li>
+    </ul>
+  </li>
+  <li>Network application development over both TCP and UDP. → Socket interface
+    <ul>
+      <li>Client-server applications in python</li>
+      <li>Socket programming assignment</li>
+    </ul>
+  </li>
+</ul>
+:ET

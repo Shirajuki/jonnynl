@@ -1,0 +1,48 @@
+I"
+<h1 id="mmi---lecture-4">MMI - Lecture 4</h1>
+<h1 id="designprinsipper"><strong>Designprinsipper</strong></h1>
+<h2 id="drikkeautomaten-smarttender">Drikkeautomaten SmartTender</h2>
+<h3 id="oppsummering-av-normans-designprinsipper">Oppsummering av <em><strong>Normans designprinsipper</strong></em></h3>
+<ul>
+  <li><strong>Visibility</strong>: Kan jeg se det?
+    <ul>
+      <li>Synlig funksjonalitet, brukergrensesnittet = knappemeny, vises synlig for brukeren. Burde ha vært plassert på rett dyse der drikken blir tappet.</li>
+      <li>Antall elementer, knapper, dyse, sted å sette kopp.</li>
+    </ul>
+  </li>
+  <li><strong>Affordance</strong>: Hvordan kan jeg bruke det?
+    <ul>
+      <li>Knapper: kan trykkes, ser sannsynlig ut som knapper. Men hvit knapp og hvit bakgrunn skiller seg ikke så mye ut. Litt vanskelig å forstå at det er en knapp.</li>
+      <li>[Kaldt vann] knappen sier lite om at den kan holdes inne, siden den er lik de andre.</li>
+      <li>Ser hvor man kan sette koppen, hullet og dysene.</li>
+    </ul>
+  </li>
+  <li><strong>Constraints</strong>: Hvorfor kan jeg ikke gjøre slik?
+    <ul>
+      <li>Espresso kan kun bli tappet om brukeren har valgt en liten kopp. Ingen indikasjon at det må være sånn siden samme constraints ikke finnes på de andre drikkene.</li>
+      <li>^Burde ha indikert noe etter at stor kopp er valgt.</li>
+      <li>Ikke noe som forhindrer oss å putte koppen i dyse 2, noe som er bare for kaldt vann.</li>
+      <li>Dersom automaten går tom for en ingrediens vil det ikke ha noen effekt å trykke på en knapp, grået ut.</li>
+    </ul>
+  </li>
+  <li><strong>Feedback</strong>: Hva skjer nå?
+    <ul>
+      <li>Feedback når knapp trykkes - er i gang - drikke tappes.</li>
+      <li>Feedback når brukeren må vente på at kaffebønnene skal kvernes og hvor lang tid prosessen på å lage drikken tar.</li>
+      <li>Ved utførelse av constraints, gi tilbakemelding om at det er blitt gjort noe feil.</li>
+    </ul>
+  </li>
+  <li><strong>Mapping</strong>: Hva fører til hva? Er sammenhengen mellom kontroll og effekt naturlig?
+    <ul>
+      <li>Knapp til rett dyse burde ha blitt plassert i samme gruppe</li>
+      <li>Plassering av kopp riktig sted</li>
+    </ul>
+  </li>
+  <li><strong>Consistency</strong>: Har jeg sett dette før?
+    <ul>
+      <li>Knapp, ting, kopp, osv…
+<a href="http://architectingusability.com/2012/06/28/donald-normans-design-principles-for-usability/">http://architectingusability.com/2012/06/28/donald-normans-design-principles-for-usability/</a></li>
+    </ul>
+  </li>
+</ul>
+:ET

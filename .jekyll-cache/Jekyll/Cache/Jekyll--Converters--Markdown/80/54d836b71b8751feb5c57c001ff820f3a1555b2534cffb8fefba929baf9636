@@ -1,0 +1,201 @@
+I"Ä<p><strong>1.1 What is the internet?</strong></p>
+<ul>
+  <li>Host / end systems
+    <ul>
+      <li>Connected together by a network of communication links and packet switches</li>
+      <li>Different link =&gt; different rates and transmission rate.</li>
+    </ul>
+  </li>
+  <li>Today:
+    <ul>
+      <li>Routers and link-layer switches</li>
+    </ul>
+  </li>
+  <li>End systems access the Internet through Internet Service Providers (ISPs).</li>
+  <li>The Internet is all about connecting end systems to each other, so the ISPs that provide access to end systems</li>
+  <li>PROTOCOLS!
+    <ul>
+      <li>Transmission Control Protocol (TCP)</li>
+      <li>Internet Protocol (IP)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>1.2 The Network Edge</strong>
+Access Networks</p>
+<ul>
+  <li>Home Access: DSL, Cable, FTTH, Dial-Up and Satellite
+    <ul>
+      <li>Digital Subscriber Line (DSL)</li>
+      <li>DSL + access multiplexer (DSLAM)</li>
+      <li>Central Office (CO)</li>
+      <li>Fiber To The Home (FTTH)</li>
+      <li>Active Optical Networks (AONs)</li>
+      <li>Passive Optical Networks (PONs)</li>
+      <li>Optical Line Terminator (OLT)</li>
+    </ul>
+  </li>
+  <li>Wide-Area Wireless Access: 3G and LTE
+    <ul>
+      <li>Long Term Evolution (LTE)</li>
+      <li>3-generation wireless (3G)
+Physical Media</li>
+    </ul>
+  </li>
+  <li>Twisted-Pair Copper Wire</li>
+  <li>Unshielded Twisted Pair (UTP)</li>
+  <li>Fiber optic</li>
+  <li>Coaxial Cable</li>
+  <li>Terrestrial Radio Channels</li>
+  <li>Satellite Radio Channels
+    <ul>
+      <li>Geostationary satellites and low-earth orbiting (LEO) satellites</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>1.3 The Network Core</strong>
+Packet Switching (MORE EFFICIENT!)</p>
+<ul>
+  <li>Packets, packet switches, routers, link-layer switches</li>
+  <li>Store-and-Forward transmission
+    <ul>
+      <li>Begins transmitting at time 0</li>
+      <li>(L = bit size &amp; R = transmission rate)</li>
+      <li>At time L/R seconds transmitted the entire packet, received and stored at the router.</li>
+      <li>Can now begin to transmit the packet onto the outbound link towards the destination.</li>
+      <li>At time 2L/R the router has transmitted the entire packet, and the entire packet has been received by the destination.</li>
+      <li>TOTAL DELAY IS <strong>2L/R</strong></li>
+    </ul>
+  </li>
+  <li>Store-and-Forward packet switching
+    <ul>
+      <li>d_end-to-end = N * L/R
+Circuit Switching</li>
+    </ul>
+  </li>
+  <li>(buffer, link transmission rate) - reserved</li>
+  <li>Multiplexing in Circuit-Switched Networks
+    <ul>
+      <li>Frequency-division multiplexing (FDM)</li>
+      <li>Time-division multiplexing (TDM)</li>
+      <li>Width of the band (bandwidth)
+  Example:</li>
+    </ul>
+  </li>
+  <li>File of 640.000 bits (L) from Host A to Host B over circuit-switched network</li>
+  <li>Assume use of TDM with 24 slots with bit rate (R) of 1.536Mbps.</li>
+  <li>Takes 500msec to establish end-to-end
+=&gt; (1.536Mbps)/24 = 64kbps
+=&gt; (640.000 bits)/(64 kbps) = 10 seconds + circuit establish time
+=&gt; 10.5</li>
+</ul>
+
+<p><strong>1.4 Delay, Loss, and Throughput in Packet-Switched Networks</strong>
+Overview:</p>
+<ul>
+  <li>Nodal processing delay</li>
+  <li>Queuing delay</li>
+  <li>Transmission delay</li>
+  <li>Propagation delay</li>
+  <li>=&gt; total delay
+Processing Delay</li>
+  <li>Time required to examine the packets header and determine where to direct the packet
+Queuing Delay</li>
+  <li>Waits to be transmitted onto the link. Length of this depends on the number of earlier-arriving packets that are queued and waiting for transmission onto the link.
+Transmission Delay</li>
+  <li>Packets can only be transmitted only after all the packets that have arrived before it has been transmitted. Length of the packet by (L) bits, transmission rate of the link from Router A to router B by (R) bits/sec.</li>
+  <li>Example:
+    <ul>
+      <li>10 Mbps ethernet link, R = 10Mbps</li>
+      <li>This is <strong>L/R</strong>
+Propagation Delay</li>
+    </ul>
+  </li>
+  <li>Once pushed onto the link, it needs to propagate to router B. The time required to propagate from the beginning of the link to router B. The propagation speed depends on the physical medium of the link (fiber optics, UTP and so on)</li>
+  <li>Range of propagation speed: 2*10<strong>8 meters/sec to 3*10</strong>8 meters/sec (a little less than the speed of light).</li>
+  <li><strong>d_prop</strong> This is <strong>d/s</strong> where (d) is the distance between router A and B. (s) is the propagation speed of the link.
+Total Nodal delay</li>
+  <li>d_nodal = d_proc + d_queue + d_trans + d_prop
+Traffic intensity</li>
+  <li>L<em>a/R where a is the average rate at which packets arrive at the queue. R is the transmission rate. L is the size of bit. Should be  L</em>a/R  &lt;= 1</li>
+  <li>The nth-packet transmitted has a queuing delay of (n-1)L/R seconds.
+End-to-End Delay</li>
+  <li>d_end-end = N (d_proc + d_trans + d_prop)</li>
+  <li>D_trans = L/R</li>
+  <li>Voice-over-IP (VoIP)
+Throughput in computer Networks</li>
+  <li>P2P - instantaneous throughput.
+Example:
+    <ul>
+      <li>File consists of (F) bits</li>
+      <li>Transfer takes T seconds for Host B to receive all (F) bits.</li>
+      <li>Average throughput is <strong>F/T</strong> bits/sec</li>
+      <li>R denotes the rate of the link between the server and the router.</li>
+      <li>Bits as fluid and communication links as pipes.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>1.5 Protocol Layers and Their Service Models</strong>
+Layered Architecture
+Protocol Layering</p>
+<ul>
+  <li>HTTP, SMTP</li>
+  <li>Protocol Stack</li>
+  <li>Top-down approach</li>
+</ul>
+
+<p>Application Layer</p>
+<ul>
+  <li>HTTP, SMTP, FRP, DNS</li>
+  <li>Message
+Transport Layer</li>
+  <li>TCP, UDP</li>
+  <li>Segment
+  Network Layer</li>
+  <li>Datagrams from one host to another, IP-protocol
+  Link Layer</li>
+  <li>Moving packets from one node to the next node in the route.</li>
+  <li>Ethernet, Wi-Fi</li>
+  <li>Frames
+  Physical Layer</li>
+  <li>Move the individual bits within the frame one node to the next.</li>
+  <li>UTP, fiber, coaxial cable
+The OSI Model</li>
+  <li>Organization for Standardization (ISO ) - Open Systems Interconnection (OSI)</li>
+</ul>
+
+<p>Encapsulation</p>
+<ul>
+  <li>Application-layer message</li>
+  <li>Transport-layer segment</li>
+  <li>Network-layer datagram</li>
+  <li>Link-layer frame</li>
+  <li>Payload field</li>
+</ul>
+
+<p><strong>1.6 Networks Under Attack</strong></p>
+<ul>
+  <li>Malware, botnet (self-replicating), virus, worms</li>
+  <li>Denial-of-service (DoS) attacks</li>
+  <li>
+    <p>Distributed DoS (DDoS) (if the server has an access rate of R bps, send approx R bps to cause damage. If R large, harder for a single attack. So we distribute lots!)</p>
+
+    <ul>
+      <li>Vulnerability attack - sending well-crafted messages to a vulnerable application. Right sequence of packets =&gt; vulnerability</li>
+      <li>Bandwidth flooding - Sends lots of packets, clogged, preventing legitimate packets from reaching.</li>
+      <li>Connection Flooding - Establishes large numbers of halp-open/fully open TCP connections. Bogged down with bogus connections that stop legitimate connections.</li>
+    </ul>
+  </li>
+  <li>Packet sniffer - fly by</li>
+  <li>Spoofing (IP / MAC and so on) - end-point authentication</li>
+</ul>
+
+<p><strong>1.7 History of Computer Networking and the Internet</strong>
+The Development of Packet Switching (1961-1972)
+Proprietary Networks and Internetworking (1972-1980)
+A Proliferation of Networks (1980-1990)
+The Internet Explosion (The 1990s)
+The New Millennium</p>
+:ET

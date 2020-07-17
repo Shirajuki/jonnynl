@@ -1,0 +1,466 @@
+I"��<h1 id="ch3-transport-layer"><strong>CH3 Transport Layer</strong></h1>
+
+<p>Residing between the application and networks layers. Critical role of providing communication services directly to the application processes running on different hosts.</p>
+<ul>
+  <li>Alternate between discussions of transport-layer principles</li>
+  <li>Discussions of how these principles are implemented in existing protocols; TCP / UDP.</li>
+  <li>Relationship between the transport and network layers - examining the first critical function of the transport layer - extending the network layer’s delivery service between two end systems to a delivery service between two application-layer processes running on the end systems.
+    <ul>
+      <li>Internet connectionless UDP</li>
+      <li>Most fundamental problems in computer networking - how two entities can communicate reliably over a medium that may lose and corrupt data.
+        <ul>
+          <li>Array of techniques that transport protocols use to solve this problem ^</li>
+          <li>Internet’s connection-oriented transport protocol TCP</li>
+        </ul>
+      </li>
+      <li>Second fundamentally important problem in networking - controlling the transmission rate of transport-layer entities in order to avoid, or recover from congestion within the network. → <strong>Congestion control.</strong></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="31-introduction-and-transport-layer-services"><strong>3.1 Introduction and Transport-Layer Services</strong></h2>
+<p>Transport-layer protocol provides for <strong>logical communication</strong> between application processes running on different hosts.</p>
+<ul>
+  <li>Logical communication: from an application’s perspective, it is as if the hosts running in the processes were directly connected: in reality, the hosts may be on opposite sides of the planet, connected via numerous routers and a wide range of link types</li>
+  <li>Application processes use the logical communication provided by the transport layer to send messages to each other, free from the worry of the details of the physical infrastructure to carry these messages.</li>
+  <li>Transport-layer protocols are implemented in the end systems but not in network routers.
+    <ul>
+      <li>Sending: the transport layer converts the application-layer messages it receives from a sending application process into transport-layer packets, known as transport-layer <strong>segments</strong> in the Internet terminology. → breaking the app messages into smaller chunks and adding a transport-layer header to each chunk to create the transport-layer segment.</li>
+      <li>Passes: segment sent to the network layer at the sending end system → encapsulated within a network-layer packet. (a datagram) and sent to the destination.</li>
+      <li>Receiving: the network layer extracts the transport-layer segment from the datagram and passes the segment up to the transport layer. The transport layer then processes the received segment, making the data in the segment available to the receiving application.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>3.1.1 Relationship Between Transport and Network Layers</strong>
+A transport-layer protocol provides logical communication between processes running on diff. Hosts.
+A network layer provides logical communication between hosts.
+<strong>EXAMPLE</strong>: Household sending posts/letters</p>
+<ul>
+  <li><strong>Application messages</strong> =&gt; Letters in envelopes</li>
+  <li><strong>Processes</strong> =&gt; cousins</li>
+  <li><strong>Hosts (end-systems)</strong> =&gt; Houses</li>
+  <li><strong>Transport-layer protocol</strong> =&gt; Ann and Bill among the cousins is the one providing the letters/ pickup and delivering to postal service. → Constrained by the postal service on quantity and time taken to deliver to the cousins.</li>
+  <li><strong>Network-layer protocol</strong> =&gt; Postal service (including mail carriers) move from house to house</li>
+</ul>
+
+<p><strong>3.1.2 Overview of the Transport Layer in the Internet</strong></p>
+<ul>
+  <li>User Datagram Protocol (<strong>UDP</strong>) - unreliable connectionless service to the invoking apps.</li>
+  <li>Transmission Control Protocol (<strong>TCP</strong>) - reliable connection-oriented service to the invoking apps.</li>
+  <li><strong>Transport-layer packets</strong> = <strong>segment</strong></li>
+  <li><strong>Network-layer packets</strong> = <strong>datagram</strong></li>
+  <li>Network-layer quick facts:
+    <ul>
+      <li>Network-layer protocol : IP - Internet Protocol, provides logical communication between hosts.</li>
+      <li><strong>Best-effort delivery service</strong>, makes it’s “best effort” to deliver segments between communicating hosts, but no guarantee. <strong>Unreliable service</strong>.</li>
+    </ul>
+  </li>
+  <li><strong>UDP &amp; TCP services</strong>:
+    <ul>
+      <li>Extend IP’s delivery service between two end systems to a delivery service between two processes running on the end systems. Extending host-to-host delivery to process-to-process delivery: (<strong>transport-layer multiplexing</strong> and <strong>demultiplexing</strong>).</li>
+      <li>Integrity checking, error detection fields in segment header. (process-to-process data delivery and error checking - UDP only has.) UDP is also unreliable.</li>
+    </ul>
+  </li>
+  <li><strong>TCP perks</strong>:
+    <ul>
+      <li><strong>Reliable data transfer</strong> - flow control, sequence numbers, acknowledgement, timers.</li>
+      <li>Ensures data is delivered from sending process to receiving process, correctly and in order. Converts IP’s unreliable service between end systems into a reliable data transport service between processes.</li>
+      <li><strong>Congestion control</strong>, Internet as a whole, prevents any one TCP connection from swamping the links and routers between communicating hosts with an excessive amount of traffic. Gives each connection traversing a congested link and equal share of the link bandwidth → By regulating the rate at which the sending sides of TCP connections can send traffic into the network.</li>
+      <li>UDP is unregulated, can send at any rate and for as long it pleases.
+        <h2 id="32-multiplexing-and-demultiplexing"><strong>3.2 Multiplexing and Demultiplexing</strong></h2>
+        <p>TL;DR:</p>
+      </li>
+    </ul>
+  </li>
+  <li>UDP works like ports, ports is assigned to socket. Multiplex reads info about which port. Demultiplexing does the work delivering.
+Extending the host-to-host delivery service provided by the network layer to a process-to-process delivery service for applications running on the hosts. → Needed for all computer networks.</li>
+  <li>Destination host: Transport layer receives segments form the network layer just below. It has the responsibility of delivering the data in these segments to the appropriate application process running in the host.
+    <ul>
+      <li><strong>Sockets</strong> - door through which data passes from the network to the process and through which data passes from the process to the network.</li>
+    </ul>
+  </li>
+  <li>Receiving host: Directs and incoming transport-layer segment to the appropriate socket. Each transport-layer segment has a set of fields in the segment for this purpose.
+    <ul>
+      <li>Examines these fields ^ to identify the receiving socket and then directs the segment to that socket.</li>
+      <li><strong>Demultiplexing</strong>: job of delivering the data in a transport-layer segment to the correct socket.</li>
+      <li><strong>Multiplexing</strong>: Job of gathering data chunks at the source host from different sockets, encapsulating each data chunk with header info to create segments, and passing the segments to the network layer.</li>
+      <li>Transport-layer multiplexing requires (1) that socket have unique identifiers, and (2) that each segment have special fields that indicate the socket to which the segment is to be delivered. (<strong>source port number field</strong>) and (<strong>destination port number field</strong>). Port number ranges from 0 to 65535 and is 16-bit number</li>
+      <li>The ports from 0 to 1023 are <strong>well-known port numbers</strong>, and are restricted/reserved.</li>
+      <li>Demultiplexing works by that each socket in the host is assigned a port number, and when a segment arrives at the host, the transport layer examines the destination port number in the segment and directs the segment to the corresponding socket. The segment’s data then passes through the socket into the attached process. (THIS IS ALL UDP DOES) TCP got more to it :D</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Connectionless Multiplexing and Demultiplexing</strong>
+UDP socket is identified by a two-tuple:destination IP address and a destination port number
+Host uses only two to direct (demultiplex) the segment.
+Source IP address and source port number is also used but only serves as part of a “return address”</p>
+<ul>
+  <li>Only if two (destination IP address and a destination port number) is verified will it direct to be demultiplexed after it’s known</li>
+</ul>
+
+<p><strong>Connection-Oriented Multiplexing and Demultiplexing</strong>
+TCP socket is identified by a four-tuple: (source IP address, source port number, destination IP address, destination port number). Demultiplex: uses all four values to direct the segment to the appropriate socket.</p>
+<ul>
+  <li>Only if all four is verified will it direct to be demultiplexed after it’s known
+<em><strong>Use nmap to port scan</strong></em></li>
+</ul>
+
+<p><strong>Web servers and TCP</strong>
+Example: Apache web server: port 80. All segments from browser to the web server have destination port 80. Both the initial connection-establishment segments and the segments carrying HTTP request messages.</p>
+<ul>
+  <li>Threading : lightweight subprocess that creates new sockets from:  persistent HTTP vs non-persistent HTTP</li>
+</ul>
+
+<h2 id="33-connectionless-transport-udp"><strong>3.3 Connectionless Transport UDP</strong></h2>
+<p>UDP:</p>
+<ul>
+  <li>multiplexing/demultiplexing</li>
+  <li>Light error checking</li>
+  <li>Adds nothing to IP</li>
+  <li>Directly talking with IP if used as transport protocol</li>
+  <li>Takes messages from the app process, attaches source and destination port number fields for the multiplexing/demultiplexing service.</li>
+  <li>adds two other small fields, and passes the resulting segment to the network layer.</li>
+  <li>Network layer encapsulates the transport-layer segment into an IP datagram and then makes a best-effort attempt to deliver the segment to the receiving host.</li>
+  <li>If the segment arrives at the receiving host, UDP uses the destination port number to deliver the segment’s data to the correct application process, no handshaking between sending/receiving. → CONNECTIONLESS (DNS)
+WHY UDP?</li>
+  <li><strong>Finer application-level control over what data is sent, and when</strong>.UDP packages the data given and immediately passes the segment to the network layer. TCP on the other hand has a congestion-control mechanism that throttles the transport-layer TCP sender when one or more links between the source and destination hosts become excessively congested. Continues to resend segment until it’s acknowledged by the destination, regardless of time. → RTA can sometimes use UDP for speed.</li>
+  <li><strong>No connection establishment</strong>. TCP uses a 3-way handshake before it starts to transfer data. UDP just blasts away, no delay (why DNS use UDP).</li>
+  <li><strong>No connection state</strong>. TCP maintains connection state in the end systems (receive and send buffers, congestion-control parameters, and sequence and acknowledgement number parameters.) UDP got none of that shit, thus it supports more active clients</li>
+  <li><strong>Small packet header overhead</strong>: TCP segment has 20 bytes of header overhead in every segment, UDP got 8 bytes.
+Example of UDP use:</li>
+  <li>Network management SNMP</li>
+  <li>Some speed multimedia apps (unsafe tho)</li>
+  <li>RTA / Internet phone and video call</li>
+  <li>Remote file server, name translation</li>
+</ul>
+
+<p><strong>3.3.1 UDP Segment Structure</strong></p>
+
+<p><strong>3.3.2 UDP Checksum</strong></p>
+<ul>
+  <li>Error detection, determine whether bits within UDp segments have been altered</li>
+  <li>As an example. Suppose that we have the following three 16-bit words:
+IF no errors are introduced into the packet, then the sum at the receiver will be 11111111111111. If one bits is a 0, then an error has happened.</li>
+  <li>Given that neither link-by-link reliability nor in-memory error detection is guaranteed, UDP must provide error detection at the transport layer, on <em>an end-end basis</em>. <strong>End-end principle.</strong></li>
+</ul>
+
+<h2 id="34-principles-of-reliable-data-transfer"><strong>3.4 Principles of Reliable Data Transfer</strong></h2>
+<ul>
+  <li>Occurs not only at the transport layer, but also the link layer and application layer as well.</li>
+  <li>Responsibility of a reliable data transfer protocol to implement service abstraction of checksum/error checking. But made difficult by layer below a reliable data transfer protocol may be unreliable. Example TCP on top of IP end-to-end network layer.
+<img src="https://lh4.googleusercontent.com/sRKXdgtZAYFOWHCXKmw-Ef4McAgWkOx52I3k_sq9QLzkleuuZmuiu4TS27i1A7UqIPhg2e2hbCILDD7Pg6GvqQklDT_6GkrgoqbgA8oMBrcAaH6VKjiL4q0aa5RSAvZl7KM0vOWXH8vKQI_Eag" alt="" /></li>
+  <li>Consider only <strong>Unidirectional data transfer</strong>: from sending to the receiving side.</li>
+  <li><strong>Bidirectional</strong> (full-duplex) <strong>data transfer</strong> is tedious to explain. But almost the same.</li>
+</ul>
+
+<p><strong>3.4.1 Building a Reliable Data Transfer Protocol</strong>
+<strong>Reliable Data Transfer over a Perfectly Reliable Channel: rdt1.0</strong>
+Finite-state machine (<strong>FSM</strong>) - defines the operation of the sender/receiver, exists separately.
+Sending:</p>
+<ul>
+  <li>Accepts data from the upper layer via the rdt_send(data) event,</li>
+  <li>creates a packet containing the data make_pkt(data) and sends the packet into the channel procedurally.
+Receiving:</li>
+  <li>Receives from the underlying channel via rdt_rcv(packet),</li>
+  <li>Removes the data from the packet extract(packet, data)</li>
+  <li>passes the data to the upper layer via deliver_data(data)
+<strong>Reliable Data Transfer over a Channel with Bit Errors: rdt2.0</strong></li>
+  <li><strong>Positive acknowledgement</strong> (“OK”) and <strong>negative acknowledgement</strong> (“Please repeat that.”)</li>
+  <li><strong>ARQ</strong> (<strong>Automatic Repeat reQuest</strong>) protocols
+    <ul>
+      <li>Error detection - detect bit errors something like checksum</li>
+      <li>Receiver feedback - provide explicit feedback to the sender. The positive (ACK) and negative (NAK) acknowledgement replies in the message-dictation scenario are examples of such feedback. → sending ACK and NAK packets from and back, usually one bit long (0 or 1).</li>
+      <li>Retransmission - if received in error at the receiver will be retransmitted by the sender</li>
+    </ul>
+  </li>
+  <li>But ACK / NAK may be corrupted! Handling examples:
+    <ul>
+      <li>“What did you say?” - fail interpretation</li>
+      <li>Error handling using checksum or something, but also recover from bit errors.</li>
+      <li>Simply resend the ACK/NAK again, introduces <strong>duplicate packets</strong> into the sender-to-receiver channel. Doesn’t know if the sent contains new data or is a transmission.</li>
+      <li><strong>The real fix is</strong>:
+        <ul>
+          <li>Add a new field to the data packet and have the sender number its data packets by putting a sequence number into the field. The receiver then need only check the sequence number to determine whether or not the received packet is a retransmission.
+<strong>Reliable Data Transfer over a Lossy Channel with Bit Errors: rdt3.0 (Alternating-bit protocol)</strong>
+In addition to corrupting bits, packets can be lost as well.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Adding a new protocol mechanism</li>
+  <li>Wait amount of time? <strong>Countdown timer</strong>?
+    <ul>
+      <li>Yes
+<span style="color:#ff0000;"><strong>3.4.2 Pipelined Reliable Data Transfer Protocols</strong></span>
+Rdt3.0 is a functionally correct protocol, stop-and-wait protocol.
+RTT, 30 milliseconds, R of 1 Gbps (10<strong>9 bits/sec) with L of 1000 bytes (8000 bits/packet). Header and data time to transmit the packet:
+**d_trans = L/R = (8000 bits/packet) / (10</strong>9 bits/sec) = 8 microseconds**
+For ACK, the <strong>t = RTT + L/R = 30.008 msec.</strong>
+Stop-ajd-wait protocol dismal sender utilization, U_sender of 
+<strong>U_sender = (L/R) / (RTT + L/R) = .008 / 30.008 = 0.00027</strong></li>
+    </ul>
+  </li>
+  <li>Since the many in-transit sender-to-receiver packets can be visualized as filling a pipeline, this technique is known as pipelining: Reliable data transfer protocols:
+    <ul>
+      <li>The range of sequence numbers must be increased, since each in-transit packet (not counting retransmissions) must have a unique sequence number and there may be multiple, in-transit, unacknowledged packets.</li>
+      <li>The sender and receiver sides of the protocols may have to buffer more than one packet. Minimally, the sender will have to buffer packets that have been transmitted but not yet acknowledged. Buffering of correctly received packets may also be needed at the receiver, as discussed below.</li>
+      <li>The range of sequence numbers needed and the buffering requirements will depend on the manner in which a data transfer protocol responds to lost, corrupted, and overly delayed packets. Two basic approaches toward pipelined error recovery can be identified:** Go-Back-N** and <strong>selective repeat.</strong>
+<span style="color:#ff0000;"><strong>3.4.3 Go-Back-N (GBN)</strong></span>
+<strong>Go-Back-N (GBN) protocol,</strong> the sender is allowed to transmit multiple packets (when available) without waiting for an acknowledgement, but is constrained to have no more than some maximum allowable number, N, of unacknowledged packets in the pipeline.</li>
+    </ul>
+  </li>
+  <li>Acknowledged packets can be viewed as a window of size N so: N is the <strong>window size</strong>, GBN protocol itself a <strong>sliding-window protocol</strong></li>
+  <li>Allows the sender to potentially “fill the pipeline”</li>
+  <li>However performance problems: A single packet error can cause retransmit a large number of packets, unnecessarily
+<span style="color:#ff0000;"><strong>3.4.4 Selective Repeat (SR)</strong></span></li>
+  <li>Selective-repeat protocols avoid unnecessary retransmission by having the sender retransmit only those packets that it suspects were received in error (lost/corrupted) at the receiver. Individually acknowledge correctly received packets.</li>
+  <li>Window size N, but already received ACKs for some of the packets in the window.</li>
+</ul>
+
+<p><strong>Mechanism</strong>: Use, Comments
+<strong>Checksum</strong>: Used to detect bit errors in a transmitted packet.
+<strong>Timer</strong>: Used to timeout/retransmit a packet, possibly because the packet (or it’s ACK) was lost within the channel. Because timeouts can occur when a packet is delayed but not lost (premature timeout), or when a packet has been received by the receiver but the receiver-to-sender ACK has been lost, duplicate copies of a packet may be received by a receiver.
+<strong>Sequence number</strong>: Used for sequential numbering of packets of data flowing from sender to receiver. Gaps in the sequence numbers of received packets allow the receiver to detect a
+lost packet. Packets with duplicate sequence numbers allow the receiver to detect
+duplicate copies of a packet.
+Acknowledgment: Used by the receiver to tell the sender that a packet or set of packets has been received correctly. Acknowledgments will typically carry the sequence number of
+the packet or packets being acknowledged. Acknowledgments may be individual
+or cumulative, depending on the protocol.
+<strong>Negative acknowledgment</strong>: Used by the receiver to tell the sender that a packet has not been received correctly. Negative acknowledgments will typically carry the sequence number
+of the packet that was not received correctly.</p>
+
+<p><strong>Window, pipelining</strong>: The sender may be restricted to sending only packets with sequence numbers that fall within a given range. By allowing multiple packets to be transmitted but not yet acknowledged, sender utilization can be increased over a stop-and-wait mode of operation. We’ll see shortly that the window size may be set on the basis of the receiver’s ability to receive and buffer messages, or the level of congestion in the network, or both.</p>
+
+<h2 id="35-connection-oriented-transport-tcp"><strong>3.5 Connection-Oriented Transport: TCP</strong></h2>
+<ul>
+  <li>Error detection, retransmission, cumulative acknowledgments, timers, header fields for sequence and acknowledgment numbers.
+<strong>3.5.1 The TCP Connection</strong>
+TCP: <strong>connection-oriented</strong>, one app process can begin to send data to another, the two processes must first “handshake” with each other. They must send preliminary segments to each other to establish the parameters of the ensuing data transfer. Both sides will initialize many TCP state variables.</li>
+  <li>Not an end-to-end TDM or FDM circuit as in circuit-switched network.</li>
+  <li>“Connection” is a logical one, with common state residing only in the TCPs in the two communicating end systems.</li>
+  <li>TCP protocol runs only in the end systems and not in the intermediate network elements (routers and link-layer switches).</li>
+  <li>The intermediate network elements do not maintain TCP connection state, oblivious to TCP connections, only datagrams.</li>
+  <li><strong>Full-duplex service</strong>: If there is a TCP connection between Process A on one host and Process B on another host, then application-layer data can flow from Process A to Process B at the same time as application-layer data flows from Process B to Process A.</li>
+  <li><strong>Point-to-point</strong>: between a single sender and a single receiver. So-called “multicasting” (see the online supplementary materials for this text)- the transfer of data from one sender to many receivers in a single send operation- is not possible with TCP. With TCP, two hosts are company and three are a crowd!</li>
+  <li>Client process, server process.
+    <ol>
+      <li>Client app process first informs the client transport layer that it wants to establish a connection (clientSocket.connect((servername,serverport)))</li>
+      <li>TCP in the client then proceeds to establish a TCP connection with TCP in the server. By the client sending a first special TCP segment, the server responds with a seconds special TCP segment. Finally the client responds again with a third special segment. (first and seconds carry no payload, no application-layer data, the third carries a payload.) <strong>Three-way handshake</strong></li>
+      <li>Established, now data can be sent to each other: The client process passes a stream of data through the socket to the TCP running in the client.</li>
+      <li>TCP Directs the data to the connection’s <strong>send buffer</strong>, a buffer set aside during the 3-way handshake. From time to time (at its own convenience), TCP will grab chunks of data from the send buffer and pass the data to the network layer.</li>
+      <li>The max amount of data that can be grabbed and placed in a segment is limited by the <strong>maximum segment size (MSS)</strong>. Set by first determining the length of the largest link-layer frame that can be sent by (<strong>maximum transmission unit (MTU)</strong>) and then setting the MSS to ensure that a TCP segment (when encapsulated in an IP datagram) + TCP/IP header will fit into a single link-layer frame. <em>MSS is typically 1460 bytes</em>.</li>
+      <li>TCP pairs each chunk of client data with a TCP header, forming <strong>TCP segments</strong>. Passed down to the network layer, separately encapsulated within network-layer IP datagram.</li>
+      <li>IP datagram er then sent into the network, and when TCP receives a segment at the other end, it is the placed in the TCP connection’s receive buffer
+<strong>3.5.2 TCP Segment Structure</strong>
+<strong>BOTH UDP AND TCP:</strong></li>
+    </ol>
+  </li>
+  <li><strong>Source and destination port numbers</strong> (multiplexing / demultiplexing data from/to upper-layer applications)</li>
+  <li><strong>Checksum field</strong>
+<strong>TCP ONLY:</strong></li>
+  <li>The 32-bit s<strong>equence number field</strong> and the 32-bit <strong>acknowledgment number field</strong> are used by the TCP sender and receiver in implementing a reliable data transfer service, as discussed below.</li>
+  <li>The 16-bit <strong>receive window</strong> field is used for flow control. We will see shortly that it is used to indicate the number of bytes that a receiver is willing to accept.</li>
+  <li>The 4-bit <strong>header length field</strong> specifies the length of the TCP header in 32-bit words. The TCP header can be of variable length due to the TCP options field. (Typically, the options field is empty, so that the length of the typical TCP header</li>
+  <li>is 20 bytes.)</li>
+  <li>The optional and variable-length <strong>options field</strong> is used when a sender and receiver negotiate the maximum segment size (MSS) or as a window scaling factor for use in high-speed networks. A time-stamping option is also defined. See RFC 854 and RFC 1323 for additional details.</li>
+  <li>The <strong>flag field</strong> contains 6 bits. The <strong>ACK bit</strong> is used to indicate that the value carried in the acknowledgment field is valid; that is, the segment contains an acknowledgment for a segment that has been successfully received. The <strong>RST</strong>, <strong>SYN</strong>, and <strong>FIN</strong> bits are used for connection setup and teardown, as we will discuss at the end of this section. The <strong>CWR</strong> and <strong>ECE</strong> bits are used in explicit congestion notification, as discussed in Section 3.7.2. Setting the <strong>PSH</strong> bit indicates that the receiver should pass the data to the upper layer immediately. Finally, the <strong>URG</strong> bit is used to indicate that there is data in this segment that the sending-side upper-layer entity has marked as “urgent. “ The location of the last byte of this urgent data is indicated by the 16-bit urgent data pointer field. TCP must inform the receiving-side upper-layer entity when urgent data exists and pass it a pointer to the end of the urgent data. (In practice, the PSH, URG, and the urgent data pointer are not used. However, we mention these fields for completeness.)
+<strong>Sequence Numbers and Acknowledgement Numbers</strong></li>
+  <li>Critical part of TCP’s reliable data transfer service</li>
+  <li><strong>Sequence number for a segment</strong> → byte-stream number of the first byte in the segment.
+    <ul>
+      <li>Suppose that the data stream consists of a file consisting of 500.000 bytes, that the MSS is 1.000 bytes, and that the first byte of the data stream is numbered 0. TCP Constructs 500 segments out of the data stream, 1.000N</li>
+    </ul>
+  </li>
+  <li>Acknowledgment number that Host A puts in its segment is the sequence number of the next byte Host A is expecting from Host B.
+    <ul>
+      <li>Suppose Host a has received 0 through 535 from B and it’s about to send a segment to Host B. Host A is waiting for byte 536 and the subsequent bytes in Host B’s data stream. So Host A pts 536 in the acknowledgement number field of the segment it sends to B.</li>
+    </ul>
+  </li>
+  <li>TCP only acknowledges bytes up to the first missing byte in the stream, provides <strong>cumulative acknowledgment</strong>.</li>
+  <li>The receiver keeps the out-of-order bytes and waits for the missing bytes to fill in the gaps.
+<strong>Telnet: A Case study for Sequence and Acknowledgment numbers</strong>
+Acknowledgment for client-to-server data carrying server-to-client: <strong>Piggybacked</strong> on the server-to-client data segment.</li>
+</ul>
+
+<p><strong>3.5.3 Round-Trip Time Estimation and Timeout</strong>
+TCP alike rdt protocol uses a timeout/retransmit mechanism to recover from lost segments.</p>
+<ul>
+  <li>Length of the timeout interval.
+    <ul>
+      <li>Larger than the connection’s round-trip time (RTT) (time from when the segment is sent until it’s acknowledged.)
+<strong>Estimating the Round-trip Time</strong>
+<em>Var a = 0.125</em>
+<strong>EstimatedRTT = (1 - a) * EstimatedRTT + a * SampleRTT</strong>
+<strong>EstimatedRTT = 0.875 * EstimatedRTT + 0.125 * SampleRTT</strong>
+EstimatedRTT  is a weighted average of the SampleRTT values.
+The average is called an <strong>exponential weighted moving average (EWMA)</strong></li>
+    </ul>
+  </li>
+  <li>Measure of the variability of the RTT, DevRTT as an estimate of how much SampleRTT typically deviates from EstimatedRTT
+<em>Var b = 0.25</em>
+<strong>DevRTT = (1 - b) * DevRTT + b + | SampleRTT - EstimatedRTT |</strong></li>
+</ul>
+
+<p><strong>Setting and Managing the Retransmission Timeout Interval</strong>
+<strong>TimeoutInterval = EstimatedRTT + 4 * DevRTT</strong>
+Initial TimeoutInterval value of 1s is recommended.</p>
+
+<p><strong>3.5.4 Reliable Data Transfer</strong>
+<strong>Reliable data transfer service</strong> on top of IP’s unreliable best-effort service.</p>
+<ul>
+  <li>Ensures that the data stream that a process reads out of its TCP receive buffer is uncorrupted, without gaps, without duplication, and in sequence.</li>
+  <li>Single retransmission timer
+<strong>A Few Interesting Scenarios</strong>
+    <ol>
+      <li>Host A sends one segment to Host B. Suppose that this segment has sequence number 92 and contains 8 bytes of data. After sending this segment, Host A waits for a segment from B with acknowledgment number 100. Although the segment from A is received at B, the acknowledgment from B to A gets lost. In this case, the timeout event occurs, and Host A retransmits the same segment. Of course, when Host B receives the retransmission, it observes from the sequence number that the segment contains data that has already been received. Thus, TCP in Host B will discard the bytes in the retransmitted segment.</li>
+      <li>Suppose Host A sends the two segments, exactly as in the second example. The acknowledgment of the first segment is lost in the network, but just before the timeout event, Host A receives an acknowledgment with acknowledgment number 120. Host A therefore knows that Host B has received everything up through byte 119; so Host A does not resend either of the two segments. 
+<strong>Doubling the Timeout Interval</strong></li>
+    </ol>
+  </li>
+  <li>Few modifications that most TCP implementations emplot, length of the timeout interval after a timer expiration. Rather than deriving it from the last EstimatedRTT and DevRTT the next TimeoutInterval is set to twice the previous value. The interval grows exponentially after each retransmission.
+<strong>Fast retransmit</strong></li>
+  <li>Timeout period can be relatively long on timeout-triggered retransmissions.</li>
+  <li>Because a sender often sends a large number of segments back to back, if one segment is lost, there will likely be many back-to-back duplicate ACKs. If the TCP sender receives three duplicate ACKs for the same data, it takes this as an indication that the segment following the segment that has been ACKed three times has been lost. In the case that three duplicate ACKs are received, the TCP sender performs a fast retransmit [RFC5681], retransmitting the missing segment before that segment’s timer expires. This is shown in Figure 3.37, where the second segment is lost, then retransmitted before its timer expires.
+<img src="https://lh3.googleusercontent.com/l_jQp25V27ZqMrgGTLB4ZeL5KyE6SYsezWYsIyVw5ilf-3BJgXCORzsgXIBCryG8ImPbtD5CLSMxr9U6kbcqRLVGfW3d4B5ChMER1O5OubguoDZrknvULPOnTNtLzdThqctouD_-vx93wHXMuA" alt="" />
+<strong>Go-Back-N or Selective Repeat?</strong></li>
+  <li>Hybrid of GBN and SR protocols</li>
+</ul>
+
+<p><strong>3.5.5 Flow Control</strong>
+<strong>Flow-control service</strong> to eliminate the possibility of the sender overflowing the receiver’s buffer. Speed-matching service, matching the rate at which the sender is sending against the rate at which the receiving application is reading. → <strong>Congestion control.</strong></p>
+<ul>
+  <li>Works by having the sender maintain a variable called the receive window. Used to give the sender an idea of how much free buffer space is available at the receiver. Since Full-duplex, the sender at each side of the connection maintains a distinct receive window.</li>
+  <li>Suppose that Host A is sending a large file to Host B over a TCP connection . Host B allocates a receive buffer to this connection; denote its size by RcvBuffer. From time to time, the application process in Host B reads from the buffer. Define the following variables:</li>
+  <li><em>LastByteRead</em>: the number of the last byte in the data stream read from the buffer by the application process in B</li>
+  <li><em>LastByteRcvd</em>: the number of the last byte in the data stream that has arrived from the network and has been placed in the receive buffer at B</li>
+  <li>Because TCP is not permitted to overflow the allocated buffer, we must have
+<strong>LastByteRcvd - LastByteRead &lt;= RcvBuffer</strong></li>
+  <li>The receive window, denoted rwnd is set to the amount of spare room in the buffer:
+<strong>Rwnd = RcvBuffer - [LastByteRcvd - LastByteRead]</strong>
+<strong>LastByteSent - LastByteAcked &lt;= rwnd</strong>
+<img src="https://lh5.googleusercontent.com/8muWm33PxMGfUIaaJnCFmDw24QlKDTB3kX56-NwJ8CrEAhedDdFLyMXx8qQLEbWD57KiFe9J9Pk0PIeBNmxzTL1MtrxUASBTKAKffwG3OQH7wyC8AYSTxgaEwVjVAW59MLr9_LFj-lSdeBGH4g" alt="" />
+<strong>The online site at</strong> <a href="http://www.awl.com/kurose-ross"><strong>http://www.awl.com/kurose-ross</strong> </a><strong>for this book provides an</strong>
+<strong>interactive Java applet that illustrates the operation of the TCP receive window.</strong></li>
+</ul>
+
+<p><strong>3.5.4 TCP connection management</strong></p>
+<ul>
+  <li><strong>Established and torn down.</strong>
+    <ol>
+      <li>The client-side TCP first sends a special TCP segment to the server-side TCP. This special segment contains no application-layer data. But one of the flag bits in the segment’s header, the SYN bit, is set to l. For this reason, this special segment is referred to as a SYN segment. In addition, the client randomly chooses an initial sequence number (<em>client_isn</em>) and puts this number in the sequence number field of the initial TCP SYN segment. This segment is encapsulated within an IP datagram and sent to the server. There has been considerable interest in properly randomizing the choice of the <em>client_isn</em> in order to avoid certain security attacks [CERT 2001-09].</li>
+      <li>Once the IP datagram containing the TCP SYN segment arrives at the server host (assuming it does arrive!), the server extracts the TCP SYN segment from the datagram, allocates the TCP buffers and variables to the connection, and sends a connection-granted segment to the client TCP. (We’ll see in Chapter 8 that the allocation of these buffers and variables before completing the third step of the three-way handshake makes TCP vulnerable to a denial-of-service attack known as SYN flooding.) This connection-granted segment also contains no application-layer data. However, it does contain three important pieces of information in the segment header. First, the SYN bit is set to 1. Second, the acknowledgment field of the TCP segment header is set to <em>client_isn+1</em>. Finally, the server chooses its own initial sequence number (<em>server_isn</em>) and puts this value in the sequence number field of the TCP segment header. This connection-granted segment is saying, in effect, “I received your SYN packet to start a connection with your initial sequence number, <em>client_isn</em>. I agree to establish this connection. My own initial sequence number is <em>server_isn</em>.” The connection-granted segment is referred to as a <strong>SYNACK segment.</strong></li>
+      <li>Upon receiving the SYNACK segment, the client also allocates buffers and variables to the connection. The client host then sends the server yet another segment; this last segment acknowledges the server’s connection-granted segment (the client does so by putting the value <em>server_isn+1</em> in the acknowledgment field of the TCP segment header). The SYN bit is set to zero, since the connection is established. This third stage of the three-way handshake may carry client-to-server data in the segment payload.</li>
+    </ol>
+  </li>
+</ul>
+
+<p><strong>→ 3-way handshake!</strong></p>
+
+<h2 id="36-principles-of-congestion-control"><strong>3.6 Principles of Congestion Control</strong></h2>
+<p>Approaches that can be taken to avoid, or react to, network congestion. TCP’s congestion-control algorithm.
+<strong>3.6.2 Approaches to Congestion Control</strong></p>
+<ul>
+  <li>
+    <p><strong>End-to-end congestion control</strong>. In an end-to-end approach to congestion control, the network layer provides no explicit support to the transport layer for congestion-control purposes. Even the presence of network congestion must be inferred by the end systems based only on observed network behavior (for example, packet loss and delay). We’ll see shortly in Section 3.7.1 that TCP takes this end-to-end approach toward congestion control, since the IP layer is not required to provide feedback to hosts regarding network congestion. TCP segment loss (as indicated by a timeout or the receipt of three duplicate acknowledgments) is taken as an indication of network congestion, and TCP decreases its window size accordingly. We’ll also see a more recent proposal for TCP congestion control that uses increasing round-trip segment delay as an indicator of increased network congestion</p>
+  </li>
+  <li>
+    <p><strong>Network-assisted congestion control</strong>. With network-assisted congestion control, routers provide explicit feedback to the sender and/or receiver regarding the congestion state of the network. This feedback may be as simple as a single bit indicating congestion at a link - an approach taken in the early IBM SNA [Schwartz 1982], DEC DECnet [Jain 1989; Ramakrishnan 1990] architectures, and ATM [Black 1995] network architectures. More sophisticated feedback is also possible. For example, in <strong>ATM Available Bite Rate (ABR)</strong> congestion control, a router informs the sender of the maximum host sending rate it (the router) can support on an outgoing link. As noted above, the Internet-default versions of IP and TCP adopt an end-to-end approach towards congestion control. We’ll see, more recently, IP and TCP may also optionally implement network-assisted congestion control.</p>
+  </li>
+</ul>
+
+<p>For network-assisted congestion control, congestion information is typically fed back from the network to the sender in one of two ways, as shown in Figure 3.49. Direct feedback may be sent from a network router to the sender. This form of notification typically takes the form of a choke packet (essentially saying, ‘I’m congested!”). The second and more common form of notification occurs when a router marks/updates a field in a packet flowing from sender to receiver to indicate congestion. Upon receipt of a marked packet, the receiver then notifies the sender of the congestion indication. This latter form of notification takes a full round-trip time.</p>
+
+<h2 id="37-tcp-congestion-control"><strong>3.7 TCP Congestion Control</strong></h2>
+<p>The TCP congestion-control mechanism operating at the sender keeps track of an additional variable, the congestion window. The congestion window, denoted
+<em>cwnd</em>, imposes a constraint on the rate at which a TCP sender can send traffic into
+the network. Specifically, the amount of unacknowledged data at a sender may not
+exceed the minimum of <em>cwnd</em> and <em>rwnd</em>, that is:
+<strong>LastByteSent - LastByteAcked &lt;= min(cwnd, rwnd)</strong></p>
+
+<p><em>Thus the sender’s send rate is roughly cwnd! RTT bytes/sec. By adjusting</em>
+<em>the value of cwnd, the sender can therefore adjust the rate at which it sends data into</em>
+<em>its connection.</em></p>
+
+<p>Let’s next consider how a TCP sender perceives that there is congestion on the
+path between itself and the destination. Let us define a “loss event” at a TCP sender
+as the occurrence of either a timeout or the receipt of three duplicate ACKs from the
+receiver. When there is excessive congestion, then one (or more) router buffers
+along the path overflows, causing a datagram (containing a TCP segment) to be
+dropped. The dropped datagram, in turn, results in a loss event at the sender-either
+a timeout or the receipt of three duplicate ACKs-which is taken by the sender to be
+an indication of congestion on the sender-to-receiver path.</p>
+
+<ul>
+  <li>TCP is self-clocking</li>
+  <li>
+    <p>Given the mechanism of adjusting the value of cwnd to control the sending rate, the critical question remains: How should a TCP sender determine the rate at which it should send? If TCP senders collectively send too fast, they can congest the network, leading to the type of congestion collapse</p>
+  </li>
+  <li>How then do the TCP senders determine their sending rates such that they don’t congest the network but at the same time make use of all the available bandwidth?</li>
+  <li>
+    <p>Are TCP senders explicitly coordinated, or is there a distributed approach in which the TCP senders can set their sending rates based only on local information? TCP answers these questions using the following guiding principles:</p>
+  </li>
+  <li><strong>A lost segment implies congestion</strong>, and hence, the TCP sender’s rate should be decreased when a segment is lost. A timeout event or the receipt of four acknowledgments for a given segment (one original ACK and then three duplicate ACKs) is interpreted as an implicit “loss event” indication of the segment following the quadruply ACKed segment, triggering a retransmission of the lost segment. From a congestion-control standpoint, the question is how the TCP sender should decrease its congestion window size, and hence its sending rate, in response to this inferred loss event.</li>
+  <li><strong>An acknowledged segment indicates that the network is delivering the sender’s segments to the receiver, and hence, the sender’s rate can be increased when an ACK arrives for a previously unacknowledged segment.</strong> The arrival of acknowl- edgments is taken as an implicit indication that all the well segments are being successfully delivered from sender to receiver, and the network is thus not congested. The congestion window size can thus be increased.</li>
+  <li><strong>Bandwidth probing</strong>. Given ACKs indicating a congestion-free source-to-destination path and loss events indicating a congested path, TCP ‘s strategy for adjusting its transmission rate is to increase its rate in response to arTiving ACKs until a loss event occurs, at which point, the transmission rate is decreased. The TCP sender thus increases its transmission rate to probe for the rate at which congestion onset begins, backs off from that rate, and then to begins probing again to see if the congestion onset rate has changed. The TCP sender’s behavior is perhaps analogous to the child who requests (and gets) more and more goodies until finally he/she is finally told “No!”, backs off a bit, but then begins making requests again shortly afterwards. Note that there is no explicit signaling of congestion state by the network-ACKs and loss events serve as implicit signals-and that each TCP sender acts on local information asynchronously from other TCP senders.</li>
+</ul>
+
+<p><span style="color:#ff0000;"><strong>TCP congestion-control algorithm</strong></span><span style="color:#ff0000;">:</span></p>
+<ol>
+  <li><strong>Slow Start</strong>
+    <ul>
+      <li>When a TCP connection begins, the value of cwnd is typically initialized to a small value of 1 MSS [RFC 3390], resulting in an initial sending rate of roughly MSS/RTT. For example, if MSS = 500 bytes and RTT = 200 msec, the resulting initial sending rate is only about 20 kbps. Since the available bandwidth to the TCP sender may be much larger than MSS/RTT, the TCP sender would like to find the amount of available bandwidth quickly. Thus, in the slow-start state, the value of cwnd begins at 1 MSS and increases by 1 MSS every time a transmitted segment is first acknowledged.</li>
+    </ul>
+  </li>
+  <li><strong>Congestion Avoidance</strong>
+    <ul>
+      <li>On entry to the congestion-avoidance state, the value of cwnd is approximately half its value when congestion was last encountered-congestion could be just around the corner! Thus, rather than doubling the value of cwnd every RTT, TCP adopts a more conservative approach and increases the value of <em>cwnd</em> by just a single MSS every RTT [RFC 5681]. This can be accomplished in several ways.</li>
+      <li>In this case, the network is continuing to deliver segments from sender to receiver (as indicated by the receipt of duplicate ACKs). So TCP’ s behavior to this type of loss event should be less drastic than with a timeout-indicated loss: TCP halves the value of cwnd (adding in 3 MSS for good measure to account for the triple duplicate ACKs received) and records the value of ssthresh to be half the value of cwn d when the triple duplicate ACKs were received. The fast-recovery state is then entered.</li>
+    </ul>
+  </li>
+  <li><strong>Fast Recovery (not mandatory but recommended)</strong>
+    <ul>
+      <li>In fast recovery, the value of cwnd is increased by 1 MSS for every duplicate ACK received for the missing segment that caused TCP to enter the fast-recovery state. Eventually, when an ACK arrives for the missing segment, TCP enters the congestion-avoidance state after deflating cwnd. If a timeout event occurs, fast recovery transitions to the slow-start state after performing the same actions as in slow start and congestion avoidance:</li>
+    </ul>
+    <ul>
+      <li>The value of <em>cwnd</em> is set to 1 MSS, and the value of <em>ssthresh</em> is set to half the value of <em>cwnd</em> when the loss event occurred.</li>
+      <li>Fast recovery is a recommended, but not required, component of TCP [RFC5681] . It is interesting that an early version of TCP, known as <strong>TCP Tahoe</strong>, unconditionally cut its congestion window to 1 MSS and entered the slow-start phase after either a timeout-indicated or triple-duplicate-ACK-indicated loss event. The newer version of TCP, <strong>TCP Reno</strong>, incorporated fast recovery .
+<strong>TCP Congestion Control: Retrospective</strong></li>
+    </ul>
+  </li>
+</ol>
+
+<p>Ignoring the initial slow-start period when a connection begins and assuming that losses are indicated by triple duplicate ACKs rather than timeouts, TCP’s congestion control consists of linear (additive) increase in <em>cwnd</em> of 1 MSS per RTT and then a halving (multiplicative decrease) of <em>cwnd</em> on a triple duplicate-ACK event. For this reasonTCP congestion control is often referred to as an <strong>additive-increase, multiplicative-decrease (AIMD)</strong> form of congestion control. AIMD congestion control gives rise to the “saw tooth” behavior shown in Figure 3.53, which also nicely illustrates our earlier intuition of TCP “probing” for bandwidth-TCP linearly increases its congestion window size (and hence its transmission rate) until a triple duplicate-ACK event occurs. It then decreases its congestion window size by a factor of two but then again begins increasing it linearly, probing to see if there is additional available bandwidth.</p>
+
+<p><strong>Macroscopic Description of TCP Throughput</strong>
+Given the saw-toothed behavior of TCP, it’s natural to consider what the average throughput (that is, the average rate) of a long-lived TCP connection might be. In this analysis we’ll ignore the slow-start phases that occur after timeout events. (These phases are typically very short, since the sender grows out of the phase exponentially fast.)</p>
+<ul>
+  <li>During a particular round-trip interval, the rate at which TCP sends data is a function of the congestion window and the current RTT. When the window size is w bytes and the current round-trip time is RTT seconds, then TCP’ s transmission rate is roughly <em>w</em>/RTT. TCP then probes for additional bandwidth by increasing <em>w</em> by 1 MSS each RTT until a loss event occurs. Denote by <em>W</em> the value of <em>w</em> when a loss event occurs. Assuming that RTT and W are approximately constant over the duration of the connection, the TCP transmission rate ranges from <strong>W/(2 · RTT)</strong> to <strong>W/RTT.</strong></li>
+  <li>These assumptions lead to a highly simplified macroscopic model for the steady-state behavior of TCP. The network drops a packet from the connection when the rate increases to <strong>W/RTT</strong>; the rate is then cut in half and then increases by <strong>MSS/RTT</strong> every RTT until it again reaches <strong>W/RTT</strong>. This process repeats itself over and over again. Because TCP’s throughput (that is, rate) increases linearly between the two extreme values, we have
+    <ul>
+      <li><strong>Average throughput of a connection = (0.75 * W) / RTT</strong></li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>TCP Over High-Bandwidth Paths</strong>
+What was good for the Internet when the bulk of the TCP connections carried SMTP, FTP, and Telnet traffic is not necessarily good for today’s HTTP-dominated Internet or for a future Internet with services that are still undreamed of.</p>
+
+<ul>
+  <li>The need for continued evolution of TCP can be illustrated by considering the high-speed TCP connections that are needed for grid- and cloud-computing appli- cations. For example, consider a TCP connection with 1,500-byte segments and a 100 ms RIT, and suppose we want to send data through this connection at 10 Gbps. Following [RFC 3649], we note that using the TCP throughput formula above, in order to achieve a 10 Gbps throughput, the average congestion window size would need to be 83,333 segments. That’s a lot of segments, leading us to be rather concerned that one of these 83,333 in-flight segments might be lost. What would happen in the case of a loss? Or, put another way, what fraction of the transmitted segments could be lost that would allow the TCP congestion-control algorithm specified in Figure 3.51 still to achieve the desired 10 Gbps rate? In the homework questions for this chapter, you are led through the derivation of a formula relating the throughput of a TCP connection as a function of the loss rate (L), the round-trip time (RIT), and the maximum segment size (MSS):
+    <ul>
+      <li><strong>Average throughput of a connection = (1.22 * MSS) / (RTT * sqrt(L))</strong></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Using this formula, we can see that in order to achieve a throughput of 10 Gbps, today’s TCP congestion-control algorithm can only tolerate a segment loss probability of 2 · 10- 10 (or equivalently, one loss event for every 5,000,000,000 segments)- a very low rate. This observation has led a number of researchers to investigate new versions of TCP that are specifically designed for such high-speed environments…</p>
+
+<p><strong>3.7.1 Fairness</strong>
+When running over UDP, applications can pump their audio and video into the network at a constant rate and occasionally lose packets, rather than reduce their rates to “fair” levels at times of congestion and not lose any packets. From the perspective of TCP, the multimedia applications running over UDP are not being fair-they do not cooperate with the other connections nor adjust their transmission rates appropriately. Because TCP congestion control will decrease its transmission rate in the face of increasing congestion (loss), while UDP sources need not, it is possible for UDP sources to crowd out TCP traffic. An area of research today is thus the development of congestion-control mechanisms for the Internet that prevent UDP traffic from bringing the Internet’s throughput to a grinding halt.</p>
+
+<p><strong>Fairness and Parallel TCP Connections</strong>
+But even if we could force UDP traffic to behave fairly, the fairness problem would still not be completely solved. This is because there is nothing to stop a TCP-based application from using multiple parallel connections. For example, Web browsers often use multiple parallel TCP connections to transfer the multiple objects within a Web page. (The exact number of multiple connections is configurable in most browsers.) When an application uses multiple parallel connections, it gets a larger fraction of the bandwidth in a congested link. As an example, consider a link of rate R supporting nine ongoing client-server applications, with each of the applications using one TCP connection. If a new application comes along and also uses one TCP connection, then each application gets approximately the same transmission rate of R/10. But if this new application instead uses 11 parallel TCP connections, then the new application gets an unfair allocation of more than R/2. Because Web traffic is so pervasive in the Internet, multiple parallel connections are not uncommon.</p>
+
+:ET

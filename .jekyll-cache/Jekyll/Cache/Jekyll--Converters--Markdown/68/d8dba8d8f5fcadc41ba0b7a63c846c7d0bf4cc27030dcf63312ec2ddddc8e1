@@ -1,0 +1,65 @@
+I"H<h1 id="øving-2---konseptuell-modell">Øving 2 - Konseptuell modell</h1>
+
+<p>PickApp! er en smarttelefonapp for samkjøring. Brukere med bil skal kunne tilby andre brukere å sitte på, samt at brukere som ønsker å sitte på kan etterlyse noen som kjører. Appens primære målgruppe er studenter. Med utgangspunkt i elementene nevnt i Johnson og Hendersons artikkel <em>“Conceptual Models: Begin by Designing What to Design”</em> [1], skal vi i denne oppgaven skissere den konseptuelle modellen til applikasjonen.</p>
+<h2 id="metaforanalogi">Metafor/analogi</h2>
+<p>Metaforen/analogien som passer best er en biltur. Dette er fordi det er mange likheter mellom en biltur og innholdet i en annonse i appen. Informasjonen i en annonse er sterkt knyttet til informasjonen til en biltur. En fysisk biltur har en sjåfør, passasjerer, et start-og sluttsted og en varighet. Det er et begrenset antall plasser i en bil som folk kan sitte på, i likhet med “kapasiteten” til en annonse. En person kan både være en sjåfør eller en passasjer, slik som i appen. På denne måten vil biltur passe som en god analogi til “PickApp!”.</p>
+<h2 id="konsepter">Konsepter</h2>
+<p><strong>Profil</strong>
+Profil-konseptet er det brukeren bruker til å interagerer med andre, brukeren oppretter en profil, og bruker den til å legge ut og oppsøke annonser. Profilen blir opprettet med at brukeren fyller inn e-post, mobilnummer, adresse, bilde og passord.</p>
+<ul>
+  <li>Attributter (fig. 1)
+    <ul>
+      <li>bilde, passord, mobilnummer, adresse , e-post, anmeldelser, transaksjoner (bestilte annonse), annonser</li>
+    </ul>
+  </li>
+  <li>Operasjoner
+    <ul>
+      <li>opprett, slett, opprett/legge ut annonse, endre bilde, endre passord, endre mobilnummer, endre adresse, endre e-post, se anmeldelser, se tidligere transaksjoner, se annonser (utløpte/aktive)
+<strong>Annonse</strong>
+En annonse er det brukeren oppretter eller søker opp for å finne bilturer eller personer(profiler). En annonse blir opprettet av en bruker, som fyller inn type, starttidspunkt, slutttudspunkt, startsted, sluttsted og antall seter. Profilen til brukeren som oppretter annonsen blir satt som skaperen av annonsen. Andre brukere kan oppsøke annonsen og ta kontakt, etter turen kan brukere gi tilbakemelding på annonsen.</li>
+    </ul>
+  </li>
+  <li>Attributter (fig. 1)
+    <ul>
+      <li>type (ønskes/tilbys), starttidspunkt, slutttidspunkt, startsted, sluttsted, ant. seter, kommentar, profil, tilbakemelding.</li>
+    </ul>
+  </li>
+  <li>Operasjoner
+    <ul>
+      <li>bestille, gi tilbakemelding, slett, endre antall seter, endre destinasjon, endre startsted, endre kommentar, endre varighet</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="relasjoner">Relasjoner</h2>
+<p>Relasjonene mellom konseptene:</p>
+<ul>
+  <li>Profil
+    <ul>
+      <li>Har annonser (1-n relasjon)</li>
+    </ul>
+  </li>
+  <li>Annonse
+    <ul>
+      <li>Har konto/brukerinformasjon
+For å gjøre det enklere å beskrive relasjonene i den konseptuelle modellen, har vi valgt en visuell representasjon av relasjonene i form av et ER-Diagram. Relasjonen mellom attributene til profil og annonse kan dermed lett observeres gjennom diagrammet under.
+<strong>Figur 1:</strong> ER-diagram over relasjonen mellom Profil og Annonse
+        <h2 id="mapping">Mapping</h2>
+        <p>Hva konseptene i systemet tilsvarer med tanke på brukskonteksten i metaforen beskrevet tidligere.</p>
+      </li>
+    </ul>
+  </li>
+  <li>En profil inne i annonsen av type “tilbys” er sjåføren i en bil i en ekte biltur.</li>
+  <li>En profil inne i annonsen av type “ønskes” er en passasjer, som ønsker å få sitte på, i en bil i en ekte biltur.</li>
+  <li>Start og sluttsted i en annonse tilsvarer et fysisk start og sluttsted på en biltur.</li>
+  <li>Ant. seter i en annonse av type “tilbys” er de fysiske ledige setene i en bil som skal kjøre.</li>
+  <li>En profil er knyttet til en reell person som skal kjøre/sitte på i en bil.</li>
+  <li>Kommentarer på en annonse er knyttet til et behov (fra passasjer) eller en opplysning (fra sjåfør, om f.eks hund i bil for personer med hundeallergi).</li>
+</ul>
+
+<p>KILDER</p>
+<ol>
+  <li><a href="https://ntnu.blackboard.com/bbcswebdav/pid-853047-dt-content-rid-24999666_1/xid-24999666_1">Johnson, H., Henderson, A. (2002) Conceptual Models: Begin by Designing What to Design, Interactions, 9(1), ACM Press</a></li>
+</ol>
+
+:ET

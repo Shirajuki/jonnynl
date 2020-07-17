@@ -1,4 +1,4 @@
-I"0<!-- HARDWARE INTRO -->
+I"/<!-- HARDWARE INTRO -->
 <h1 id="principles-of-computer-operations">Principles of Computer Operations</h1>
 <h2 id="following-instructions">Following Instructions</h2>
 <h2 id="learning-objectives">Learning objectives</h2>
@@ -39,7 +39,7 @@
 <h1 id="try-it-solutions">TRY IT SOLUTIONS</h1>
 <ol>
   <li><strong>Finding the Right Address.</strong> If the address of the byte in the following sequence is 1020, what is the address of the last byte? <br />
-<code class="language-plaintext highlighter-rouge">42 72 65 61 6B 27 73 20 6F 76 65 72 2E</code> <br />
+<code class="highlighter-rouge">42 72 65 61 6B 27 73 20 6F 76 65 72 2E</code> <br />
 Knowing that these are hexadecimal values, check Figure 7.3 to see what this memory is remembering.
     <ul>
       <li>The address of 2E is 1032, or if 1020 to base16 = 102C. Spells out “Break’s over.”</li>
@@ -52,17 +52,17 @@ Knowing that these are hexadecimal values, check Figure 7.3 to see what this mem
   </li>
   <li><strong>Same Data, Different Operations.</strong> Using the data from Figure 9.7, execute the multiply instruction MUL 4000, 2000, 2080 and (read this carefully) the subtract instruction SUB 4000, 2080, 2000.
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">Operation output, input1, input2</code> gives us [48<em>2,9</em>0,14*14] on multiply and [2-48,0-9,14-14] on subtract.</li>
+      <li><code class="highlighter-rouge">Operation output, input1, input2</code> gives us [48<em>2,9</em>0,14*14] on multiply and [2-48,0-9,14-14] on subtract.</li>
     </ul>
   </li>
   <li><strong>Much Faster.</strong> In our walk through of the F/E Cycle the answer computed was 42, whicha ccording to Douglas Adam’s <em>Hitchhiker’s Guide to the Galaxy</em> is “The Answer to the Ultimate Question of Life, the Universe, and Everything.” Adams reveals in the book that the mythical Deep Thought computer took 7.5 million years to get the answer; the computer in your phone executes five steps above in about 7.5 nanoseconds. If there are a billion nanoseconds in a second and 31 million seconds in a year, how many times faster is your phone at computing 42 than Deep Thought?
     <ul>
-      <li>The equation is <code class="language-plaintext highlighter-rouge">7.5 * 10**6 years / 7.5 nanoseconds</code> giving us <code class="language-plaintext highlighter-rouge">10**6 * (3.1 * 10**7)sec/year * 10**9</code> = <code class="language-plaintext highlighter-rouge">3.1 * 10**22</code></li>
+      <li>The equation is <code class="highlighter-rouge">7.5 * 10**6 years / 7.5 nanoseconds</code> giving us <code class="highlighter-rouge">10**6 * (3.1 * 10**7)sec/year * 10**9</code> = <code class="highlighter-rouge">3.1 * 10**22</code></li>
     </ul>
   </li>
-  <li><strong>OR Circuitry.</strong> Processors also have an instruction OR, ANS, A, B, which is true if either of A or B is true (or both); it’s false only if both are false. Using split wire <code class="language-plaintext highlighter-rouge">-[___]-</code> show where MOS transistors should be positioned to compute this instruction, assuming the gate conducts when the operand value is 1.
+  <li><strong>OR Circuitry.</strong> Processors also have an instruction OR, ANS, A, B, which is true if either of A or B is true (or both); it’s false only if both are false. Using split wire <code class="highlighter-rouge">-[___]-</code> show where MOS transistors should be positioned to compute this instruction, assuming the gate conducts when the operand value is 1.
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">1 - top/bottom - (1 if top and bottom is 1)</code></li>
+      <li><code class="highlighter-rouge">1 - top/bottom - (1 if top and bottom is 1)</code></li>
     </ul>
   </li>
 </ol>
@@ -134,12 +134,12 @@ Knowing that these are hexadecimal values, check Figure 7.3 to see what this mem
       <li>the same reuslts most of the time but sometimes it is different</li>
     </ul>
   </li>
-  <li>If <code class="language-plaintext highlighter-rouge">this.Opactiy += 1.0;</code> increases the opacity, what line of code would decrease the opacity?
+  <li>If <code class="highlighter-rouge">this.Opactiy += 1.0;</code> increases the opacity, what line of code would decrease the opacity?
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">this.Opacity = 1.0;</code></li>
+      <li><code class="highlighter-rouge">this.Opacity = 1.0;</code></li>
       <li><strong>this.Opacity -= 1.0;</strong></li>
-      <li><code class="language-plaintext highlighter-rouge">this.Opactiy ++ 1.0;</code></li>
-      <li><code class="language-plaintext highlighter-rouge">this.Opacity -- 1.0;</code></li>
+      <li><code class="highlighter-rouge">this.Opactiy ++ 1.0;</code></li>
+      <li><code class="highlighter-rouge">this.Opacity -- 1.0;</code></li>
     </ul>
   </li>
   <li>Which of the following characteristics of a computer depends on the number of Fetch/Execute Cycles it performs per second?
@@ -177,7 +177,7 @@ Knowing that these are hexadecimal values, check Figure 7.3 to see what this mem
   <li>What is the speed of the processor on your personal computer? Explain where you found this information.
     <ul>
       <li>CPU Mhz: 1133 <br />
-  <code class="language-plaintext highlighter-rouge">$ lscpu</code></li>
+  <code class="highlighter-rouge">$ lscpu</code></li>
     </ul>
   </li>
   <li>List the characteristics of software
@@ -222,7 +222,7 @@ Knowing that these are hexadecimal values, check Figure 7.3 to see what this mem
   </li>
   <li>A megabyte is 1,048,576 bytes. Explain why it is not 1,000,000.
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">2**20 = 1,048,576</code> is in base2 not base10</li>
+      <li><code class="highlighter-rouge">2**20 = 1,048,576</code> is in base2 not base10</li>
     </ul>
   </li>
   <li>List 10 devices that can be connected to a computer, and classify each as “input”, “output”, or “I/O”.

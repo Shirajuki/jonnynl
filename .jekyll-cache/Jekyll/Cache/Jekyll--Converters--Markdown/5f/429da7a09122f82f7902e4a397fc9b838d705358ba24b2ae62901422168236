@@ -1,0 +1,12 @@
+I"�<h1 id="innkapsling-og-validering---teorispørsmål">Innkapsling og validering - Teorispørsmål</h1>
+<ol>
+  <li>a) Hva er forskjellen på<strong>public</strong>, <strong>protected</strong> og <strong>private</strong>?
+<span style="color:#980000;"><strong>public</strong></span><span style="color:#980000;"> brukes når andre klasser skal kunne instansiere klassen direkte med </span><span style="color:#980000;">**new <klasse>(…)**&lt;/span&gt;<span style="color:#980000;">. </span><span style="color:#980000;">**protected**</span><span style="color:#980000;">-konstruktører brukes for å initialisere felt i en superklasse og kalles av subklassens konstruktør med </span><span style="color:#980000;">**super(…)**</span><span style="color:#980000;">. </span><span style="color:#980000;">**private**</span><span style="color:#980000;"> brukes på hjelpekonstruktører internt i en klasse og kalles med </span><span style="color:#980000;">**this(…)**</span><span style="color:#980000;">.</span>
+b) Hva bør i utgangspunktet alle variablene dine være deklarert som? 
+<span style="color:#980000;">Innkapsling handler om å: 
+1) hindre at en kan sette objekter til en ulovlig tilstand og 
+2) skjule representasjonsdetaljer slik at en kan gjøre endringer uten at andre klasser også må endres. </span></klasse></span></li>
+  <li>Hvilke to metoder er vanlig å ha for variabler i Java? 
+<span style="color:#980000;">Generelt er det en fordel å redusere settet med metoder, siden det gir frihet til å endre klasse siden. Når felt initaliseres i en konstruktør, så trengs som oftest ikke set-metoder. Her trenger en heller ikke get-metoder, siden metodene som stiller spørsmål og sjekker svar utgjør et komplett API for klassen.</span></li>
+</ol>
+:ET

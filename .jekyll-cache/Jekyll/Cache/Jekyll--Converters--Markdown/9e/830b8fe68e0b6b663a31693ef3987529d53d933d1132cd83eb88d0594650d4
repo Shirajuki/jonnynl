@@ -1,0 +1,74 @@
+I"�<p><strong>#SSL Record Types</strong></p>
+<ol>
+  <li>First 6 SSL/TLS packets from ClientHello filtered using ssl shows:
+i. specify the source of the packet (client or server):
+ii. list the SSL record types for the packet:</li>
+  <li>Source: 10.24.33.248 (client)
+    <ul>
+      <li>Record type: HANDSHAKE (0x16)</li>
+      <li>Handshake type value: CLIENT_HELLO(0x01)</li>
+    </ul>
+  </li>
+  <li>Source: 23.13.248.68 (server)
+    <ul>
+      <li>Record type: HANDSHAKE (0x16)</li>
+      <li>Handshake type value: SERVER_HELLO(0x02)</li>
+    </ul>
+  </li>
+  <li>Source: 23.13.248.68 (server)
+    <ul>
+      <li>Record type: HANDSHAKE (0x16)</li>
+      <li>Handshake type value: CERTIFICATE (0x0b), SERVER_KEY_EXCHANGE (0x0c), SERVER_DONE (0x0e)</li>
+    </ul>
+  </li>
+  <li>Source: 10.24.33.248 (client)
+    <ul>
+      <li>Record type: HANDSHAKE (0x16) and CHANGE_CIPHER_SPEC (0x14)</li>
+      <li>Handshake type value: CLIENT_KEY_EXCHANGE (0x10), FINISHED</li>
+    </ul>
+  </li>
+  <li>Source: 10.24.33.248 (client)
+    <ul>
+      <li>Record type: APPLICATION_DATA (0x17)</li>
+    </ul>
+  </li>
+  <li>Source: 23.13.248.68 (server)
+    <ul>
+      <li>Record type: HANDSHAKE (0x16) and CHANGE_CIPHER_SPEC (0x14)</li>
+      <li>Handshake type value: NEW_SESSION_TICKET (0x04), FINISHED</li>
+    </ul>
+  </li>
+  <li>Each of the SSL records begins with the same three fields, known as it’s header.
+    <ul>
+      <li>The TLS Record header comprises three fields, necessary to allow the higher layer to be built upon it:</li>
+    </ul>
+  </li>
+  <li>Content type (record type), with length of 1 byte</li>
+  <li>Version (TLS version), with length of 2 bytes</li>
+  <li>Length (length of the data), with length of 2 bytes</li>
+</ol>
+
+<p><strong>#Client Hello</strong></p>
+<ol>
+  <li>Expanding the first ClientHello record found, the value of content type shows the type of the record which is HANDSHAKE, it’s hexadecimal value is 0x16 and in decimal is 22.</li>
+  <li>The ClientHello record advertise the cipher suites it supports. In the first listed cipher suite of ClientHello we see:
+TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, which means:</li>
+  <li>The public-key algorithm is <strong>ECDHE</strong> (Elliptical Curve Diffe-Hellman Ephemeral) and <strong>ECDSA</strong> (Elliptic Curve Digital Signature Algorithm)</li>
+  <li>The symmetric-key algorithm is <strong>AES-128</strong> and <strong>GCM</strong></li>
+  <li>The hash algorithm is <strong>SHA-256</strong></li>
+</ol>
+
+<p><strong>#Client Key Exchange</strong></p>
+<ol>
+  <li>Locating to the client key exchange record, the public key included in this record is
+04:f6:30:ef:4f:1d:b4:cc:6d:3e:6b:24:c5:12:ac:0c:1f:29:3e:9b:2b:28:3d:3e:db:32:86:5a:ab:57:18:ea:02:7b:f1:ea:ea:b0:1a:b0:5d:af:98:32:4b:6a:e4:76:c7:3a:88:84:5e:0b:bb:69:fa:60:2d:cf:40:77:9a:13:e2, with the length of 65 bytes.</li>
+</ol>
+
+<p><strong>#Application Data</strong></p>
+<ol>
+  <li>The application data is encrypted with the symmetric-key algorithm chosen in the HANDSHAKE phase (AES-128 combined with GCM).</li>
+  <li>The records containing application data does include a MAC, as it’s appended to the application data prior to encryption.</li>
+  <li>From the look of it, wireshark doesn’t distinguish the encrypted application data and the MAC.</li>
+</ol>
+
+:ET

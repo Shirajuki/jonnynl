@@ -1,0 +1,23 @@
+I"Â<p><strong>1.1 What is the internet?</strong></p>
+<ul>
+  <li>Host / end systems
+    <ul>
+      <li>Connected together by a network of communication links and packet switches</li>
+      <li>Different link =&gt; different rates and transmission rate.</li>
+    </ul>
+  </li>
+  <li>Today:
+    <ul>
+      <li>Routers and link-layer switches</li>
+    </ul>
+  </li>
+  <li>End systems access the Internet through Internet Service Providers (ISPs).</li>
+  <li>The Internet is all about connecting end systems to each other, so the ISPs that provide access to end systems</li>
+  <li>PROTOCOLS!
+    <ul>
+      <li>Transmission Control Protocol (TCP)</li>
+      <li>Internet Protocol (IP)</li>
+    </ul>
+  </li>
+</ul>
+:ET

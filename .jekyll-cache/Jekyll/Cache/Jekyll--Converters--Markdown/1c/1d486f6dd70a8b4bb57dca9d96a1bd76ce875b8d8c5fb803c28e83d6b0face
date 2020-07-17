@@ -1,0 +1,9 @@
+I"�<h1 id="tdt4180--øving-1-designprinsipper"><strong>TDT4180 – Øving 1: Designprinsipper</strong></h1>
+<ol>
+  <li>
+    <h2 id="ebillett">eBillett</h2>
+    <p>Applikasjonen valgt for oppgaven er en nettside for bestilling av e-billetter, mer spesifikt kinobilletter, via Ebillett.no. Nettsiden skal fungere som en rask, trygg og fleksibel selvbetjeningsløsning der kunder slipper å kjøpe billettene på fysiske billettautomater eller i kassen. Nettsiden tilbyr flere billettkategorier etter at kunden velger ønsket film.
+For enkelte filmer vil billettprisene variere for de ulike billettkategoriene, bl.a. voksne, studenter, barn o.l. Applikasjonen inneholder også en betalingsløsning for billettene.</p>
+  </li>
+</ol>
+:ET

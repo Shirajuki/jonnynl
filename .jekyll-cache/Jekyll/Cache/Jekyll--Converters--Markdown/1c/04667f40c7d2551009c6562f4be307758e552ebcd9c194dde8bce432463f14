@@ -1,0 +1,117 @@
+I"#J<p><strong>Øving 4 - Design av funksjonell prototype og forberedelse av brukertest</strong>
+FIKS EN ANNA OPPG ENN Å LEGG IGJEN ANMELDELSE PÅ OPPG3!</p>
+<ol>
+  <li>
+    <h1 id="prototype"><strong>Prototype</strong></h1>
+    <p>Link til Figma prosjekt: 
+<a href="https://www.figma.com/file/TQMJIn9WcOb6lQxZYpWHXR/Pickapp?node-id=0%3A1">https://www.figma.com/file/TQMJIn9WcOb6lQxZYpWHXR/Pickapp?node-id=0%3A1</a><span style="color:#0000ff;">
+</span>Link til Figma Prototype: 
+<a href="https://www.figma.com/proto/TQMJIn9WcOb6lQxZYpWHXR/Pickapp?node-id=2%3A2&amp;scaling=scale-down">https://www.figma.com/proto/TQMJIn9WcOb6lQxZYpWHXR/Pickapp?node-id=2%3A2&amp;scaling=scale-down</a></p>
+    <h1 id="2-tilstandsdiagram"><strong>2. Tilstandsdiagram</strong></h1>
+    <p>Vi har delt prototypen opp i to tilstandsdiagrammer, hvor den ene (Tilstandsdiagram.svg) er for generell navigasjon rundt i applikasjonen, mens det andre diagrammet (Tilstandsdiagram tur.svg) viser hvordan applikasjonen skal fungere når andre brukere sender forespørsler.
+Vi valgte å bruke filformatet svg siden det bevarte kvaliteten på skjermbildene best mulig.</p>
+    <h1 id="3-brukertest"><strong>3. Brukertest</strong></h1>
+    <h2 id="testoppgaver"><strong>Testoppgaver</strong></h2>
+    <h3 id="oppgave-1"><span style="color:#000000;"><strong>Oppgave 1:</strong></span></h3>
+    <p><strong>Legge ut annonse (om å kjøre) til skolen.</strong>
+Oppgavetekst:</p>
+    <ul>
+      <li>Du kjører regelmessig til og fra skolen alene med bil. Etter du får ideen om å kjøre andre som trenger å komme seg til skolen laster du ned appen PickApp!. Logg inn på appen og opprett en annonse hvor du tilbyr å kjøre (du trenger ikke å fylle inn sted og tid i annonsen). Etter annonsen er opprettet vil en bruker spørre om å sitte på. Godkjenn forespørselen.</li>
+      <li>Etter en stund finner du ut at du ikke kan kjøre til den opprinnelige tiden, send en melding til passasjeren din om at du blir litt forsinket (Du trenger ikke å skrive noe i tekstboksen).</li>
+      <li>Du går ut av huset ditt, ogsier ifra til passasjeren at du er klar for å kjøre.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="oppgave-2"><span style="color:#000000;"><strong>Oppgave 2:</strong></span></h3>
+<p><strong>Finn en annonse om å sitte på noen fra nattklubb til hjem (1 pers)</strong>
+Oppgavetekst:</p>
+<ul>
+  <li>Du er ute på byen, har hatt litt å drikke, er sliten og vil hjem. Du hører fra noen i nattklubben at de bruker PickApp! for å komme seg hjem, og du bestemmer deg for å laste ned appen og opprette bruker. Finn en annonse av noen som tilbyr å kjøre fra nattklubben og hjem. Etter du har spurt om å få sitte på, blir dere enige om hvor dere skal møtes, og du venter til du får beskjed om at sjåføren er klar til å plukke deg opp. Etter at turen er gjennomført, finn din gjennomførte reise i historikken og legg igjen en anmeldelse av turen (Du trenger ikke å skrive noe i tekstboksen).</li>
+</ul>
+
+<h3 id="oppgave-3"><span style="color:#000000;"><strong>Oppgave 3:</strong></span></h3>
+<p><strong>Legg ut en annonse om å bli kjørt fra hjem til flyplassen og sitt på med personen (1 pers)</strong></p>
+<ul>
+  <li>Du er oppe tidlig en lørdag morgen og klokken er 8. Du skal reise med fly og venter ute ved din lokale busstopp for å dra til flyplassen. Du har ikke tid til å bruke mer enn 1 time å vente, og finner ut at bussen ikke kjører før ettermiddag den dagen. Du velger å laste ned PickApp! etter å ha sett en reklame av appen på busstoppet. Du finner ut at med appen kan du sitte på med en annen ved å opprette en annonse.
+Klarer du å opprette en annonse? (Du trenger ikke å skrive noe i tekstboksene).</li>
+  <li>I løpet av turen finner du ut at du har registrert deg med feil telefonnummer i appen. Klarer du å endre på profilinstillingene dine i appen? (Du trenger ikke å skrive noe i tekstboksene)</li>
+</ul>
+
+<h2 id="gjennomføring-av-testen">Gjennomføring av testen</h2>
+<h3 id="oppsett-i-laboratoriet"><span style="color:#000000;"><strong>Oppsett i laboratoriet</strong></span></h3>
+<p>Oppsettet i laboratoriet vil være enkelt for å ikke ta bort fokuset fra selve appen/prototypen. Vi vil bruke to grupperom ved siden av hverandre til å gjennomføre selve testen. Det vil være en dør mellom grupperommene slik at man kan gå fra det ene til det andre.</p>
+
+<p>Forsøkslederen og tespersonen skal være i det første grupperommet (grupperom 1). Vil vil også ha et lite bord og en behagelig  stol. På bordet skal vi legge en telefon med prototypen åpnet på innloggingssiden. I tillegg vil vi ha en termos med kaffe og en kanne med vann samt flere pappkopper, i tilfelle brukeren blir tørst underveis, og for å skape en mer avslappet stemning. Lyset i rommet vil være nøytralt; ikke for sterkt eller for svakt, og vi vil sørge for å ha noen planter eller andre vanlige interiør gjenstander slik at rommet ikke føles kunstig/oppsatt. Av teknisk utstyr skal vi ha et lite diskret kamera med mikrofon som filmer testpersonen og forsøkslederen gjennom brukertesten. Denne skal streames direkte til det andre grupperommet. I tillegg vil forsøkslederen ha en notatblokk og en penn til å skrive med.</p>
+
+<p>Det andre grupperommet (grupperom 2) vil være et slags teknisk rom der resten av gruppemedlemmene skal sitte og følge med på to skjermer. Den ene skjermen vil vise det brukeren ser på sin mobilskjerm (gjennom speiling av skjermen), mens den andre skjermen viser en stream av det som skjer i testrommet (testpersonen og forsøkslederen). Disse to skjermene/datamaskinene skal stå på hvert sitt bord med to stoler, altså to personer per skjerm. Ellers vil det ikke være noe spesielt med dette rommet.</p>
+
+<h3 id="rollefordeling"><span style="color:#000000;"><strong>Rollefordeling</strong></span></h3>
+<p>Vi er fem personer i gruppa, så en av oss vil være forsøksleder (grupperom 1) og de fire andre vil sitte på det tekniske rommet (grupperom 2). På grupperom 2 skal to av de fire observere speilbildet av skjermen til testpersonen, og de to andre skal observere grupperom 1 gjennom en stream fra kameraet. Alle fire skal gjøre observasjoner og ta relevante notater underveis.</p>
+<h3 id="rekruttering-av-brukere"><span style="color:#000000;"><strong>Rekruttering av brukere</strong></span></h3>
+<p>Vi vil rekruttere 6 studenter mellom 18-33 år. Vi vil gjøre en kort undersøkelse på potensielle kanditater for å kartlegge brukeren (kjønn, alder, siviltilstand, transportvaner, erfaring innen IKT, osv.) slik at vi kan velge brukere som gir oss et tilfeldig, men representativt utvalg. 
+Rekruttering vil foregå via sosiale medier og gjennom venner med fokus på de i alderen 18-33 år ettersom studenter og unge voksne i utgangspunktet er målgruppen til appen.</p>
+<h3 id="datainnsamling"><span style="color:#000000;"><strong>Datainnsamling</strong></span></h3>
+<p>Data vi samler inn:</p>
+<ul>
+  <li>Speiling av mobilskjerm</li>
+  <li>Registrering av tastetrykk (en del av screen-recording)</li>
+  <li>Video av personen når han/hun bruker appen</li>
+  <li>Undersøkelsene som brukeren fylte inn på forhånd</li>
+  <li>SUS-skjema</li>
+  <li>Eventuelle tilbakemeldinger eller synspunkter fra bruker</li>
+</ul>
+
+<p>Speilingen av mobilskjermen brukes til å sjekke hvordan brukeren interagerer med appen. Når vi kombinerer dette med tastetrykkene kan vi se hvor godt designet er ved å se om brukeren klarer å finne ut hvilke knapper han/hun må trykke på for å gjennomføre oppgaven de har blitt utdelt. Hvis vi observerer at flere brukere trykker feil eller sliter med å finne rett knapp vil dette gi oss informasjon om at designet er forvirrende og lite intuitivt.</p>
+
+<p>Til hver oppgave har vi også en oversikt over den optimale måten å gjøre oppgaven på (oppgaven utført ved minst antall steg). Dette vil vi kunne sammenligne med stegene brukeren har tatt for å løse oppgaven for å kunne måle effektiviteten.</p>
+
+<p>Video av brukeren når de bruker appen vil være nyttig for å se når brukeren blir frustrert eller usikker på de skal gjøre. Kroppsspråk kan si mye om hvordan appen vår fungerer. Hvis brukeren begynner å stille spørsmål til instruktør vil dette også være med i lyden til videoen, spørsmålene noteres ned og brukes til å vurdere designet i en videre iterativ prosess.</p>
+<h3 id="praktisk-gjennomføring-av-brukertesten"><span style="color:#000000;"><strong>Praktisk gjennomføring av brukertesten</strong></span></h3>
+<p>Ved starten av testen vil hele teamet/gruppa stå inne på grupperom 1. Forsøksleder leder testpersonen inn i grupperommet.</p>
+<ol>
+  <li>Leder introduserer seg selv og de andre i teamet mens alle håndhilser på testpersonen. Alle smiler og er hyggelige og avslappet for å skape trygghet hos testpersonen. Leder sier at resten av teamet vil sitte på et rom ved siden av og hjelpe med å observere. Resten av gruppa går inn på grupperom 2. Vi tilbyr kaffe eller vann.</li>
+  <li>Leder forklarer hensikten med testen: “Vi trenger hjelp med å teste ut en app i en tidlig fase av design. Vi vil gjøre det veldig klart at vi vil teste produktet og ikke deg eller dine ferdigheter. Vi har selv jobbet med det så lenge at det er vanskelig for oss å se potensielle feil og utfordringer, og trenger derfor deg til å gi oss et friskt syn på brukervennligheten av appen.”</li>
+  <li>Deretter vil Leder si: “Du kan avbryte når du vil uten å gi oss noe grunn. Om du føler deg ukomfortabel er det bare å si ifra, og vi vil slutte med en gang og slette eventuell data som er samlet. Du har full kontroll!”.</li>
+  <li>Så vil vi beskrive utstyret i rommet. Leder vil peke på kameraet og si at det brukes til å ta opptak av hva som skjer i rommet (lyd og bilde) slik at teamet på grupperom 2 kan hjelpe henne med å gjøre observasjoner og skrive ned eventuelle kommentarer brukeren kommer med. Leder vil også gjøre brukeren oppmerksom på at skjermen blir speilet til grupperom 2 for å kunne kartlegge hvilke knapper og handlingsmønstre som er mest intuitive for våre potensielle brukere. Vi vil også forklare at prototypen kun er en prototype, og ikke en ferdig versjon av appen. Kommunikasjonen i appen vil derfor være begrenset siden vi ikke kan ha ekte folk som tilbyr å kjøre/forespør om å sitte på.</li>
+  <li>Leder vil deretter gi noen eksempler på hvordan man tenker høyt: “Når du tenker vil jeg gjerne høre hva du tenker på. Hvis jeg for eksempel hadde fått i oppgave om å slå av lyset i dette rommet, ville jeg tenkt høyt slik: “Hvor er lysbryteren? Åja, kanskje den er på veggen, det virker intuitivt. Hmm, ikke på denne veggen. Kanskje ved døren?” og så fortsetter man slik. Det hjelper oss veldig å kunne sette oss inn i andre sin tankegang.”</li>
+  <li>Vi vil gjøre det klart at vi ikke kan tilby hjelp under testen. Leder vil si at testen ikke har noe fasit, og at vi derfor ikke vil hjelpe. Vi er ikke interesserte i om testpersonen gjør ting “riktig”, men heller i hva de syns er naturlig å gjøre. Om det er noe brukeren ikke får til, er det vår feil og det er appen som trenger “hjelp” (å bli endret på), ikke brukeren. Vi vil oppfordre brukeren til å likevel si det de lurer på underveis slik at vi kan diskutere det på slutten av testen.</li>
+  <li>Leder vil beskrive appen kort, og deretter introdusere oppgavene. Vi har tre ulike oppgaver vi vil brukeren skal løse. Hver oppgave har en ulik situasjon og et ulikt formål. Leder legger listen med oppgavene ved siden av brukeren, på bordet.</li>
+  <li>Til slutt vil Leder spørre brukeren om det er noe de lurer på, og hvis ikke, så starter vi med testen. Leder vil trekke seg litt unna, men stå nært nok til å se mobilskjermen. Om brukeren blir stille vil Leder oppfordre de til å snakke: “Hva tenker du nå?”, for eksempel. Leder vil ta noen raske notater, men ha mest fokus på direkte observasjon. Resten av teamet på grupperom 2 vil ta detaljerte notater fra videoopptak og skjermspeiling.</li>
+  <li>Etter at oppgavene er gjennomført vil Leder svare på spørsmålene brukeren stilte underveis og oppfordre til en diskusjon med brukeren om andre ting de syns var interessant/vanskelig. Brukeren vil deretter bli spurt etter en helhetlig vurdering av prototypen og eventuelle designforslag til appen. Til slutt vil brukeren bli bedt om å fylle ut System Usability Scale (Sauro, 2011) basert på deres opplevelse. 
+Etter at hele testen er gjennomført med alle personene vil vi samle og organisere notatene våre. Vi vil finne ut hvor brukerne slet mest for å så skrive opp og prioritere problemene, slik at disse kan fikses i videre utvikling. Vi vil bruke datainnsamlingen til å finne alternative designløsninger og komme med nye og bedre forslag til et mer brukervennlig design.</li>
+</ol>
+
+<h1 id="4-refleksjon"><strong>4. Refleksjon</strong></h1>
+<h3 id="validitetsutfordringer"><span style="color:#000000;"><strong>Validitetsutfordringer</strong></span></h3>
+<p>Gyldige resultater fra en brukertest forutsetter at deltakerne er representative brukere, at testoppgavene er representative for brukernes oppgaver/mål og at de fysiske og sosiale omgivelsene hvor testen gjennomføres er representative i forhold til de reelle bruksomgivelsene.
+Brukskontekst (context of use) slik begrepet defineres i ISO 9241-11, omfatter brukere, oppgaver, utstyr (programvare, maskinvare, materialer) samt det fysiske og sosiale miljøet produktet blir brukt i. For at brukertesten skal gi mest mulig gyldige resultater, må brukskonteksten være tilnærmet lik den reelle brukskonteksten for en tenkt bruk av appen.</p>
+
+<p><em>Brukere</em>
+Siden vi planlegger å plukke ut brukere blant den planlagte målgruppen til applikasjonen, vil brukerne i testen være tilstrekkelig representative for den gjennomsnittlige brukeren av applikasjonen. Validitetsutfordringen her vil være at vi ikke får testet appen for en minoritetsgruppe av brukere med forskjellige funksjonshemmelser som f.eks lese- og synsvansker. Også andre folk, uten noen funksjonshemmelser, men i ulike aldersgrupper og sysselsettinger vil ikke bli en del av vår testing.</p>
+
+<p><em>Oppgaver</em>
+Oppgavene er som nevnt tidligere basert på de forskjellige scenarioene vi lagde i øving 3, og her har vi prøvd å få med så mye av prototypen som mulig slik at vi får testet de forskjellige sidene av prototypen. Validitetsutfordringen til oppgavene vil være at de ikke nødvendigvis er representative for måten brukere ellers ville ha brukt applikasjonen, og at vi dermed ikke får data som er helt representativ for brukerne. Dessuten får vi ikke testet hele appen, for eksempel vil “Favoritter” sannsynligvis aldri bli trykket på, heller ikke “Profil” (privat og offentlig) og kart-ikonet på annonsene. Testpersonene vil nok forholde seg til et minimum antall elementer å trykke på for å løse oppgavene, og ikke utforske appen som en “vanlig” bruker ville ha gjort i et mer avslappet miljø.</p>
+
+<p><em>Utstyr</em>
+En annen validitetsutfordring er at vi ikke har en ferdigstilt versjon av applikasjonen. Siden den kun er en prototype er det mangle deler av brukeropplevelsen som vi ikke får testet. For eksempel interaksjonen mellom passasjer og sjåfør siden Figma ikke tillater kommunikasjon. I tillegg vil det være vanskelig å gå gjennom annonser/anmeldelser brukeren “legger ut” i testen ettersom det ikke faktisk blir lagt ut noe.</p>
+
+<p><em>Fysisk og sosialt miljø</em>
+Det fysiske og sosiale miljøet er også noe som blir vanskelig å gjenskape i brukertesten, siden denne skal gjennomføres på lab. I virkeligheten vil appen bli brukt i ulike omgivelser som har ulikt vær, støynivå, lysforhold og lignende som vi ikke klarer å gjenskape inne i et klasserom/grupperom. I tillegg får vi ikke ordentlig interaksjon mellom to forskjellige brukere på grunn av begrensninger i prototypeverktøyet.</p>
+
+<h3 id="diskusjon"><span style="color:#000000;"><strong>Diskusjon</strong></span></h3>
+<p>I forbindelse med design av prototypen benyttet vi brukerkarakterene med ulike karakteristikker og scenariene som designverktøy for å best mulig sikre høy brukskvalitet for brukerne. Mens vi lagde de ulike sidene i prototypen, tenkte vi alltid på hvordan vi kunne gjøre det lettere for våre imaginære brukere. Når vi skulle lage de ulike koblingene/navigeringen mellom sidene, prøvde vi å se for oss hva som ville ha vært mest naturlig i de ulike scenariene vi hadde lagd.</p>
+
+<p>I det første scenarioet hadde sjåføren, Ole Johansen, vansker med å få uttrykt seg og var stort sett innadvendt. For brukere med slik karakteristikk har vi lagd en melding funksjon i appen som lar brukere sende tekst til hverandre istedenfor å ringe. Personas har også gitt oss mer fokus på Don Normans designprinsipper [2]. Visibility, mapping, feedback og consistency gjør ting lett gjenkjennelig og forståelig. For brukere som er lik karakteren Mark Whitehouse, som hadde drukket seg full, eller Regine Hansen, som hadde lite tid, fungerte designprinsippene svært godt i å øke brukskvaliteten.</p>
+
+<p>Bruken av scenariene fungerte ganske bra med tanke på at brukskvaliteten til prototypen 
+er kontekstavhengig, det vil si avhengig av hvilke brukere som bruker appen og hvilket miljø dette gjøres i. Det å benytte personas og storyboard i forbindelse med design av prototypen bidrar dermed til å øke brukskvaliteten, ettersom karakterene og scenariene er en tiltenkt kontekst som vi bruker i designet. På samme tid ga bruken av brukerkarakterer oss en baktanke på hvordan designet skulle være med tanke på målgruppen.</p>
+
+<p>Det som fungerte mindre bra var at vi ikke hadde mulighet til å utvide, endre eller ta vekk funksjoner etter egen mening, ettersom prototypen tok utgangspunkt i personas og scenariene. Løsningen for appen skulle være for karakterene og ikke for oss selv, og det ble dermed utfordrende å få brukt disse som designverktøy fordi det virket begrensende på oss som “designere”.</p>
+
+<p>Det vi kunne ha gjort annerledes er å bruke scenariene og personas enda mer. Vi følte at vi ikke fikk så mye ut av de som vi hadde håpet. I et eventuelt annet prosjekt ville vi ha lagt mer innsats i å forstå og bruke disse verktøyene litt bedre.</p>
+
+<h1 id="bibliografi"><strong>Bibliografi</strong></h1>
+<p><strong>[1]</strong> Sauro, J. (2011, Februar 2). <em>Measuring usability with the system usability scale (SUS).</em> Hentet fra Measuringu: <a href="https://measuringu.com/sus/">https://measuringu.com/sus/</a> (Artikkel først hentet fra <a href="https://measuringu.com/sus/">https://</a><a href="http://usability.gov">usability.gov</a>)
+<strong>[2]</strong> Sharp, H., Preece, J., &amp; Rogers, Y. (2019). Don Norman Principles. I <em>Interaction Design: Beyond Human-Computer Interaction 5th Edition</em> (ss. 26-30). Wiley.</p>
+:ET

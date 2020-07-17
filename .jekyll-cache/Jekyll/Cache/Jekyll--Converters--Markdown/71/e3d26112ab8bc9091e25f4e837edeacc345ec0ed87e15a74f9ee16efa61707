@@ -1,0 +1,18 @@
+I"\<p><strong>Chapter 6 : The Link Layer</strong></p>
+<h1 id="61-introduction-to-the-link-layer"><strong>6.1 Introduction to the link layer</strong></h1>
+<p>Between the two hosts, datagrams travel over a series of communication links, some wired and some wireless, starting at the source host, passing through a series of packet switches (switches and routers) and ending at the destination host. As we continue down the protocol stack, from the network layer to the link layer, we naturally wonder how packets are sent across
+the individual links that make up the end-to-end communication path.</p>
+<ul>
+  <li>How are the network-layer datagrams encapsulated in the link-layer frames for transmission over a single link?</li>
+  <li>Are different link-layer protocols used in the different links along the communication path?</li>
+  <li>How are transmission conflicts in broadcast links resolved?</li>
+  <li>Is there addressing at the link layer and, if so, how does the link-layer addressing operate with the network-layer addressing we learned about in Chapter 4?</li>
+  <li>And what exactly is the difference between a switch and a router?
+<strong>There are two fundamentally different types of link-layer channels.</strong>
+    <ol>
+      <li>The first type are <strong>broadcast channels</strong>, which connect multiple hosts in wireless LANs, satellite networks, and hybrid fiber-coaxial cable (HFC) access networks. Since many hosts are connected to the same broadcast communication channel, a so-called <strong>medium access protocol</strong> is needed to coordinate frame transmission. In some cases, a central controller may be used to coordinate transmissions; in other cases, the hosts themselves coordinate transmissions.</li>
+      <li>The second type of link-layer channel is the <strong>point-to-point communication link</strong>, such as that often found between <strong>two routers connected</strong> by a long-distance link, or between a user’s office computer and the nearby Ethernet switch to which it is connected. Coordinating access to a <strong>point-to-point link is simpler</strong>.</li>
+    </ol>
+  </li>
+</ul>
+:ET

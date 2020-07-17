@@ -1,0 +1,207 @@
+I"3<p>DESIGNPRINSIPPER</p>
+<ul>
+  <li>Forstå hvilken funksjon designprinsipper har i design av grafiske brukergrensesnitt.</li>
+  <li>Don Normans seks prinsipper</li>
+  <li>Jacob Nielsens ti prinsipper</li>
+  <li>Prinsipper for universell utforming og WCAG</li>
+</ul>
+
+<p>Konvensjoner</p>
+<ul>
+  <li>Etablerte, anerkjente regler (normer) for hva slike komponenter benyttes til forbindelse med GUI-design. Radio button, checkbox, anchor links osv…
+<strong>Designprinsipper</strong> (retningslinjer/heuristikker)</li>
+  <li>Erfaringsbasert designkunnskap - generelle regler osv…</li>
+  <li>Generaliserbarhet</li>
+  <li>Organisering av el, lede brukerens oppmerksomhet, nav, forenkling av inputs.</li>
+  <li>Fungerer som “sjekklister” i designprosessen.
+Teorier</li>
+  <li>Konseptuelle og mentale modeller, Gestalt osv…
+Brukskvalitet (usability)</li>
+  <li>Nødvendig å teste brukskvaliteten til designløsningen selvom vi følger designprinsippene. Spesifikke aspekter.</li>
+</ul>
+
+<h2 id="don-normans-designprinsipper-fra-design-of-everyday-things--læreboka-kap-163"><span style="color:#ff7e7e;"><strong>Don Normans designprinsipper</strong></span> fra ”Design of Everyday Things“ – Læreboka, kap. 1.6.3</h2>
+<ol>
+  <li><strong>Visibility</strong> - Kan jeg se det?
+    <ul>
+      <li>Synlig funksjonalitet - forståelse til brukeren - mål til aksjoner</li>
+      <li>Funksjoner som meny, tabs, view er vanskeligere å finne/skjønne</li>
+      <li>Skjermstørrelse - mobil vs pc - antall elementer</li>
+    </ul>
+  </li>
+  <li><strong>Affordance</strong> - Hvordan kan jeg bruke det?
+    <ul>
+      <li>Referer til hvilken handling en gjenstand signaliserer gj. Sin fysiske utforming.</li>
+      <li>Ting “inviterer” til visse handlinger eller bruksmuligheter, Dørhåndtak sier trykk meg, drikkeflaske sier drikk meg.</li>
+      <li>Dvs. at vi tolker/gjenkjenner relasjonene/signalene.Relasjon mellom et objekts utforming og en aktørs fysiske egenskaper</li>
+      <li>Gjør det åpenbart for bruker hvordan et produkt kan brukes.</li>
+      <li>Perceived affordance: grafiske grensesnitt har ikke “real affordance” - de er virtuelle. GUI-design er hva brukeren oppfatav mulige aksjoner som er viktig. Er det en knapp? Kan elementet trykkes på? Kan elementet dras?<img src="https://lh6.googleusercontent.com/YkEiPp9JdewpADb-IUaWR-aJjfJD7TNkGBOla1EtwkGNPpLrj3qnlMuBjWmww1u9N7iwHjG_7w5ZIFkLgFxpEXWnmaLrmhqw8bXYJVYp1RlDnrsQyvUXnHlEcwb00VCZnL1FpfG67zt9yKBjQw" alt="" /></li>
+    </ul>
+  </li>
+  <li><strong>Constraints</strong> - Hvorfor kan jeg ikke gjøre slik?
+    <ul>
+      <li>Signaliserer begrensninger i forhold til handlinger (hva som ikke lar seg gjøre med et produkt)</li>
+      <li>Knapper som er “grået ut” kan ikke trykkes, dato felt tillater bare tall</li>
+      <li>Affordance betinges av ulike typer constraints:
+        <ul>
+          <li>Det fysiske: kroppen og gjenstandens anatomi (knappen)</li>
+          <li>Det kulturelle: Konvensjoner som læres, grå knapp betyr no</li>
+          <li>Det logiske: resonering, knapper på bildøre brukes for å styre ting på døra (dørlås, vindu osv…)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Feedback</strong> (tilbakemelding) - Hva skjer nå?
+    <ul>
+      <li>Informasjon til brukeren om aksjoner som har blitt utført og tilstander.</li>
+      <li>“Fullfører” affordance - info om at handlingen er utført mens affordance gir info om handlinger som kan gjøres med en gjenstand.</li>
+      <li>“Det ser som en knapp og det oppfører seg som en knapp”</li>
+      <li>Gyldige handlinger skal ALLTID gi feedback, onevents!
+        <ul>
+          <li>Visuell: musepeker, progressbar, knapp som trykkes ned</li>
+          <li>Auditiv: feil-beep, varsel ved notifikasjon</li>
+          <li>Taktil: varierende motstand, vibrasjon, shake</li>
+          <li>Kombinasjon av visuell, auditiv og taktil feedback.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Mapping</strong> (overføring) - Hva fører til hva? Sammenheng mellom k og e naturlig?
+    <ul>
+      <li>Sammenhengen mellom kontrollelementer (layout og interaksjon) og deres effekt i praksis. KONTROLL OG EFFEKT.</li>
+      <li>Volumkontroll med knapper over hverandre, opp og ned, vri-knapp</li>
+      <li>“Natural mapping” - layout på kontroll, sammenheng mellom int. og effekt</li>
+    </ul>
+  </li>
+  <li><strong>Consistency</strong> - Har jeg ikke sett dette før?
+    <ul>
+      <li>Elementer som ser like ut bør ha samme funksjon, elementer med samme funksjon bør se like ut.</li>
+      <li>Benytte seg av tidligere erfaringer med lignende produkter - kontrollel.</li>
+      <li>Inkonsistens skaper forvirring.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="jacob-nielsens-10-brukbarhets-heuristikker--httpwwwuseitcompapersheuristicheuristic_listhtml"><span style="color:#ff7e7e;"><strong>Jacob Nielsens 10 brukbarhets-heuristikker</strong></span> – <a href="http://www.useit.com/papers/heuristic/heuristic_list.html">http://www.useit.com/papers/heuristic/heuristic_list.html</a></h2>
+<ol>
+  <li><strong>Visibility of system status.</strong>
+    <ol>
+      <li>Systemet skal alltid vise brukeren hva som foregår i maskinen, gjennom relevant tilbakemelding innen rimelig tid.</li>
+    </ol>
+  </li>
+  <li><strong>Match between system and the real world</strong>
+    <ol>
+      <li>Snakk brukerens språk! Bruke begreper, ord og framstillingsmåte (metaforer) som brukeren forstår.</li>
+      <li>Eks: MSpaint - penn, pensel, viskelær</li>
+    </ol>
+  </li>
+  <li><strong>User control and freedom</strong>
+    <ol>
+      <li>La brukeren ha kontroll, undo og redo på alle nivåer.</li>
+    </ol>
+  </li>
+  <li><strong>Consistency and standards</strong>
+    <ol>
+      <li>Konsistens i grensesnittet, følge retningslinjene for platformen som brukes, style guides. New/Create, Delete/Clear</li>
+    </ol>
+  </li>
+  <li><strong>Error prevention</strong>
+    <ol>
+      <li>Fleksibilitet, feilmelding i designet for å prevente problemer, minst mulig feil er mulig. Feilsjekking i inputs f.eks.</li>
+    </ol>
+  </li>
+  <li><strong>Recognition rather than recall.</strong>
+    <ol>
+      <li>Kunnskap i verder, ikke hodet! Objects, actions og valger visible. Skal ikke huske informasjon fra et sted til annet, instruksjoner skal da være visible og lett retrievable når det er appropriate. Generelle hurtigtaster som ctrl+c, ctrl+v, ctrl+z osv…</li>
+    </ol>
+  </li>
+  <li><strong>Flexibility and efficiency of use</strong>
+    <ol>
+      <li>Accelerators, unseen by the novice user - speede opp interaksjoner for experte usere så system kan både brukes for nybegynner og eksperter.</li>
+      <li>Avanserte shortcuts og lignende som ctrl+c og andre snarveier.</li>
+    </ol>
+  </li>
+  <li><strong>Aesthetic and minimalist design.</strong>
+    <ol>
+      <li>Alt som ikke tjener en hensikt skal vekk! Dialogues should not contain information which is irrelevant or rarely needed. Every extra unit of info competes with the relevant units of info and diminishes their relative visibility.</li>
+    </ol>
+  </li>
+  <li><strong>Help users recognize, diagnose, and recover from errors.</strong>
+    <ol>
+      <li>Feilmelding skal bli expressed in plain langua (less codes), precisely to indicate the problem and constructively suggest a solution.</li>
+      <li>Hjelper brukeren unngå og håndtere feil</li>
+    </ol>
+  </li>
+  <li><strong>Help and documentation.</strong>
+    <ol>
+      <li>Even though it’s better if the system can be used without docs, it may be necessary to provide some help and docs. Any such info should be easy to search, focused on the user’s task, list concrete steps to be carried out, and not be too large.</li>
+      <li>Lag et godt hjelpe system - hurtigref. - brukermanual - tooltips
+    - Shneidermans 8 golden rules – <a href="https://www.cs.umd.edu/users/ben/goldenrules.html">https://www.cs.umd.edu/users/ben/goldenrules.html</a>
+    - Bruce Tognazzinis 19 First Principles <a href="http://www.asktog.com/basics/firstPrinciples.html">http://www.asktog.com/basics/firstPrinciples.html</a></li>
+    </ol>
+  </li>
+</ol>
+
+<p>Universell utforming - bygger på en forståelse av funksjonshemming som relasjonell</p>
+<ul>
+  <li>Funksjonshemming oppstår når det ikke er samsvar mellom en persons funksjonsevner og kravene omgivelsene stiller - skapt av omgivelse (dårlig design), ikke en del av personen.</li>
+  <li>Universell utforming tar utgangspunkt i menneskelig mangfold:
+    <ul>
+      <li>Forskjellige fysiske evner, kognitive evner, sanseevner</li>
+      <li>Alderdom, sykdom, kjønn, ulik kropp</li>
+    </ul>
+  </li>
+  <li>Ved å designe for menneskelig mangfold kan vi lage produkter som er lettere for alle å bruke.
+    <h2 id="de-7-prinsippene-for-universell-design--httpuniversaldesigniewhat-is-universal-designthe-7-principles"><span style="color:#ff7e7e;"><strong>De 7 prinsippene for Universell Design</strong></span> – <a href="http://universaldesign.ie/What-is-Universal-Design/The-7-Principles/">http://universaldesign.ie/What-is-Universal-Design/The-7-Principles/</a></h2>
+    <ol>
+      <li><strong>Like muligheter for bruk</strong></li>
+    </ol>
+  </li>
+  <li>Utforming skal være anvendbar og tilgjengelig for personer med ulike ferdigheter.</li>
+  <li>Gi ulike brukergrupper samme muligheter til bruk, likeverdige løsninger.</li>
+  <li>Unngå segregering og stigmatisering av brukere, mulighet for privatliv, sikkerhet og trygghet tilgjengelig for alle. Utformingen tiltalende for alle brukere. (Automatiske skyvedører)
+    <ol>
+      <li><strong>Fleksibel i bruk</strong></li>
+    </ol>
+  </li>
+  <li>Utformingen skal tjene et vidt spekter av individuelle pref og ferdigheter.</li>
+  <li>Muliggjøre ulike valg av metoder for bruk, høyre + venstre håndsbruk for eks. Nøyaktighet og presisjon. Muliggjøre ferdigheter som samsvarer med brukerens tempo. Minibank med visuell, taktil og auditiv feedback osv…
+    <ol>
+      <li><strong>Enkel og intuitiv bruk</strong></li>
+    </ol>
+  </li>
+  <li>Utformingen skal være lett å forstå uten hensyn til brukerens erfaring, kunnskap, språkferdigheter eller konsentrasjonsnivå.</li>
+  <li>Eliminere unødvendig kompleksitet, overensstemmelse med brukerens forventninger og intuisjon. Tjene et vidt spekter av lese-, skrive- og språkferdigheter. Info i konsist forhold til viktighet. Effektiv og raske tilbakemeldinger ila og etter at oppgaven er utført. (IKEA brukermanual)
+    <ol>
+      <li><strong>Forståelig informasjon</strong></li>
+    </ol>
+  </li>
+  <li>Utformingen skal kommunisere nødvendig informasjon til brukeren på en effektiv måte, uavhengig av forhold knyttet til omgivelsene eller brukerens sensoriske ferdigheter.</li>
+  <li>Bruke forskjellige måter (bilde, verbal, taktil) for en bred presentasjon avv essensiell info. Kontraster mellom essensiell info og deres omgivelser.</li>
+  <li>Maksimerer “lesbarheten” av essensiel info, kompatibilitet med forskj. typer teknikker og innretninger, til bruk for mennesker med sensoriske begr. (Flyplass: bred presentasjon av essensiell informasjon - auditiv info, flere språk, informasjonstavler)
+    <ol>
+      <li><strong>Toleranse for feil</strong></li>
+    </ol>
+  </li>
+  <li>Utformingen skal minimalisere farer og skader som kan gi ugunstige konsekvenser, eller minimaliserer utilsiktede handlinger.</li>
+  <li>Arrangere elementen på en slik måte at en minimaliserer farer og feil; mest burte elementer, mest tilgjengelige; farlige elementer elimineres, isoleres eller skjermes.</li>
+  <li>Sørge for advarsel om farer og feil, anordninger for feilsikkerhet, ikke oppmuntre til utilsiktede handlinger på områder som krever årvåkenhet. (Undo, tæpping kan skannes på begge sider)
+    <ol>
+      <li><strong>Lav fysisk anstrengelse</strong></li>
+    </ol>
+  </li>
+  <li>Utformingen skal kunne brukes effektivt og bekvemt med et minimum av besvær.</li>
+  <li>Tillate brukeren å opprettholde en nøytral kroppsstilling</li>
+  <li>Bruke rimelig betjeningsstyrke.</li>
+  <li>Minimalisere gjentakende handlinger, vedvarende fysisk kraft. (berøringssensitive lamper erstatter på/av bryter)
+    <ol>
+      <li><strong>Størrelse og plass for tilgang og bruk</strong></li>
+    </ol>
+  </li>
+  <li>Hensiktmessig størrelse og plass skal muliggjøre tilgang, rekkevide, betjening og bruk, uavhengig av brukerens kroppsstørrelse, kroppstilling eller mobilitet.</li>
+  <li>Muliggjøre en klar synslinje til viktige elementer for både sittende og stående brukere, at det er bekvem rekkevidde til alle komponenter for sittende og stående brukere.</li>
+  <li>Muliggjører variasjoner i hånd- og gripestørrelse.</li>
+  <li>Tilrettelegge nok rom for bruk av hjelpemidler og personlig assistanse. (Klar synslinje for sittende og stående, fysisk plass som muliggjør tilgang og bruk)</li>
+  <li>WCAG 2.0-rettningslinjer – <a href="http://www.w3.org/Translations/WCAG20-no/#guidelines">http://www.w3.org/Translations/WCAG20-no/#guidelines</a></li>
+</ul>
+:ET

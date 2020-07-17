@@ -1,0 +1,19 @@
+I"�
+<h1 id="innkapsling-og-validering---teorispørsmål">Innkapsling og validering - Teorispørsmål</h1>
+<ol>
+  <li>a) Hva er forskjellen på<strong>public</strong>, <strong>protected</strong> og <strong>private</strong>?
+<span style="color:#ff7e7e;"><strong>public</strong></span><span style="color:#ff7e7e;"> brukes når andre klasser skal kunne instansiere klassen direkte med </span><span style="color:#ff7e7e;">**new <klasse>(…)**&lt;/span&gt;<span style="color:#ff7e7e;">. </span><span style="color:#ff7e7e;">**protected**</span><span style="color:#ff7e7e;">-konstruktører brukes for å initialisere felt i en superklasse og kalles av subklassens konstruktør med </span><span style="color:#ff7e7e;">**super(…)**</span><span style="color:#ff7e7e;">. </span><span style="color:#ff7e7e;">**private**</span><span style="color:#ff7e7e;"> brukes på hjelpekonstruktører internt i en klasse og kalles med </span><span style="color:#ff7e7e;">**this(…)**</span><span style="color:#ff7e7e;">.</span>
+b) Hva bør i utgangspunktet alle variablene dine være deklarert som? 
+<span style="color:#ff7e7e;">Innkapsling handler om å: 
+1) hindre at en kan sette objekter til en ulovlig tilstand og 
+2) skjule representasjonsdetaljer slik at en kan gjøre endringer uten at andre klasser også må endres. </span></klasse></span></li>
+  <li>Hvilke to metoder er vanlig å ha for variabler i Java? 
+<span style="color:#ff7e7e;">Generelt er det en fordel å redusere settet med metoder, siden det gir frihet til å endre klasse siden. Når felt initaliseres i en konstruktør, så trengs som oftest ikke set-metoder. Her trenger en heller ikke get-metoder, siden metodene som stiller spørsmål og sjekker svar utgjør et komplett API for klassen.
+</span>
+<span style="color:#ff7e7e;">get-metoder gir tilgang til tilstanden uten å ”avsløre” hvilke felt som brukes for å representere tilstanden.</span></li>
+  <li>Hva er forskjellen på ugyldig tilstand og ugyldig argument? 
+<span style="color:#ff7e7e;">Hva er formålet med / begrunnelsen for å implementere en eller flere konstruktører for en klasse : En konstruktør har som formål å </span><span style="color:#ff7e7e;"><em>initialisere</em> </span><span style="color:#ff7e7e;">et objekt, slik at det fra starten av har en </span><span style="color:#ff7e7e;"><em>gyldig</em> </span><span style="color:#ff7e7e;">tilstand.</span></li>
+  <li>Hva er meningen med innkapsling og validering? 
+<span style="color:#ff7e7e;">Innkapsling skal sikre et objekt starter og forblir i en </span><span style="color:#ff7e7e;"><em>gyldig tilstand</em></span><span style="color:#ff7e7e;"> og at innholdet kan leses og endres uten å avdekke den </span><span style="color:#ff7e7e;"><em>interne representasjonen og implementasjonen</em></span><span style="color:#ff7e7e;">. Mekanismen er bruk av synlighetsmodifikatorer, som reduserer muligheten (andre) klasser har til å referere til felt og metoder.</span></li>
+</ol>
+:ET

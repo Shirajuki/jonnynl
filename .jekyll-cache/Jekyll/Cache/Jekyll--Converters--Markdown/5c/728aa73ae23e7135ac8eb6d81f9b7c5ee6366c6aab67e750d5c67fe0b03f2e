@@ -1,0 +1,50 @@
+I"¾<p><strong>#SSL Record Types</strong></p>
+<ol>
+  <li>First 6 SSL/TLS packets from ClientHello filtered using ssl shows:
+i. specify the source of the packet (client or server):
+ii. list the SSL record types for the packet:</li>
+  <li>Source: 10.24.33.248 (client)
+    <ul>
+      <li>Record type: HANDSHAKE (0x16)</li>
+      <li>Handshake type value: CLIENT_HELLO(0x01)</li>
+    </ul>
+  </li>
+  <li>Source: 23.13.248.68 (server)
+    <ul>
+      <li>Record type: HANDSHAKE (0x16)</li>
+      <li>Handshake type value: SERVER_HELLO(0x02)</li>
+    </ul>
+  </li>
+  <li>Source: 23.13.248.68 (server)
+    <ul>
+      <li>Record type: HANDSHAKE (0x16)</li>
+      <li>Handshake type value: CERTIFICATE (0x0b), SERVER_KEY_EXCHANGE (0x0c), SERVER_DONE (0x0e)</li>
+    </ul>
+  </li>
+  <li>Source: 10.24.33.248 (client)
+    <ul>
+      <li>Record type: HANDSHAKE (0x16) and CHANGE_CIPHER_SPEC (0x14)</li>
+      <li>Handshake type value: CLIENT_KEY_EXCHANGE (0x10), FINISHED</li>
+    </ul>
+  </li>
+  <li>Source: 10.24.33.248 (client)
+    <ul>
+      <li>Record type: APPLICATION_DATA (0x17)</li>
+    </ul>
+  </li>
+  <li>Source: 23.13.248.68 (server)
+    <ul>
+      <li>Record type: HANDSHAKE (0x16) and CHANGE_CIPHER_SPEC (0x14)</li>
+      <li>Handshake type value: NEW_SESSION_TICKET (0x04), FINISHED</li>
+    </ul>
+  </li>
+  <li>Each of the SSL records begins with the same three fields, known as itâ€™s header.
+    <ul>
+      <li>The TLS Record header comprises three fields, necessary to allow the higher layer to be built upon it:</li>
+    </ul>
+  </li>
+  <li>Content type (record type), with length of 1 byte</li>
+  <li>Version (TLS version), with length of 2 bytes</li>
+  <li>Length (length of the data), with length of 2 bytes</li>
+</ol>
+:ET

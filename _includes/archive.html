@@ -18,7 +18,7 @@
 {% for temptag in sortedtemptags %}
   {% assign tagitems = temptag | split: '#' %}
   {% capture tagname %}{{ tagitems[1] | downcase }}{% endcapture %}
-	{% if tagname == "ttm4100" or tagname == "tdt4180" or tagname == "tdt4100" or tagname == "ma0301" %}
+	{% if tagname == "ttm4110" or tagname == "tdt4180" or tagname == "tdt4100" or tagname == "ma0301" %}
 	  <a class="tags" href="/tag/{{ tagname | downcase }}"><code class="highligher-rouge"><nobr>{{ tagname }}</nobr></code></a>
 	{% endif %}
 {% endfor %}

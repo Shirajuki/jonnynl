@@ -1,4 +1,4 @@
-I"�<h1 id="tycho-brahe-1546---1601">Tycho Brahe (1546 - 1601)</h1>
+I"q<h1 id="tycho-brahe-1546---1601">Tycho Brahe (1546 - 1601)</h1>
 <ul>
   <li>har sin storhet som <strong>observator</strong>. Gir grunnlaget for Kepler. Bare <strong>observasjoner</strong> kan avhøre striden om eliosentrismen.</li>
   <li>Avviste heliosentrisme ut i fra han at ikke observerte noen <strong>parallakse</strong>. <em>Falsifiserte dermed heliosentrismen ut i fra sine observasjoner.</em></li>
@@ -27,7 +27,7 @@
 
 <h4 id="keplers-3-lov">Keplers 3. lov</h4>
 <ul>
-  <li>Annen potens av omløpstiden er proporsjonal med tredje potens av avstanden til Solen: <code class="language-plaintext highlighter-rouge">T**2 = k * R**3</code></li>
+  <li>Annen potens av omløpstiden er proporsjonal med tredje potens av avstanden til Solen: <code class="highlighter-rouge">T**2 = k * R**3</code></li>
 </ul>
 
 <h2 id="kepler-fortsatt-harmoni">Kepler: fortsatt harmoni</h2>

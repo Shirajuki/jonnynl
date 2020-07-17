@@ -1,0 +1,134 @@
+I"s9<p><strong>Chapter 8 - Security in Computer Networks</strong>
+Examine how the fundamental cryptography principles can be used to create secure networking protocols.
+Top-down approach:</p>
+<ul>
+  <li>Examine secure protocols in each layers</li>
+  <li>Secure email, TCP connection, LAN</li>
+  <li>Blanket security at the network layer</li>
+  <li>Operational security, protecting organizational networks from attacks</li>
+  <li>Firewall and intrusion detection system.
+    <h1 id="81-what-is-network-security"><strong>8.1 What is network security?</strong></h1>
+    <p>Secure communication:</p>
+  </li>
+  <li><strong>Confidentiality</strong>. Only the sender and intended receiver should be able to understand the contents of the transmitted message. Because eavesdroppers may intercept the message, this necessarily requires that the message be somehow encrypted so that an intercepted message cannot be understood by an interceptor. This aspect of confidentiality is probably the most commonly perceived meaning of the term secure communication. We’ll study cryptographic techniques for encrypting and decrypting data in Section 8.2.</li>
+  <li><strong>Message integrity</strong>. Alice and Bob want to ensure that the content of their communication is not altered, either maliciously or by accident, in transit. Extensions to the checksumming techniques that we encountered in reliable transport and data link protocols can be used to provide such message integrity. We will study message integrity in Section 8.3.</li>
+  <li><strong>End-point authentication</strong>. Both the sender and receiver should be able to confirm the identity of the other party involved in the communication-to confirm that the other party is indeed who or what they claim to be. Face-to-face human communication solves this problem easily by visual recognition. When communicating entities exchange messages over a medium where they cannot see the other party, authentication is not so simple. When a user wants to access an inbox, how does the mail server verify that the user is the person he or she claims to be? We study end-point authentication in Section 8.4.</li>
+  <li><strong>Operational security</strong>. Almost all organizations (companies, universities, and so on) today have networks that are attached to the public Internet. These networks therefore can potentially be compromised. Attackers can attempt to deposit worms into the hosts in the network, obtain corporate secrets, map the internal network configurations, and launch DoS attacks. We’ll see in Section 8.9 that operational devices such as firewalls and intrusion detection systems are used to counter attacks against an organization’s network. A firewall sits between the organization ‘s network and the public network, controlling packet access to and from the network. An intrusion detection system performs “deep packet inspection,” alerting the network administrators about suspicious activity.</li>
+</ul>
+
+<p>All or some of the messages sent will typically be encrypted. As discussed in Section
+1.6, an intruder can potentially perform:</p>
+<ul>
+  <li><strong>eavesdropping-sniffing</strong> and recording control and data messages on the channel.</li>
+  <li><strong>modification</strong>, <strong>insertion</strong>, or <strong>deletion</strong> of messages or message content.
+Allows the intruder to possible steal passwords and data, impersonate another entity, hijacking an ongoing session, denying service to legitimate network users by overleading system resources, and so on.
+    <h1 id="82-principle-of-cryptography"><strong>8.2 Principle of cryptography</strong></h1>
+    <p>Message = Plaintext/cleartext
+Encryption algorithm -&gt; ciphertext</p>
+  </li>
+</ul>
+
+<p><strong>8.2.1 Symmetric Key Cryptography</strong>
+Substituting one thing for another, computing and substituting the appropriate ciphertext to create the encrypted message.</p>
+<ul>
+  <li>Caesar cipher: shift alphabet letters</li>
+  <li>Monoalphabetic cipher, substitutes letter of the alphabet with another letter of the alphabet.
+The intruder has:</li>
+  <li><strong>Ciphertext-only attack</strong>. In some cases, the intruder may have access only to the intercepted ciphertext, with no certain information about the contents of the plaintext message. We have seen how statistical analysis can help in a ciphertext-only attack on an encryption scheme.</li>
+  <li><strong>Known-plaintext attack</strong>. We saw above that if Trudy somehow knew for sure that “bob” and “alice” appeared in the ciphertext message, then she could have determined the (plaintext, ciphertext) pairings for the letters a, l, i, c, e, b, and o. Trudy might also have been fortunate enough to have recorded all of the cipher-text transmissions and then found Bob’ s own decrypted version of one of the transmissions scribbled on a piece of paper. When an intruder knows some of the (plaintext, ciphertext) pairings, we refer to this as a known-plaintext attack on the encryption scheme.</li>
+  <li><strong>Chosen-plaintext attack</strong>. In a chosen-plaintext attack, the intruder is able to choose the plaintext message and obtain its corresponding ciphertext form. For the simple encryption algorithms we’ ve seen so far, if Trudy could get Alice to send the message, “The quick brown fox jumps over the lazy dog,” she could completely break the encryption scheme. We’ll see shortly that for more sophisticated encryption techniques, a chosen-plaintext attack does not necessarily mean that the encryption technique can be broken.</li>
+  <li><strong>Polyalphabetic cipher</strong> using two caesar ciphers
+<img src="https://lh6.googleusercontent.com/6joIKKdtYsqKJZ3v4JSaFRGupIxe0uetks2pQt16Gbpk2K3bOmIJ0ODQNiF5vLBi_CVfl6Nk6ZRH8zCGor7bCn4Z0OmP9E5e7RDfFm0wXJGSia36sj5zb7hN2QbwKiK711EUgaiLCusA9aZHCw" alt="" /></li>
+</ul>
+
+<p><strong>Block Ciphers</strong>
+Modern:</p>
+<ul>
+  <li><strong>Stream ciphers</strong></li>
+  <li><strong>Block ciphers</strong> - encrypted in blocks of k bits, if k = 64 then the message is broken into 64-bit blocks, each block encrypted independently. To encode a block the cipher uses a one-to-one mapping to map the k-bit block of cleartext to a k-bit block of ciphertext. Example k = 3, maps 3-bit inputs / blocks and encrypts each block according to the above mapping. Number of possible mappings: 2**k!</li>
+  <li><img src="https://lh6.googleusercontent.com/cCLMGDsNt3CvCvcqKatCAagXaXLUm2kLobTE93OWSqhKtNOXzXmC1L_lEr9w5PoZg9ZQzroV1GfUXRyFsSKooVGSUdZYmnMTYNHPac2f22ZlLeU0x7_nbcN75yxfLIRrrXn6WNBQWNi6-p70QA" alt="" />
+Today there are a number of popular block ciphers, including <strong>DES</strong> (standing
+for Data Encryption Standard), <strong>3DES</strong>, and <strong>AES</strong> (standing for Advanced Encryption
+Standard). Each of these standards uses functions, rather than predetermined tables,
+along the lines of Figure 8.5.</li>
+</ul>
+
+<p>Each of these algorithms also uses a string of bits for a key. For example, <strong>DES uses</strong>
+<strong>64-bit blocks with a 56-bit key</strong>. <strong>AES uses 128-bit blocks and can operate with keys</strong>
+<strong>that are 128, 192, and 256 bits long</strong>. 
+An algorithm’ s key determines the specific “mini-table” mappings and permutations within the algorithm’s internals. The bruteforce attack for each of these ciphers is to cycle through all the keys , applying the decryption algorithm with each key. Observe that with a key length of n, there are 2**n possible keys.</p>
+
+<p><strong>Cipher-Block Chaining</strong>
+If plain cipher block is used, multiple plaintext blocks is then encrypted with the same shared key. Thus easy to crack when given many plaintexts.
+Thus** Cipher Block Chaining (CBC)**: send one random value along the very first message, and then have the sender and receiver use the computed coded blocks in place of the subsequent random number.</p>
+<ol>
+  <li>Before encrypting the message (or the stream of data), the sender generates a random k-bit string, called the <strong>Initialization Vector (IV)</strong>. Denote this initialization vector by c(0). The sender sends the IV to the receiver in cleartext.</li>
+  <li>For the first block, the sender calculates m(1) XOR c(0), that is, calculates the exclusive-or of the first block of cleartext with the IV. It then runs the result through the block-cipher algorithm to get the corresponding ciphertext block; that is, c(1) = K_s(m(1) XOR c(0)). The sender sends the encrypted block c(1) to the receiver.</li>
+  <li>For the i-th block, the sender generates the i-th ciphertext block from c(i) = K_s(m(i) XOE c(i - 1)).</li>
+</ol>
+
+<p><strong>8.2.2 Public Key Encryption</strong>
+<img src="https://lh5.googleusercontent.com/FUQxP1wUoQin8iB4SKaS0Vs15dNX6IzKYBIdieCjoC4_7rTj0BywSV5GBAFaqa9Az97rKpw_9ycJ7gp1UVwDnD1-l-DHDP4WGU-5EfraDZGI47iX7IBOwJ0Gun8P4fXLAxdD4tBdegJnWJZ6gg" alt="" />
+<strong>Public key</strong> and** private key**
+<strong>RSA algorithm:</strong> modulo-n arithmetic
+<img src="https://lh4.googleusercontent.com/nf5Z-rpx06sc82owH29LRXY_WBLPQMKO0cK6NjCP_DYo8cPmAuUcVSRqxOv2AAfEsMCmx6vOfIJc8pSc8RLQ-f0T74rBqkN_qUTZCu1RbBCeuBBs4bBK5QDA8LnUz4fvYXFP6EcLu9zW-r6azg" alt="" />
+To generate the public and private RSA keys, Bob performs the following steps:</p>
+<ol>
+  <li>Choose two large prime numbers, <strong>p</strong> and <strong>q</strong>. How large should p and q be? The larger the values, the more difficult it is to break RSA, but the longer it takes to perform the encoding and decoding. RSA Laboratories recommends that the product of p and q be on the order of 1,024 bits. (FactorDB)</li>
+  <li>Compute <strong>n = p<em>q** and **z = (p - l)</em>(q - 1)</strong></li>
+  <li>Choose a number, <strong>e</strong>, less than <strong>n</strong>, that has no common factors (other than <strong>1</strong>) with z. (In this case, e and z.are said to be relatively prime.) The letter e is used since this value will be used in encryption.</li>
+  <li>Find a number, <strong>d</strong>, such that <strong>e<em>d - 1 is exactly divisible** (that is, with no remainder) by **z**. The letter d is used because this value will be used in decryption. Put another way, given e, we choose d such that: **e</em>d mod z = 1</strong></li>
+  <li>The public key that Bob makes available to the world, K+b, is the pair of numbers <strong>(n, e)</strong>; his private key, K-b, is the pair of numbers <strong>(n, d)</strong>.
+The encryption by Alice and the decryption by Bob are done as follows:
+    <ul>
+      <li>Suppose Alice wants to send Bob a bit pattern represented by the integer number <strong>m</strong> (with <strong>m &lt; n</strong>). To encode, Alice performs the exponentiation m<strong>e, and then computes the integer remainder when **m</strong>e** is divided by <strong>n</strong>. In other words, the encrypted value, <strong>c</strong>, of Alice’ s plaintext message, <strong>m</strong>, is: <strong>c = m</strong>e mod n**</li>
+      <li>The bit pattern corresponding to this ciphertext <strong>c</strong> is sent to Bob</li>
+      <li>To decrypt the received ciphertext message, c, Bob computes: <strong>m = c</strong>d mod n**
+which requires the use of his private key (n, d).
+<img src="https://lh4.googleusercontent.com/8X7ayCfI9R0p0LEfC_jwPQVuRcoop1yJ1Sxz-YJn2hqyncEb3mVvPn3eApwdyWy0mqVi_L8WaQTvJQj2ri8cpnftz4vZrGinL4phxHPTuXPDmUvQqJ4xF8uXse_RAuS0GmhQm8yV9sQSiTx-Mg" alt="" />
+<img src="https://lh4.googleusercontent.com/A7gle67xveK1N0bq672i3bLDfXGFGsLzspiShkBe5RkYqgbb6b6ykPc5yuj7QoQ5nyb2gujW_53t0VDEdMYB0hv6Lp9MklZ7HDe8Y8ZTeKaEFiF3h1EGkMgU-okq7awf_QXAsk5WKC7aHSeFMw" alt="" /></li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="83-message-integrity-and-digital-signatures"><strong>8.3 Message Integrity and Digital Signatures</strong></h1>
+<p><strong>Message integrity</strong> (message authentication)
+A popular message integrity technique that is used by many secure networking protocols. But before doing so, we need to cover another important topic in cryptography-cryptographic hash functions.</p>
+
+<p><strong>8.3.1 Cryptographic Hash Functions</strong>
+It is computationally infeasible to find any two different messages x and y such that H(x) = H(y).
+Computationally infeasible for an intruder to substitute one message for another message that is protected by the hash.
+MD5 hash algorithm - 128-bit hash in a four-step process consisting of a padding step (null bytes so the length satisfies a condition), an append step (64-bit representation of the message length), and initialization of an accumulator, and a final looping step (16-word blocks are processed 4 rounds).</p>
+<ul>
+  <li><strong>Secure Hash Algorithm (SHA-1)</strong></li>
+</ul>
+
+<p><strong>8.3.2 Message Authentication Code</strong>
+Auth key
+Message Authentication code (MAC)
+HMAC</p>
+
+<p><strong>8.3.3 Digital Signatures</strong>
+A digital signature is a cryptographic technique for proving signed documents in a digital world.
+<img src="https://lh6.googleusercontent.com/RJzMXILcUGDbgFCsD3OdBR14eU7yv0DJS0VDQ_1psa-6mU9NkRvAGq3mjGeR3MUyL5gOP9h1z9c4nXLMJkgbKCK2AMVcDvGnFCsOmnlOd4q4H2TsBYQHl9gvxkuereqBkVjA6T0AAzosfAxU5w" alt="" />
+<img src="https://lh6.googleusercontent.com/RmxDmu4d8Yjtz-iMB-k0nlAXNoVjiBVFxSl0HisRn23W7DqqRGvGdEGw_fMHy0bwGCTV2VjVRPR4Vwryg9TvMxW8twyORiJ8LsxZiGixw1yYPn30Nuu4zhZYjFswQf84R1tSXJwZbspa0p9YIg" alt="" />
+<img src="https://lh6.googleusercontent.com/P2ZIXSiBLl_tO_6-c0PlRygYVgHyuERn2QoslaeqDi5w9JtOzFcPwGQJzClTDPNUjb0O2R3-AGgXyoWbdWEQ63pko16vmH9Kbmovz72BElOyJAw_SZqs3ei0ZdOFynCY2OSUCzfWSSnFKkBOfw" alt="" />
+<img src="https://lh6.googleusercontent.com/WbbN5I_o77pDEEmg4fYTGSUR7FPLq4llgKPmUwyCNBOxVU2nDdzrWPK8444gDlFXVl4voBDhb65dPCPaL14b5eEP4xkSbwmLVXb8B5dLSGyNCIjCqbHm5COx0196RqjPm6qqr1JnQtstCDzksw" alt="" />
+<img src="https://lh4.googleusercontent.com/-F6Kq_YBsINDC9WV2tCsmqyGgdw33uoHDwHxacEgo_C2V628G_SZ7Z3JbD3Mq5b2yyjJnETMUcf0FPY_lhPin_XuykUvg4B1Vq-VwkWXnXTWY_VtYme-6mi6dU6iWwgrfzdKWUPMZsF3E5UQIA" alt="" /></p>
+<h1 id="85-securing-e-mail"><strong>8.5 Securing E-Mail</strong></h1>
+<p>8.5.1 Secure E-Mail</p>
+
+<h1 id="86-securing-tcp-connections-ssl"><strong>8.6 Securing TCP Connections: SSL</strong></h1>
+<p>8.6.1 The Big Picture
+8.6.2 A More Complete Picture</p>
+
+<h1 id="87-network-layer-security-ipsec-and-vpns"><strong>8.7 Network-Layer Security: IPsec and VPNs</strong></h1>
+<p>8.7.1 IPsec and Virtual Private Networks (VPNs)</p>
+
+<h1 id="88-securing-wireless-lans"><strong>8.8 Securing Wireless LANs</strong></h1>
+<p>8.8.1 Wired Equivalent Privacy (WEP)</p>
+
+<h1 id="89-operational-security-firewalls-and-intrusion-detection-systems"><strong>8.9 Operational Security: Firewalls and Intrusion Detection Systems</strong></h1>
+<p>8.9.1 Firewalls</p>
+
+:ET

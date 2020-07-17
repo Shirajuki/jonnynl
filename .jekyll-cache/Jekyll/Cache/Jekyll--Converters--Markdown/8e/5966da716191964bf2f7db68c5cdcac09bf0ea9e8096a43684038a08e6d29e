@@ -1,0 +1,18 @@
+I"�<p><strong>Chapter 8 - Security in Computer Networks</strong>
+Examine how the fundamental cryptography principles can be used to create secure networking protocols.
+Top-down approach:</p>
+<ul>
+  <li>Examine secure protocols in each layers</li>
+  <li>Secure email, TCP connection, LAN</li>
+  <li>Blanket security at the network layer</li>
+  <li>Operational security, protecting organizational networks from attacks</li>
+  <li>Firewall and intrusion detection system.
+    <h1 id="81-what-is-network-security"><strong>8.1 What is network security?</strong></h1>
+    <p>Secure communication:</p>
+  </li>
+  <li><strong>Confidentiality</strong>. Only the sender and intended receiver should be able to understand the contents of the transmitted message. Because eavesdroppers may intercept the message, this necessarily requires that the message be somehow encrypted so that an intercepted message cannot be understood by an interceptor. This aspect of confidentiality is probably the most commonly perceived meaning of the term secure communication. We’ll study cryptographic techniques for encrypting and decrypting data in Section 8.2.</li>
+  <li><strong>Message integrity</strong>. Alice and Bob want to ensure that the content of their communication is not altered, either maliciously or by accident, in transit. Extensions to the checksumming techniques that we encountered in reliable transport and data link protocols can be used to provide such message integrity. We will study message integrity in Section 8.3.</li>
+  <li><strong>End-point authentication</strong>. Both the sender and receiver should be able to confirm the identity of the other party involved in the communication-to confirm that the other party is indeed who or what they claim to be. Face-to-face human communication solves this problem easily by visual recognition. When communicating entities exchange messages over a medium where they cannot see the other party, authentication is not so simple. When a user wants to access an inbox, how does the mail server verify that the user is the person he or she claims to be? We study end-point authentication in Section 8.4.</li>
+  <li><strong>Operational security</strong>. Almost all organizations (companies, universities, and so on) today have networks that are attached to the public Internet. These networks therefore can potentially be compromised. Attackers can attempt to deposit worms into the hosts in the network, obtain corporate secrets, map the internal network configurations, and launch DoS attacks. We’ll see in Section 8.9 that operational devices such as firewalls and intrusion detection systems are used to counter attacks against an organization’s network. A firewall sits between the organization ‘s network and the public network, controlling packet access to and from the network. An intrusion detection system performs “deep packet inspection,” alerting the network administrators about suspicious activity.</li>
+</ul>
+:ET

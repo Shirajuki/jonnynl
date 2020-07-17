@@ -1,0 +1,10 @@
+I"�<h1 id="internet-packet-delay-ch1">Internet (packet, delay) (CH1)</h1>
+<ul>
+  <li>Nodal processing delay</li>
+  <li>Queuing delay</li>
+  <li>Transmission delay</li>
+  <li>Propagation delay</li>
+  <li>=&gt; total delay
+<span style="color:#ff7e7e;">Propagasjon-forsinkelse bestemmes av de fysiske egenskapene til det mediet som benyttes, mens transmisjons-forsinkelse er gitt av det utstyret (f.eks. elektronikk eller optikk) som brukes for å sende bit ut på mediet</span></li>
+</ul>
+:ET

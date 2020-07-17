@@ -1,4 +1,4 @@
-I"'#<!-- DIGITAL REPRESENTATION -->
+I"�!<!-- DIGITAL REPRESENTATION -->
 <h1 id="representing-information-digitally">Representing Information Digitally</h1>
 <h2 id="bits-and-the-why-of-bytes">Bits and the “Why” of bytes</h2>
 <h2 id="learning-objectives">Learning objectives</h2>
@@ -26,20 +26,20 @@
 
 <h1 id="try-it-solutions">TRY IT SOLUTIONS</h1>
 <ol>
-  <li><strong>Complete the Code.</strong> QWERTY vs. Dovrak. From Dovrak to QWERTY: <code class="language-plaintext highlighter-rouge">Ecuu.p.by ofmxrnoq oam. m.abcbi</code>
+  <li><strong>Complete the Code.</strong> QWERTY vs. Dovrak. From Dovrak to QWERTY: <code class="highlighter-rouge">Ecuu.p.by ofmxrnoq oam. m.abcbi</code>
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">Different symbolsx same meaning</code></li>
+      <li><code class="highlighter-rouge">Different symbolsx same meaning</code></li>
     </ul>
   </li>
   <li><strong>Specific Information.</strong> North Atlantic lobsters have green-brown shells when alive. Specify the bit of information for “lobster cooked.”</li>
   <li><strong>Bits of Orange.</strong> The sequence of glasses below records information in several different ways. Assuming thatt present represents 1, identify what the phenomenon is to represent these binary sequences: (a) 101101001, (b) 000001011, and (c) 100110101.</li>
   <li><strong>Count one more.</strong> If your new computer thinks it is 100111 days old, how old will it be tomorrow?</li>
-  <li><strong>Casting a Hex.</strong> Convert the hex <code class="language-plaintext highlighter-rouge">F00D 4 A BEE</code> to binary using substitutiong from table 7.3. Going the other decode this binary <code class="language-plaintext highlighter-rouge">0000 1111 1111 0010 1010 1101 1000</code> into hex</li>
+  <li><strong>Casting a Hex.</strong> Convert the hex <code class="highlighter-rouge">F00D 4 A BEE</code> to binary using substitutiong from table 7.3. Going the other decode this binary <code class="highlighter-rouge">0000 1111 1111 0010 1010 1101 1000</code> into hex</li>
   <li><strong>Counting on Your Fists.</strong> According to the joke, humans count with their fingers, which is why we have decimal; computer people count with their fists, which is why we have binary. Assign 0 and 1 to the fists below to make binary six.
-  <code class="language-plaintext highlighter-rouge">0101</code> eller <code class="language-plaintext highlighter-rouge">1010</code></li>
-  <li><strong>Alternating.</strong> What decimal number is the binary number <code class="language-plaintext highlighter-rouge">1 0101 0101</code></li>
-  <li><strong>Numbers as letters.</strong> Encode the phone number (888) 555-1212 in ASCII, including the punctuation. (Notice that there is a space before the first 5.) To find the answer, locate each character in Figure 7.3 and write the four bits at the left of the row and the four bits at the top of the column. For example, the open paranthesis -(- is in the third row and corresponds to <code class="language-plaintext highlighter-rouge">0010 1000</code></li>
-  <li><strong>How Much is a Pound?</strong> The ASCII for the character “£”, the symbol for the British pound, is A3 in hex and <code class="language-plaintext highlighter-rouge">1010 0011</code> in binary. Wht’s the deimal value of the binary number <code class="language-plaintext highlighter-rouge">1010 0011</code>; that is, how much is a £.</li>
+  <code class="highlighter-rouge">0101</code> eller <code class="highlighter-rouge">1010</code></li>
+  <li><strong>Alternating.</strong> What decimal number is the binary number <code class="highlighter-rouge">1 0101 0101</code></li>
+  <li><strong>Numbers as letters.</strong> Encode the phone number (888) 555-1212 in ASCII, including the punctuation. (Notice that there is a space before the first 5.) To find the answer, locate each character in Figure 7.3 and write the four bits at the left of the row and the four bits at the top of the column. For example, the open paranthesis -(- is in the third row and corresponds to <code class="highlighter-rouge">0010 1000</code></li>
+  <li><strong>How Much is a Pound?</strong> The ASCII for the character “£”, the symbol for the British pound, is A3 in hex and <code class="highlighter-rouge">1010 0011</code> in binary. Wht’s the deimal value of the binary number <code class="highlighter-rouge">1010 0011</code>; that is, how much is a £.</li>
 </ol>
 
 <h1 id="review-questions">REVIEW QUESTIONS</h1>
@@ -134,20 +134,20 @@
       <li>present or absent gives different combinations, 01 is different from 10.</li>
     </ul>
   </li>
-  <li>Translate the following hexadecimal into binary and then into ASCII: <code class="language-plaintext highlighter-rouge">68 65 78 61 64 65 63 69 6D 61 6C</code>
+  <li>Translate the following hexadecimal into binary and then into ASCII: <code class="highlighter-rouge">68 65 78 61 64 65 63 69 6D 61 6C</code>
     <ul>
-      <li>“hexadecimal” using python3 <code class="language-plaintext highlighter-rouge">bytearray.fromhex('68 65 78 61 64 65 63 69 6D 61 6C').decode()</code></li>
+      <li>“hexadecimal” using python3 <code class="highlighter-rouge">bytearray.fromhex('68 65 78 61 64 65 63 69 6D 61 6C').decode()</code></li>
     </ul>
   </li>
-  <li>Encode the following ISBN number in ASCII: <code class="language-plaintext highlighter-rouge">978-3-16-148410-0</code></li>
-  <li>You have discovered the following string of binary ASCII code; figure out what they mean: <code class="language-plaintext highlighter-rouge">01010111 01100001 01111001 00100000 01110100 01101111 00100000 01100111 01101111 00100001</code>
+  <li>Encode the following ISBN number in ASCII: <code class="highlighter-rouge">978-3-16-148410-0</code></li>
+  <li>You have discovered the following string of binary ASCII code; figure out what they mean: <code class="highlighter-rouge">01010111 01100001 01111001 00100000 01110100 01101111 00100000 01100111 01101111 00100001</code>
     <ul>
-      <li>python3 <code class="language-plaintext highlighter-rouge">chr(int('base2',2))</code> gives us <code class="language-plaintext highlighter-rouge">"way to go!"</code></li>
+      <li>python3 <code class="highlighter-rouge">chr(int('base2',2))</code> gives us <code class="highlighter-rouge">"way to go!"</code></li>
     </ul>
   </li>
   <li>Explain the relatonship between the number D and 1101.
     <ul>
-      <li>D in base16/hex = <code class="language-plaintext highlighter-rouge">bin(int('D',16))</code></li>
+      <li>D in base16/hex = <code class="highlighter-rouge">bin(int('D',16))</code></li>
     </ul>
   </li>
   <li>Explain why radio broadcasters use longer encoding to transmit information.</li>
