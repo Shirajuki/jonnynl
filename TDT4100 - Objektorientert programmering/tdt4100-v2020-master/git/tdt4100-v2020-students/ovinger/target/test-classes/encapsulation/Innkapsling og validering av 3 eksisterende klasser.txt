@@ -1,0 +1,15 @@
+DEL 1 - teori
+1. Hvordan skal private og public brukes for at denne klassen skal være korrekt innkapslet?
+  Private blir brukt i variables, mens metodene som f.eks. get og set gjøres public for å innkapsle klassene.
+  Metoder som blir brukt til valideringssjekk gjøres også til private siden det kjøres internt også.
+
+2. Hva slags validering bør legges til for å sikre gyldig tilstand?
+  For å sikre gyldig tilstand thrower vi ulike exceptions i ulike valideringssjekk.
+
+3. Hvilke metoder må evt. legges til?
+  valideringssjekks-metoder må evt. legges til for bedre flyt i innkapslingen og validering av klassene.
+
+4. Vil du karakterisere denne klassen som data-orientert eller tjeneste-orientert. Begrunn svaret!
+  Denne klassen kan karakteriseres som en mellomting mellom data-og tjenesteorientert, men er mest mot det dataorienterte ved at den hovedsakelig jobber med getter- og setter metoder på interne data.
+  Det som er litt tjenesteorientert med klassene er at metoder blir brukt for å også håndtere interne tilstand: validiseringsmetoder.
+  Tatt i dette som betrakning mener jeg at klassene er data-orientert ut i fra metodene vi har.

@@ -1,0 +1,23 @@
+1. Why does the following expression 0.1 + 0.2 === 0.3 evaluate to false in Javascript?
+- The following expression evaluates to false in javascript binary representation of floating point values, since
+  the the numbers are being converted from decimal (base10) to binary (base2) since the computer computes in binary.
+  Because of this we get rounding errors most of the time. Using the Number method .toPrecision(n) we can see that 0.1.toPrecision(17) is indeed not exactly 0.1 but
+  0.10000000000000001. Since the precision is off by some decimals, we get false.
+
+2. What does the method attribute on a form element decide?
+- The method attribute on a form element decides how we send the form-data/which HTTP method to send the data with. It can be either sent as URL variables with method GET),
+  or as HTTP post transaction with method POST.
+
+3. Explain why the form fields appear in the URL when the method on form element is
+changed to GET ?
+- The form fields appear in the URL when the method on form element is method GET as it's
+  a type of HTTP request where we can specify the data requeste to the server using the URL. Thus the form fields would appear on the URL.
+
+4. Why is it considered bad practice to only validate form input with HTML5 and/or
+Javascript?
+- It is considered bad practice to only validate form input with HTML and/or Javascript as it is pretty vulnerable to sorts of code injections/scriptings since it is possible to alter the data being sent
+  browser/client side. When we validate form inputs it is better/good practice to validate the data on the server.
+
+5. When is it appropriate to use textarea over input ?
+- Textarea element is a multiline text field which allows line break in the typed text by the user.
+  It is appropriate to use textarea over input when we need the user to input multilined texts.

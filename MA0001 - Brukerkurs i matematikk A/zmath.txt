@@ -1,0 +1,105 @@
+1-3
+§§§(13-15)
+• absverdi: 3,5,6
+• linjer: 10,15,21,26,29
+• anvendt: 46,52,53
+• sirkler: 55,57,61
+• trigono: 61,66,67,71
+• exp/log: 73-84
+
+4
+§§§(34.39)
+• def/verdimengde: 5,7,9,13,17,33,35
+• jevn/odde: 27
+• injektivitet: 69,71,73,75,77
+• anvendt: 30,32,42,44,53,63,66,67
+
+5
+§§§(34-39)
+• period.trig.graf: 91,92,93,94
+§(52-53)
+• graf: 1,2,7,11,14,15
+§(67-68)
+• eksponentiell vekst: 24,27
+• anvendt: 75,77
+
+6
+§§§(78-79)
+• definisjon av følge: 10,11,12,27,29,36
+• grenseverdien til følge: 40,42,43,46,52
+• regneregler til grenseverdier: 71-82
+• rekursjon: 90,91,95,97,100,101
+
+7
+§§§(143-145)
+• Deriverte og graf: 2,3,5,8.
+• Definisjonen til den deriverte: 21,25,26,35,38
+• Likninga til tangenten: 27,28,33
+• Anvendt, fordybende: 42,44,45,46,47
+• Kontinuitet og deriverbarhet: 54,55
+§(149-151)
+• Polynom: 1→. Gjør så mange at det blir lett.
+• Polynom, med parametrer: 23,24,27,32,36,39,41
+§(158-159)
+• Produkregel: 1→. Gjør så mange at det blir lett.
+• Potensfunksjon: 59 – 66, 69,70,72,73,80,81. Gjør så mange at det blir lett.
+¤¤¤ • Anvendt: 46,47,48
+
+8
+§§§(158-159)
+• Brøkregel: 49–58,67,68,75–79,82–90. Så mange at det blir lett.
+• Tangent: 71
+• Anvendt: 94
+§(172-173)
+• Kjerneregel: 1→. Gjør så mange at det blir lett
+§(177)
+• Trigonometriske deriverte: 1→. Gjør så mange at det blir lett.
+• Anvendt: 73
+§(181-183)
+• Eksponentiell deriverte: 1 – 52. Gjør så mange at det blir lett.
+• Befolkningen: 59 – 65
+• Radioaktivitet: 66 – 73
+§(192-193)
+• Den deriverte til logaritmen: 23 – 62. Gjør så mange at det blir lett.
+• Den deriverte til den inverse funksjonen: 1 – 6. De andre er fordypende
+
+9
+§§§(172-173)
+• Høgere ordens deriverte: 73 →. God øvelse for deriverteregninger, hvis de er ikke ennå lett.
+• Implisitt derivasjon: 47, 49, 53, 54, 55.
+• Anvendt: 69, 72, 86, 87
+§(192-193)
+• Den logaritmiske deriverte: 63, 66, 67, 71, 72, 75, 76. Hvis disse er vanskelige, får mer repetisjoner må å regne ut alle.
+§(213-215)
+• Sekantsetningen: 40, 41, 43, 46, 47.
+• Estimering med de deriverte: 50, 51, 53.
+• Ekstremalverdier, skissering: 1, 4, 7, 8, 9, 10, 11, 12, 13, 16, 18.
+• Ekstremalverdier, er kandidat et lokalt ekstremalpunkt: 20, 23, 28
+
+10
+§§§(252-253)
+• L’Hôpitals regel: 1, 5, 7, 15, 21, 29, 35, 45, 49
+• Kan L’Hôpital brukes: 52, 55, 59
+• Anvendt: 67
+§§§(381-382)
+• Avsnitt [7.6]: 1, 3, 5, 7, 11, 15, 17, 19, 21, 23, 27, 29
+
+11
+§§§(272-273)
+• Anti-deriverte til potensfunksjoner og polynom: 1–12, 15, 16. Gjør så mange at det blir lett.
+• Anti-deriverte: 13, 17, 19, 23, 27, 29, 37, 41, 43, 47, 49, 53
+• Initialverdiproblem: 59, 61, 67, 71
+• Anvendt: 73, 77
+
+12
+§§§(370–371)
+• Midtpunktreger og tilnærming: 1, 3, 5, 7, 17, 19
+§(291–293)
+• Approksimasjon med rektangler: 2, 33, 36.
+• Hva a og b betyr i integral(a,b): 54–60, 68, 74.
+-----------------------------------
+• Geometrisk integrering: 38, 39, 61–67, 70–73, 75–77, 80–84. Hint for 62–67: likninga til sirkelet.
+• Anvendt, krevende: 85
+§(305–306)
+• Ubestemte integraler: 39–66, 69–71, 75–96. Det er repetisjon av antiderivasjon. Lær den nå hvis du har ikke lært den ennå. Regn så mange at de enkle øvingene blir lette.
+• Bestemte integraler: 97–106, 108–113, 115–122. Så mange at de første blir lett

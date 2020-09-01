@@ -1,0 +1,11 @@
+1. Add this:
+// Denne main-metoden gjør at en kan bruke testklassen selv som hovedprogram når en vil teste med standalone-versjonen av JExercise.
+public static void main (String[ ] arum) {
+   no.hal.jex.standalone.JexStandalone.main(UpOrDownCounterTest.class);
+}
+
+2. Compile your and test file
+$ javac -cp .:jexercise-standalone.jar stateandbehavior/UpOrDownCounter.java stateandbehavior/UpOrDownCounterTest.java
+
+3. Run test
+$ java -cp .:jexercise-standalone.jar stateandbehavior/UpOrDownCounter

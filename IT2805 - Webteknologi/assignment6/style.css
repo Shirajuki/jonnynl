@@ -1,0 +1,91 @@
+:root {
+ --text-color: #017b37;
+ --bg-color: #ffffff;
+  --base-color: #144e28;
+  --base-color-light: #56a672;
+  --base-color-dark: #115028;
+  --input-color: #fafffa;
+}
+html, body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+div {
+  padding: 2px 0;
+}
+form {
+  margin: 2% auto;
+  max-width: 600px;
+  width: 100%;
+}
+fieldset{
+	border-radius: 10px;
+	border: .4rem solid var(--base-color-light);
+	padding: 20px;
+  background: var(--bg-color);
+}
+fieldset legend{
+	color: var(--base-color-dark);
+	border: .3rem solid var(--base-color-light);
+	border-radius: 5px;
+	background: #FFF4F4;
+	padding: 3px 8px;
+	font-size: 1rem;
+}
+input[type=text],
+input[type=date],
+input[type=number],
+input[type=email],
+select {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: .4rem 0;
+	border: .1rem solid var(--base-color);
+	outline: none;
+	color: var(--text-color);
+	box-shadow: inset 0 0 .1rem var(--text-color);
+	background: var(--input-color);
+  font-size: 1rem;
+}
+input:read-only {
+  color: gray;
+  background: #f0f0f0
+}
+.formButton {
+  width: 100%;
+  text-align: center;
+}
+button[type=submit] {
+  background-color: var(--base-color-dark);
+  color: white;
+  padding: .8rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  max-width: 400px;
+  width: 100%;
+  font-size: 1rem;
+  box-shadow: 0 7px var(--text-color);
+}
+button[type=submit]:active {
+  /* background-color: var(--text-color); */
+  transform: translateY(7px);
+  box-shadow: 0 0 var(--text-color);
+}
+/* Styling radio */
+input[type=radio] + label {
+  cursor: pointer;
+  padding: 0 20px 0 0;
+}
+input[type=radio] {
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: translateY(.35rem);
+}
+input:invalid {
+  border: 1px solid red;
+}
+input:valid {
+  border: 1px solid green;
+}

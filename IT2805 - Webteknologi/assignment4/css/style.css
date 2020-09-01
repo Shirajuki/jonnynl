@@ -1,0 +1,45 @@
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: white;
+    font-family: arial, sans-serif;
+  }
+  #screen {
+    position: relative;
+  }
+  video, #fallback_image {
+    height: auto;
+    width: 100%;
+  }
+  #fallback_image {
+    display: block;
+  }
+  #title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #title > img {
+    width: 100%;
+  }
+  article {
+    /* width: 720px; */
+    width: 80%;
+    margin: 50px auto;
+  }
+  p {
+    color: black;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  @media (max-width: 940px) {
+    video {
+      display: none;
+    }
+    #fallback_image {
+      display: block;
+    }
+  }

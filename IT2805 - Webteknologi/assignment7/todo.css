@@ -1,0 +1,120 @@
+:root {
+    --color1: #55456fe6;
+    --color2: #55456f;
+}
+body {
+    background: linear-gradient(to top, var(--color1), #e9ffc380);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+div {
+    margin: 2% auto;
+    max-width: 600px;
+    width: 100%;
+}
+h1 {
+    color: var(--color2);
+}
+output {
+    font-size: 1.4rem;
+    color: var(--color2);
+}
+/* Styling list task */
+ul {
+    list-style: none;
+    border-radius: 2px;
+    border: 8px solid var(--color1);
+    padding: 10px;
+    background: #ffffff80;
+}
+ul::before {
+    content: "Added tasks:";
+    position: relative;
+    margin-bottom: 10px;
+    color: var(--color2);
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+}
+/* Styling form */
+form {
+    width: 100%;
+}
+fieldset{
+    border-radius: 2px;
+    border: 8px solid var(--color1);
+    padding: 20px;
+    background-color: #ffffff80;
+}
+fieldset legend{
+    color: var(--color2);
+    padding: 0 5px;
+}
+input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 0 0 10px 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 5px solid white;
+    outline: none;
+    background: #ffffff80;
+    font-size: 1rem;
+}
+input[type=submit] {
+    background-color: #f9ceff80;
+    border: 4px solid #ffffff;
+    border-radius: 15px;
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    transition: all ease-in-out 0.3s;
+    color: var(--color1);
+    font-weight: bolder;
+    font-size: 1em;
+}
+input[type=submit]:hover {
+    background-color: #d9bfff80;
+    color: var(--color1);
+    cursor: pointer;
+}
+input[type=submit]:active {
+    border-color: #d9bfff80;
+    font-size: 1.2rem;
+}
+/* Styling checkbox */
+input[type=checkbox] + span {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    top: -4.4px;
+  }
+input[type=checkbox] {
+    display: none;
+}
+input[type=checkbox] + span:before {
+    content: " ";
+    position: relative;
+    display: inline-block;
+    bottom: -7px;
+    border: 0.15rem solid #fff;
+    width: 1rem;
+    height: 1rem;
+    padding: 1px 2px 2px 1px;
+    margin-right: 10px;
+    color: transparent;
+    transition: .2s;
+}
+input[type=checkbox] + span:active:before {
+    transform: scale(0.5);
+}
+input[type=checkbox]:checked + span:before {
+    background-color: var(--color1);
+    border-color: 0.1rem solid var(--theme-color1);
+    color: #fff;
+}

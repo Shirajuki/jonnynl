@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+PATH_TO_FX=/home/j9/Documents/javafx-sdk-11.0.2/lib/
+javac --module-path $PATH_TO_FX --add-modules javafx.controls /home/j9/tdt4100-v2020-master/ws/platform/src/application/Main.java
+( cd /home/j9/tdt4100-v2020-master/ws/platform/src/ && java -Xmx512m --module-path $PATH_TO_FX --add-modules javafx.controls application.Main )
+

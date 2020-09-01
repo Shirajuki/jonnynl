@@ -1,0 +1,10 @@
+DATE,NAME,REASON,FLOOR,LVL,CANDIES
+03/03/20,Alpha,Killed by a spider,1,2,100
+03/03/20,Alpha,Killed by a spider,1,2,100
+03-03-20,Alpha,Killed by Goblin,0,1,10
+03-03-20,Alpha,Killed by Goblin,1,1,10
+03-03-20,Alpha,Killed by Zombie,0,1,10
+03-03-20,Alpha,Killed by Zombie,0,1,10
+25/03/20,Alpha,Killed by Slime,1,1,10
+26/03/20,Alpha,Killed by Zombie,0,1,10
+21/05/20,Alpha,Killed by Goblin,0,2,108

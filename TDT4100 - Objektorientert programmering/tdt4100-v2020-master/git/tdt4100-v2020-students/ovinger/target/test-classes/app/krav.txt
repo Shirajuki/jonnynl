@@ -1,0 +1,20 @@
+- Kunne programmere meningsfulle og fungerende objektstrukturer
+- Kunne grunnleggende konfigurere en JavaFX-controller til å fungere med programmet
+
+Oppgaven er veldig åpen, og består av to deler. Etter endt øving, skal du ha laget en app som oppfyller følgende minstekrav:
+
+[x] Appen må ha et brukergrensesnitt (realisert i en FXML-fil). [Menu screen]
+[x] Appen må ha to eller flere interagerende klasser som står for logikken/databehandlingen i appen. [EZ]
+[x] Her stilles det også krav til at det må være noe kalkulasjoner av et eller annet, altså kan du ikke ha to rene dataklasser.
+[x] I tillegg til de interagerende klassene skal appen ha en controller-klasse som kobler sammen brukergrensesnittet og klassene fra punktet over. [MAIN/APP]
+[x] Appen må ha mulighet for å utvides med en form for lagring i form av skriving til og lesing fra fil. [Leaderboard]
+[OK] Du må også ha en app-klasse som kun brukes til å starte appen.
+
+Eksempler på apper man kan lage:
+[Roguelike dungeon]
+- Spill (f.eks. bondesjakk, sokoban, minesweeper, yatzy) 
+
+Hva man kan lagre av data:
+[OK] Leaderboard / Highscore / Days lived
+- For spill kan det være relevant å lagre tilstanden til spillet slik at man kan fortsette senere
+- For mobilapper som kalender, klokke og påminnelser, kan det være relevant å lagre henholdsvis avtaler, alarmer og påminnelser

@@ -1,0 +1,28 @@
+1. What is the IP address of the client computer?
+	192.168.1.102
+2. How many bytes are in the IP header?
+	20 bytes header
+3. How many bytes are in the payload of the IP datagram?
+	total byte length of 56 bytes, so data is 56-20 = 36 data bytes
+4. Has this IP datagram been fragmented?
+	No. Offset = 0.
+5. Which fields in the IP datagram always change from one datagram to the next within this series of ICMP messages sent by the client computer?
+	TTL 
+	Header checksum
+	Identification
+6. Which fields stay constant?
+	Version
+	Header length
+	Differentiated Service Field
+	Total Length
+	Protocol
+	Source
+	Destination
+7. What is the value in the Identification field? Use the number in the parenthesis.
+	num=9, ID-field = 0x32d0 (13008)
+8. What is the value in the TTL field?
+	1
+9. Has that message been fragmented across more than one IP datagram?
+	YES
+10. How many bytes of data is sent int the ICMP message?
+	2000 bytes

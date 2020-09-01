@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IT2805 assignment 5: JavaScript introduction</title>
+    <style>
+      .box{
+        /* Sets the size and position of each box */
+        width: 200px;
+        height: 200px;
+        background-color: #185D8B;
+        margin: 10px;
+
+        /* Sets the font within each box*/
+        color: #fff;
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: center;
+        line-height: 200px;
+        font-size: 100px;
+      }
+
+      .buttons{
+        width: 200px;
+        margin: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 id='title'></h1>
+
+    <h2>Part 5</h2>
+    <div class='buttons'>
+      <button onclick="changeDisplay()">Display: none </button>
+      <button onclick="changeVisibility()">Visibility: hidden</button>
+      <button onclick="reset()">Reset</button>
+    </div>
+    <div class='box' id='magic'> 1 </div>
+    <div class='box'> 2 </div>
+
+    <h2>Part 6</h2>
+    <ul id='tech'>
+    </ul>
+    <script type="text/javascript" src="script.js"></script>
+    <!--
+    PART 1
+    The reason I chose to include the javascript file here is because we're working on DOM manipulations.
+    The reason for that is that we have to wait for the DOM to get loaded in the page first, before
+    starting to manipulate it using javascript.
+
+    Another way we can do this is to place it on the <head> tag, making the javascript file load in first,
+    but making sure to use window.onload = () => {}; to wait for the DOMs to load first,
+    before executing any type of DOM manipulations.
+    -->
+  </body>
+</html>

@@ -1,0 +1,15 @@
+header {
+  font-family: "Arial", sans-serif;
+}
+body {
+  background-color: #ffe1e6;
+}
+p {
+  color: #3b0000;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+img {
+  border: 5px solid deeppink;
+  border-radius: 10px;
+  max-width: 150px;
+}

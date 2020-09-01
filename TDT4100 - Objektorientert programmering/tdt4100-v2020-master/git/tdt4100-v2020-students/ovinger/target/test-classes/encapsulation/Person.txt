@@ -1,0 +1,12 @@
+DEL 2 - teori
+
+1. Foreslå en alternativ innkapsling av navnet. Hint: del opp.
+  String firstname
+  String lastname
+  set/get firstname
+  set/get lastname
+
+2. Foreslå to alternative strategier for å kapsle inn tilstand som er koblet slik navn og e-post er. Hint: 1) samtidig og 2) dekoble.
+  samtidig: bruk av substring-
+  dekoble: splitte strengen-
+    i validity sjekk av email med navn, domene og landskode.

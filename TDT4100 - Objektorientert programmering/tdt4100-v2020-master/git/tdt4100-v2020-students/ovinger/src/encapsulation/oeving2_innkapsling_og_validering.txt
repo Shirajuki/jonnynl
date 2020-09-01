@@ -1,0 +1,8 @@
+1. Hva er en synlighetsmodifikator?
+  Innkapsling er en programmeringsteknikk som har som formål å hindre direkte tilgang til tilstanden til et objekt fra objekter av andre klasser.
+  - definere et sett operasjoner for sikker (og indirekte) tilgang til data, istedenfor å gi direkte tilgang til attributter.
+  Såkalte synlighetsmodifikatorer er modifikatorer for å deklarere hvilke navn som skal være offentlige og private for operasjoner og attributter.
+
+2. Hva er forskjellen på private og public og når brukes de?
+  Forskjellen på private og public er synligheten på dem. Enten offentlig eller privat.
+  Private og public kan da brukes for både operasjoner og attributter i klasser, der grunnregelen er at alle attributter er private, mens utvalgte operasjoner er offentlige.

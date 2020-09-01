@@ -1,0 +1,17 @@
+[~-]*/
+*.pdf
+*.epub
+*.tar
+*.tar.*
+
+# Examen Philosophicum
+EXPH0300*/netland/
+EXPH0300*/seminar/
+!EXPH0300*/seminar/*.md
+
+*.class
+*.dll
+*.7z
+*.zip
+*.rar
+*.log

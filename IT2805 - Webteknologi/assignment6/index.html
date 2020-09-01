@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tax returns form</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript">
+          // Declare global variables
+          let income,wealth,taxes;
+          // Function for calculating taxes
+          const tax = (income, wealth) => (0.35 * income) + (0.25 * wealth);
+          // Onload event for page load, DOM-manipulation
+          window.onload = () => {
+            // Assign DOMs to the global variables
+            income = document.getElementById('income');
+            wealth = document.getElementById('wealth');
+            taxes = document.getElementById('tax');
+            // onkeyup event on income and wealth
+            income.oninput = taxValue;
+            wealth.oninput = taxValue;
+          }
+          // Function that sets dom taxes to the tax.
+          function taxValue() {
+            taxes.value = tax(+income.value,+wealth.value);
+          }
+        </script>
+    </head>
+    <body>
+      <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" method="post">
+        <fieldset><legend>Personal information</legend>
+          <div>
+            <label>Real name
+              <input type="text" name="name" pattern="[a-zA-Z øæåØÆÅ]*" placeholder="Enter your full name" autofocus required>
+            </label>
+          </div>
+          <div>
+            <label for="gender"><span>Gender</span>
+              <select name="gender">
+                <option value="Male">male</option>
+                <option value="Female">female</option>
+              </select>
+            </label>
+          </div>
+          <div>
+            <label>E-mail
+              <input type="email" name="email" placeholder="Enter your e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            </label>
+          </div>
+          <div>
+            <label>Birthdate
+              <!-- googling around I see no way of setting date display as dd/mm/yyyy since it is solely based on the computers locale.
+              Though one way to do this is using javascript, but it is not allowed in this part. Another would be using the pattern attribute: regex, which would be far too complicated.
+              Thus I give up.
+              - Jonny -->
+              <input type="date"  name="birthdate" max="1987-12-31" required>
+            </label>
+          </div>
+          <div>
+            <label>Hero name
+              <input type="text" name="hero" placeholder="Enter your hero name" required>
+            </label>
+          </div>
+          <div>
+            Do you wear spandex?
+            <div>
+              <input type="radio" name="spandex" id="spandex1" value="True" required>
+              <label for="spandex1">True</label>
+              <input type="radio" name="spandex" id="spandex2" value="False" required>
+              <label for="spandex2">False</label>
+            </div>
+            <br/>
+          </div>
+          <div>
+            <label>Strength
+              <input type="number" name="strength" min=1 max=10 placeholder="Enter your strength" required>
+            </label>
+          </div>
+          <div>
+            <label>Speed
+              <input type="number" name="speed" min=1 max=10 placeholder="Enter your speed" required>
+            </label>
+          </div>
+          <div>
+            <label>Intelligence
+              <input type="number" name="intelligence" min=1 max=10 placeholder="Enter your intelligence" required>
+            </label>
+          </div>
+        </fieldset>
+        <br/>
+        <fieldset><legend>Income calculation</legend>
+          <div>
+            <label>Income
+              <input type="number" name="income" id="income" min=1 placeholder="Enter your income" required>
+            </label>
+          </div>
+          <div>
+            <label>Savings
+              <input type="number" name="wealth" id="wealth" min=1 placeholder="Enter your wealth" required>
+            </label>
+          </div>
+          <div>
+            <label>Taxes
+              <input type="number" name="tax" id="tax" value="0" placeholder="Your calculated tax" readonly>
+            </label>
+          </div>
+        </fieldset>
+        <br/>
+        <div class="formButton">
+          <button type="submit">Submit tax form</button>
+        </div>
+      </form>
+    </body>
+</html>
