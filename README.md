@@ -1,5 +1,7 @@
 [![master](https://img.shields.io/badge/branch-master-darkred?logo=read-the-docs)](https://github.com/Shirajuki/jonnynl/tree/master)
+
 [![ntnu](https://img.shields.io/badge/branch-ntnu-red?logo=stackoverflow)]()
+
 # jonnynl - NTNU student archive
 Notes I've taken over the years "e-notebook website" 
 
@@ -16,7 +18,7 @@ Branch over to NTNU for past assignments done
 - [**IT2805**    Webteknologi    7.5    O]()
 --------------------------------------------------------------------------------------------
 - [**TDT4100**   Objektorientert programmering    7.5    O]()
-- [**TDT4180**   Menneske og maskin-interaksjon    7.5    O]()
+- [**TDT4180**   Menneske-maskin-interaksjon    7.5    O]()
 - [**MA0301**    Elementær diskret matematikk    7.5    O]()
 - [**TTM4100**   Kommunikasjon - Tjenester og nett    7.5    O]()
 --------------------------------------------------------------------------------------------
