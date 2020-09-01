@@ -1,7 +1,10 @@
 [![Master](https://img.shields.io/badge/branch-Master-darkred?logo=read-the-docs)](https://github.com/Shirajuki/jonnynl/tree/master)
 [![NTNU](https://img.shields.io/badge/branch-NTNU-red?logo=stackoverflow)]()
 # jonnynl - NTNU student archive
-Notes I've taken over the years "e-notebook website"
+Notes I've taken over the years "e-notebook website" 
+
+Visit: http://jonnynl.js.org/
+
 Branch over to NTNU for past assignments done
 
 
