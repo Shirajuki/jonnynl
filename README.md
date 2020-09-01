@@ -1,5 +1,4 @@
 [![master](https://img.shields.io/badge/branch-master-darkred?logo=read-the-docs)](https://github.com/Shirajuki/jonnynl/tree/master)
-
 [![ntnu](https://img.shields.io/badge/branch-ntnu-red?logo=stackoverflow)]()
 
 # jonnynl - NTNU student archive
